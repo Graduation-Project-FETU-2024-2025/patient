@@ -22,10 +22,15 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Birthday": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
+        "Pleaseselectyourgender":
+            MessageLookupByLibrary.simpleMessage("الرجاء اختيار جنسك"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "createYourNewAccount":
+            MessageLookupByLibrary.simpleMessage("قم بإنشاء حسابك الجديد"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "dontReceiveOTP":
@@ -39,11 +44,16 @@ class MessageLookup extends MessageLookupByLibrary {
             "أدخل رمز إعادة التعيين المرسل إلى"),
         "enterYourEmail":
             MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
+        "female": MessageLookupByLibrary.simpleMessage("أنثى"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
+        "gender": MessageLookupByLibrary.simpleMessage("الجنس"),
+        "id": MessageLookupByLibrary.simpleMessage("الاى دى"),
+        "location": MessageLookupByLibrary.simpleMessage("الموقع"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول إلى حسابك"),
+        "male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
@@ -56,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendOTP": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "signup": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحبا بعودتك!")
       };
 }

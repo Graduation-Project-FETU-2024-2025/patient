@@ -22,10 +22,15 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Birthday": MessageLookupByLibrary.simpleMessage("Birthday"),
+        "Pleaseselectyourgender":
+            MessageLookupByLibrary.simpleMessage("Please select your gender"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "createYourNewAccount":
+            MessageLookupByLibrary.simpleMessage("Create your new account"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "dontReceiveOTP":
@@ -38,11 +43,16 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter OTP sent to"),
         "enterYourEmail":
             MessageLookupByLibrary.simpleMessage("Enter your email"),
+        "female": MessageLookupByLibrary.simpleMessage("Female"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "gender": MessageLookupByLibrary.simpleMessage("Gender"),
+        "id": MessageLookupByLibrary.simpleMessage("id"),
+        "location": MessageLookupByLibrary.simpleMessage("Location"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
+        "male": MessageLookupByLibrary.simpleMessage("Male"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
@@ -55,6 +65,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("Resend OTP"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "signup": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!")
       };
 }

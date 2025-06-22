@@ -6,7 +6,7 @@ class EndPoints {
 
   //auth
   static String login = "api/auth/user/login";
-  
+  static String register = "api/Auth/register";
 }
 
 class ApiKeys {

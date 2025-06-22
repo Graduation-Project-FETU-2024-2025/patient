@@ -5,6 +5,8 @@ import 'package:patient_app/core/database/api/dio_factory.dart';
 import 'package:patient_app/core/database/cache/cashe_helper.dart';
 import 'package:patient_app/features/sign_in/data/repository/sign_in_repo.dart';
 import 'package:patient_app/features/sign_in/data/repository/sign_in_repo_impl.dart';
+import 'package:patient_app/features/sign_up/data/repos/sign_up_repo.dart';
+import 'package:patient_app/features/sign_up/data/repos/sign_up_repo_impl.dart';
 
 final getIt = GetIt.instance;
 
@@ -20,5 +22,8 @@ void setup() {
   // signIn
   getIt.registerLazySingleton<SignInRepo>(
     () => SignInRepoImpl(getIt<ApiConsumer>()),
+  );
+  getIt.registerLazySingleton<SignUpRepo>(
+    () => SignUpRepoImpl(apiConsumer: getIt<ApiConsumer>()),
   );
 }

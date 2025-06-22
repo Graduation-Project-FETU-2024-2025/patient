@@ -279,6 +279,96 @@ class S {
       args: [],
     );
   }
+
+  /// `id`
+  String get id {
+    return Intl.message(
+      'id',
+      name: 'id',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Birthday`
+  String get Birthday {
+    return Intl.message(
+      'Birthday',
+      name: 'Birthday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gender`
+  String get gender {
+    return Intl.message(
+      'Gender',
+      name: 'gender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Male`
+  String get male {
+    return Intl.message(
+      'Male',
+      name: 'male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Female`
+  String get female {
+    return Intl.message(
+      'Female',
+      name: 'female',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location`
+  String get location {
+    return Intl.message(
+      'Location',
+      name: 'location',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up`
+  String get signup {
+    return Intl.message(
+      'Sign Up',
+      name: 'signup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select your gender`
+  String get Pleaseselectyourgender {
+    return Intl.message(
+      'Please select your gender',
+      name: 'Pleaseselectyourgender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create your new account`
+  String get createYourNewAccount {
+    return Intl.message(
+      'Create your new account',
+      name: 'createYourNewAccount',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
