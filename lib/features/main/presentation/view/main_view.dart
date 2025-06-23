@@ -1,7 +1,12 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
+import 'package:patient_app/features/profile/data/repo/profile_repo.dart';
+import 'package:patient_app/features/profile/presentation/model_view/profile_cubit/profile_cubit.dart';
+import 'package:patient_app/features/profile/presentation/view/profile_view.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -26,9 +31,10 @@ class _MainViewState extends State<MainView> {
     const Scaffold(
       body: Center(child: Text('Profile Screen')),
     ),
-    const Scaffold(
-      body: Center(child: Text('Settings Screen')),
-    ),
+    BlocProvider(
+      create: (context) => ProfileCubit(getIt<ProfileRepo>())..getProfileEmitter(),
+      child: const ProfileView(),
+    )
   ];
   @override
   Widget build(BuildContext context) {

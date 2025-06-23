@@ -24,13 +24,16 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "dontReceiveOTP":
             MessageLookupByLibrary.simpleMessage("Didn\'t receive OTP?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
         "enterNewPassword": MessageLookupByLibrary.simpleMessage(
             "Enter a new password to reset the password on your account. We\'ll ask for this password whenever you log in."),
         "enterOTP": MessageLookupByLibrary.simpleMessage("Enter OTP"),
@@ -40,14 +43,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your email"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "medicineRecord":
+            MessageLookupByLibrary.simpleMessage("Medicine Records"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
+        "orderLog": MessageLookupByLibrary.simpleMessage("Order Log"),
         "otpSent":
             MessageLookupByLibrary.simpleMessage("OTP sent successfully"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),

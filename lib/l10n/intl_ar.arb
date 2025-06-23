@@ -23,6 +23,13 @@
         "newPassword":"كلمة مرور جديدة",
         "confirmPassword":"تأكيد كلمة المرور",
         "someThingWentWrong":"حدث خطأ ما",
-        "passwordResetSuccess":"تم إعادة تعيين كلمة المرور بنجاح"
+        "passwordResetSuccess":"تم إعادة تعيين كلمة المرور بنجاح",
+        "english":"الإنجليزية",
+        "arabic":"العربية",
+        "language":"اللغة",
+        "darkMode":"الوضع المظلم",
+        "logout":"تسجيل الخروج",
+        "medicineRecord":"سجلات الأدوية",
+        "orderLog":"سجل الطلبات"
 
 }
