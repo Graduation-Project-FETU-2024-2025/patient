@@ -34,6 +34,20 @@
         "editProfile":"تعديل الملف الشخصي",
         "gallery":"المعرض",
         "camera":"الكاميرا",
-        "save":"حفظ"
+        "save":"حفظ",
+        "patientHistory":"تاريخ المريض",
+        "generalInfo":"المعلومات العامة",
+        "gender":"النوع",
+        "address":"العنوان",
+        "age":"العمر",
+        "id":"المعرف",
+        "contact":"الاتصال",
+        "phoneNumber":"رقم الهاتف",
+        "lastVisit":"آخر زيارة",
+        "DateOfVisit":"تاريخ الزيارة",
+        "diagnosis":"التشخيص",
+        "chiefComplaint":"الشكوى الرئيسية",
+        "unknown":"غير معروف"
+
 
 }

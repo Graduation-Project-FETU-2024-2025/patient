@@ -46,7 +46,9 @@ class ProfileOptionContainer extends StatelessWidget {
             title: S.of(context).language,
           ),
           ProfileOptionRaw(
-            onTap: () {},
+            onTap: () {
+              context.pushNamed(Routing.medicalRecords);
+            },
             leading: Image.asset(
               AppImages.imagesMedicinRecords,
               height: 24.h,

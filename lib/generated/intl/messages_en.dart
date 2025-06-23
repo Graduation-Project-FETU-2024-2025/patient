@@ -22,13 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "DateOfVisit": MessageLookupByLibrary.simpleMessage("Date of Visit"),
+        "address": MessageLookupByLibrary.simpleMessage("Address"),
+        "age": MessageLookupByLibrary.simpleMessage("Age"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
+        "chiefComplaint":
+            MessageLookupByLibrary.simpleMessage("Chief Complaint"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "contact": MessageLookupByLibrary.simpleMessage("Contact"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "diagnosis": MessageLookupByLibrary.simpleMessage("Diagnosis"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "dontReceiveOTP":
@@ -46,7 +53,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
+        "gender": MessageLookupByLibrary.simpleMessage("gender"),
+        "generalInfo": MessageLookupByLibrary.simpleMessage("General Info"),
+        "id": MessageLookupByLibrary.simpleMessage("ID"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "lastVisit": MessageLookupByLibrary.simpleMessage("Last Visit"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
@@ -64,13 +75,17 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordResetSuccess":
             MessageLookupByLibrary.simpleMessage("Password reset successfully"),
+        "patientHistory":
+            MessageLookupByLibrary.simpleMessage("Patient History"),
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("Resend OTP"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
+        "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!")
       };
 }

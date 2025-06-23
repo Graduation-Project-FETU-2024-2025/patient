@@ -15,6 +15,7 @@ import 'package:patient_app/features/forget_password/presentation/view_model/otp
 import 'package:patient_app/features/forget_password/presentation/view_model/reset_password_cubit/reset_password_cubit.dart';
 import 'package:patient_app/features/forget_password/presentation/view_model/send_otp_cubit/send_otp_cubit.dart';
 import 'package:patient_app/features/main/presentation/view/main_view.dart';
+import 'package:patient_app/features/medical_records/presentation/view/medical_records_view.dart';
 import 'package:patient_app/features/onboarding/presentation/view/onboarding_view.dart';
 import 'package:patient_app/features/profile/data/models/user_model.dart';
 import 'package:patient_app/features/sign_in/data/repository/sign_in_repo.dart';
@@ -50,6 +51,8 @@ class AppRouters {
         );
       case Routing.signUp:
         return _buildRoute(const Scaffold());
+      case Routing.medicalRecords:
+        return _buildRoute(const MedicalRecordsView());
       case Routing.editProfile:
         return _buildRoute(BlocProvider(
           create: (context) => EditProfileCubit(getIt<EditProfileRepo>()),

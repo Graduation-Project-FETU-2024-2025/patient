@@ -34,5 +34,18 @@
         "editProfile":"Edit Profile",
         "gallery":"Gallery",
         "camera":"Camera",
-        "save":"Save"
+        "save":"Save",
+        "patientHistory":"Patient History",
+        "generalInfo":"General Info",
+        "gender":"gender",
+        "address":"Address",
+        "age":"Age",
+        "id":"ID",
+        "contact":"Contact",
+        "phoneNumber":"Phone Number",
+        "lastVisit":"Last Visit",
+        "DateOfVisit":"Date of Visit",
+        "diagnosis":"Diagnosis",
+        "chiefComplaint":"Chief Complaint",
+        "unknown":"Unknown"
 }

@@ -409,6 +409,136 @@ class S {
       args: [],
     );
   }
+
+  /// `Patient History`
+  String get patientHistory {
+    return Intl.message(
+      'Patient History',
+      name: 'patientHistory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `General Info`
+  String get generalInfo {
+    return Intl.message(
+      'General Info',
+      name: 'generalInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `gender`
+  String get gender {
+    return Intl.message(
+      'gender',
+      name: 'gender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get address {
+    return Intl.message(
+      'Address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Age`
+  String get age {
+    return Intl.message(
+      'Age',
+      name: 'age',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ID`
+  String get id {
+    return Intl.message(
+      'ID',
+      name: 'id',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact`
+  String get contact {
+    return Intl.message(
+      'Contact',
+      name: 'contact',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone Number',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Visit`
+  String get lastVisit {
+    return Intl.message(
+      'Last Visit',
+      name: 'lastVisit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date of Visit`
+  String get DateOfVisit {
+    return Intl.message(
+      'Date of Visit',
+      name: 'DateOfVisit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnosis`
+  String get diagnosis {
+    return Intl.message(
+      'Diagnosis',
+      name: 'diagnosis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chief Complaint`
+  String get chiefComplaint {
+    return Intl.message(
+      'Chief Complaint',
+      name: 'chiefComplaint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unknown`
+  String get unknown {
+    return Intl.message(
+      'Unknown',
+      name: 'unknown',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
