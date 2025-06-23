@@ -2,6 +2,7 @@ import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_not
 import 'package:flutter/material.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
+import 'package:patient_app/features/home/presentation/views/home_view.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -17,9 +18,7 @@ class _MainViewState extends State<MainView> {
   double kIconSize = 24.0;
   double kBottomRadius = 20.0;
   List<Widget> screens = [
-    const Scaffold(
-      body: Center(child: Text('Home Screen')),
-    ),
+    const HomeView(),
     const Scaffold(
       body: Center(child: Text('Search Screen')),
     ),

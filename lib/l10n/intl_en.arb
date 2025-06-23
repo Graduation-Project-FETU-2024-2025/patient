@@ -23,5 +23,10 @@
         "newPassword":"New Password",
         "confirmPassword":"Confirm Password",
         "someThingWentWrong":"Something went wrong",
-        "passwordResetSuccess":"Password reset successfully"
+        "passwordResetSuccess":"Password reset successfully",
+        "medicalSpecialites":"Medical specialties",
+        "seeAll":"See All",
+        "highlyRecommended":"Highly Recommended",
+        "doctors":"Doctors",
+        "avaliableAppointments":"Available Appointments : "
 }

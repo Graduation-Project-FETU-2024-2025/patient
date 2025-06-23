@@ -7,4 +7,6 @@ abstract class Routing {
   static const String forgetPassword = '/forgetPassword';
   static const String restPassword = '/restPassword';
   static const String emailView = '/emailView';
+  static const String homeView = '/homeView';
+  static const String allDoctorsView = '/allDoctorsView';
 }

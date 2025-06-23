@@ -24,10 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "avaliableAppointments":
+            MessageLookupByLibrary.simpleMessage("Available Appointments : "),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "doctors": MessageLookupByLibrary.simpleMessage("Doctors"),
         "dontReceiveOTP":
             MessageLookupByLibrary.simpleMessage("Didn\'t receive OTP?"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
@@ -40,9 +43,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your email"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "highlyRecommended":
+            MessageLookupByLibrary.simpleMessage("Highly Recommended"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
+        "medicalSpecialites":
+            MessageLookupByLibrary.simpleMessage("Medical specialties"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
@@ -57,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("Resend OTP"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!")

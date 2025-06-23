@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_single_quotes
 class AppImages {
   AppImages._();
-  
+
   /// Assets for imagesAppIcon
   /// assets/images/app_icon.png
   static const String imagesAppIcon = "assets/images/app_icon.png";
@@ -32,34 +32,52 @@ class AppImages {
 
   /// Assets for imagesSelectedPharmacy
   /// assets/images/selected_pharmacy.png
-  static const String imagesSelectedPharmacy = "assets/images/selected_pharmacy.png";
+  static const String imagesSelectedPharmacy =
+      "assets/images/selected_pharmacy.png";
 
   /// Assets for imagesSelectedProfile
   /// assets/images/selected_profile.png
-  static const String imagesSelectedProfile = "assets/images/selected_profile.png";
+  static const String imagesSelectedProfile =
+      "assets/images/selected_profile.png";
 
   /// Assets for imagesSelectedSchedule
   /// assets/images/selected_schedule.png
-  static const String imagesSelectedSchedule = "assets/images/selected_schedule.png";
+  static const String imagesSelectedSchedule =
+      "assets/images/selected_schedule.png";
 
   /// Assets for imagesUnselectedHome
   /// assets/images/unselected_home.png
-  static const String imagesUnselectedHome = "assets/images/unselected_home.png";
+  static const String imagesUnselectedHome =
+      "assets/images/unselected_home.png";
 
   /// Assets for imagesUnselectedPharmacy
   /// assets/images/unselected_pharmacy.png
-  static const String imagesUnselectedPharmacy = "assets/images/unselected_pharmacy.png";
+  static const String imagesUnselectedPharmacy =
+      "assets/images/unselected_pharmacy.png";
 
   /// Assets for imagesUnselectedProfile
   /// assets/images/unselected_profile.png
-  static const String imagesUnselectedProfile = "assets/images/unselected_profile.png";
+  static const String imagesUnselectedProfile =
+      "assets/images/unselected_profile.png";
 
   /// Assets for imagesUnselectedSchedule
   /// assets/images/unselected_schedule.png
-  static const String imagesUnselectedSchedule = "assets/images/unselected_schedule.png";
+  static const String imagesUnselectedSchedule =
+      "assets/images/unselected_schedule.png";
 
   /// Assets for imagesUnvisable
   /// assets/images/unvisable.png
   static const String imagesUnvisable = "assets/images/unvisable.png";
-}
 
+  /// Assets for imagesNeurology
+  /// assets/images/neurology_9133638.png
+  static const String imagesNeurology = "assets/images/neurology_9133638.png";
+
+  /// Assets for imagesAdvertise
+  /// assets/images/advertise.png
+  static const String imagesAdvertise = "assets/images/advertise.png";
+
+  /// Assets for imagesDoctor
+  /// assets/images/doctor.png
+  static const String imagesDoctor = "assets/images/doctor.png";
+}

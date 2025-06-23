@@ -24,10 +24,13 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
+        "avaliableAppointments":
+            MessageLookupByLibrary.simpleMessage("المواعيد المتاحة : "),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
+        "doctors": MessageLookupByLibrary.simpleMessage("الأطباء"),
         "dontReceiveOTP":
             MessageLookupByLibrary.simpleMessage("لم يتم الاستلام؟"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
@@ -41,9 +44,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
+        "highlyRecommended": MessageLookupByLibrary.simpleMessage("موصى به "),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول إلى حسابك"),
+        "medicalSpecialites":
+            MessageLookupByLibrary.simpleMessage("التخصصات الطبية"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
@@ -58,6 +64,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendOTP": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحبا بعودتك!")
