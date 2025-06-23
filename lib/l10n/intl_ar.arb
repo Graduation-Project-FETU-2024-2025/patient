@@ -30,6 +30,10 @@
         "darkMode":"الوضع المظلم",
         "logout":"تسجيل الخروج",
         "medicineRecord":"سجلات الأدوية",
-        "orderLog":"سجل الطلبات"
+        "orderLog":"سجل الطلبات",
+        "editProfile":"تعديل الملف الشخصي",
+        "gallery":"المعرض",
+        "camera":"الكاميرا",
+        "save":"حفظ"
 
 }

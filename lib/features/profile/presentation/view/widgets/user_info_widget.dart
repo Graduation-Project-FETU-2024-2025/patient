@@ -1,7 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:patient_app/core/functions/is_network_image.dart';
+import 'package:patient_app/core/helpers/extentions.dart';
+import 'package:patient_app/core/routers/routing.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
+import 'package:patient_app/core/utils/app_styles.dart';
 import 'package:patient_app/features/profile/presentation/model_view/profile_cubit/profile_cubit.dart';
 import 'package:patient_app/features/profile/presentation/model_view/profile_cubit/profile_state.dart';
 import 'package:flutter/material.dart';
@@ -34,24 +37,25 @@ class UserInfoWidget extends StatelessWidget {
                 children: [
                   Text(
                     state.userModel.userName,
-                    style: Theme.of(context).textTheme.headlineSmall,
+                    style: AppStyles.medium20(context)
+                        .copyWith(color: AppColors.primaryColor),
                   ),
                   IconButton(
                     onPressed: () {
-                      // context
-                      //     .pushNamed(Routing.editProfile,
-                      //         argument: state.userModel)
-                      //     .then(
-                      //   (value) {
-                      //     if (value == true) {
-                      //       if (context.mounted) {
-                      //         context.read<ProfileCubit>().getProfileEmitter();
-                      //       } else {
-                      //         return;
-                      //       }
-                      //     }
-                      //   },
-                      // );
+                      context
+                          .pushNamed(Routing.editProfile,
+                              argument: state.userModel)
+                          .then(
+                        (value) {
+                          if (value == true) {
+                            if (context.mounted) {
+                              context.read<ProfileCubit>().getProfileEmitter();
+                            } else {
+                              return;
+                            }
+                          }
+                        },
+                      );
                     },
                     icon: Image.asset(
                       Theme.of(context).brightness == Brightness.light

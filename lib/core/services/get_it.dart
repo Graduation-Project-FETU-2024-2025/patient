@@ -3,6 +3,8 @@ import 'package:patient_app/core/database/api/api_consumer.dart';
 import 'package:patient_app/core/database/api/dio_consumer.dart';
 import 'package:patient_app/core/database/api/dio_factory.dart';
 import 'package:patient_app/core/database/cache/cashe_helper.dart';
+import 'package:patient_app/features/edit_profile/data/repo/edit_profile_repo.dart';
+import 'package:patient_app/features/edit_profile/data/repo/edit_profile_repo_impl.dart';
 import 'package:patient_app/features/forget_password/data/repository/forget_password_repo.dart';
 import 'package:patient_app/features/forget_password/data/repository/forget_password_repo_impl.dart';
 import 'package:patient_app/features/profile/data/repo/profile_repo.dart';
@@ -32,5 +34,9 @@ void setup() {
 
   getIt.registerLazySingleton<ProfileRepo>(
     () => ProfileRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+
+    getIt.registerLazySingleton<EditProfileRepo>(
+    () => EditProfileRepoImpl(apiConsumer: getIt<ApiConsumer>()),
   );
 }
