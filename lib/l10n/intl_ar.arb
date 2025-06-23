@@ -23,6 +23,9 @@
         "newPassword":"كلمة مرور جديدة",
         "confirmPassword":"تأكيد كلمة المرور",
         "someThingWentWrong":"حدث خطأ ما",
-        "passwordResetSuccess":"تم إعادة تعيين كلمة المرور بنجاح"
-
+        "passwordResetSuccess":"تم إعادة تعيين كلمة المرور بنجاح",
+        "specialities":"التخصصات",
+        "aboutDoctor":"عن الطبيب",
+        "bookingPrice":"سعر الحجز",
+        "makeAnAppointment":"احجز موعدًا"
 }

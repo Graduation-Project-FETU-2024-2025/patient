@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:patient_app/core/routers/routing.dart';
 import 'package:patient_app/core/services/get_it.dart';
+import 'package:patient_app/features/all_Specialities/presentation/views/all_specialities_view.dart';
+import 'package:patient_app/features/doctor_details/presentation/views/doctor_details_view.dart';
 import 'package:patient_app/features/forget_password/data/repository/forget_password_repo.dart';
 import 'package:patient_app/features/forget_password/presentation/view/email_view.dart';
 import 'package:patient_app/features/forget_password/presentation/view/otp_view.dart';
@@ -46,6 +48,10 @@ class AppRouters {
         );
       case Routing.signUp:
         return _buildRoute(const Scaffold());
+      case Routing.doctorDetailsView:
+        return _buildRoute(DoctorDetailsView());
+      case Routing.allSpecialitiesView:
+        return _buildRoute(AllSpecialitiesView());
       case Routing.restPassword:
         return _buildRoute(
           BlocProvider(

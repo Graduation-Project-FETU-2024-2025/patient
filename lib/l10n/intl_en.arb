@@ -23,5 +23,9 @@
         "newPassword":"New Password",
         "confirmPassword":"Confirm Password",
         "someThingWentWrong":"Something went wrong",
-        "passwordResetSuccess":"Password reset successfully"
+        "passwordResetSuccess":"Password reset successfully",
+        "specialities":"Specialities",
+        "aboutDoctor":"About Doctor",
+        "bookingPrice":"Booking Price",
+        "makeAnAppointment":"Make Appointment"
 }

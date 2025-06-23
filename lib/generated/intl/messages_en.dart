@@ -22,8 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "aboutDoctor": MessageLookupByLibrary.simpleMessage("About Doctor"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "bookingPrice": MessageLookupByLibrary.simpleMessage("Booking Price"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "doNotHaveAnAccount":
@@ -43,6 +45,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
+        "makeAnAppointment":
+            MessageLookupByLibrary.simpleMessage("Make Appointment"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
@@ -59,6 +63,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
+        "specialities": MessageLookupByLibrary.simpleMessage("Specialities"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!")
       };
 }
