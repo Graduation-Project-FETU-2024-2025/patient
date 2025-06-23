@@ -22,13 +22,20 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "DateOfVisit": MessageLookupByLibrary.simpleMessage("تاريخ الزيارة"),
+        "address": MessageLookupByLibrary.simpleMessage("العنوان"),
+        "age": MessageLookupByLibrary.simpleMessage("العمر"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
+        "chiefComplaint":
+            MessageLookupByLibrary.simpleMessage("الشكوى الرئيسية"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "contact": MessageLookupByLibrary.simpleMessage("الاتصال"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
+        "diagnosis": MessageLookupByLibrary.simpleMessage("التشخيص"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "dontReceiveOTP":
@@ -48,7 +55,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "gallery": MessageLookupByLibrary.simpleMessage("المعرض"),
+        "gender": MessageLookupByLibrary.simpleMessage("النوع"),
+        "generalInfo": MessageLookupByLibrary.simpleMessage("المعلومات العامة"),
+        "id": MessageLookupByLibrary.simpleMessage("المعرف"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "lastVisit": MessageLookupByLibrary.simpleMessage("آخر زيارة"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول إلى حسابك"),
@@ -64,7 +75,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordResetSuccess": MessageLookupByLibrary.simpleMessage(
             "تم إعادة تعيين كلمة المرور بنجاح"),
+        "patientHistory": MessageLookupByLibrary.simpleMessage("تاريخ المريض"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "register": MessageLookupByLibrary.simpleMessage("تسجيل"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "resetPassword":
@@ -72,6 +85,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
+        "unknown": MessageLookupByLibrary.simpleMessage("غير معروف"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحبا بعودتك!")
       };
 }
