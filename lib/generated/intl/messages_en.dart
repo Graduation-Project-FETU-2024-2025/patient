@@ -25,6 +25,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
@@ -32,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
         "dontReceiveOTP":
             MessageLookupByLibrary.simpleMessage("Didn\'t receive OTP?"),
+        "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
         "enterNewPassword": MessageLookupByLibrary.simpleMessage(
@@ -43,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your email"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
@@ -65,6 +68,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "register": MessageLookupByLibrary.simpleMessage("Register"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("Resend OTP"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!")

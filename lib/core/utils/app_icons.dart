@@ -49,5 +49,8 @@ class AppIcons {
   /// Assets for svgsTheme
   /// assets/svgs/theme.svg
   static const String svgsTheme = "assets/svgs/theme.svg";
+  /// Assets for svgsCamera
+  /// assets/svgs/camera.svg
+  static const String svgsCamera = "assets/svgs/camera.svg";
 }
 
