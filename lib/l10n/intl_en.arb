@@ -23,5 +23,12 @@
         "newPassword":"New Password",
         "confirmPassword":"Confirm Password",
         "someThingWentWrong":"Something went wrong",
-        "passwordResetSuccess":"Password reset successfully"
+        "passwordResetSuccess":"Password reset successfully",
+        "english":"English",
+        "arabic":"Arabic",
+        "language":"Language",
+        "darkMode":"Dark Mode",
+        "logout":"Logout",
+        "medicineRecord":"Medicine Records",
+        "orderLog":"Order Log"
 }

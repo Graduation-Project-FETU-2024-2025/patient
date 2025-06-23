@@ -10,17 +10,37 @@ class AppImages {
   /// assets/images/auth_header.png
   static const String imagesAuthHeader = "assets/images/auth_header.png";
 
+  /// Assets for imagesEdit
+  /// assets/images/edit.png
+  static const String imagesEdit = "assets/images/edit.png";
+
+  /// Assets for imagesEditDark
+  /// assets/images/edit_dark.png
+  static const String imagesEditDark = "assets/images/edit_dark.png";
+
   /// Assets for imagesEmail
   /// assets/images/email.png
   static const String imagesEmail = "assets/images/email.png";
+
+  /// Assets for imagesMedicinRecords
+  /// assets/images/medicin_records.png
+  static const String imagesMedicinRecords = "assets/images/medicin_records.png";
 
   /// Assets for imagesOnboarding
   /// assets/images/onboarding.png
   static const String imagesOnboarding = "assets/images/onboarding.png";
 
+  /// Assets for imagesOrderLog
+  /// assets/images/order_log.png
+  static const String imagesOrderLog = "assets/images/order_log.png";
+
   /// Assets for imagesPassword
   /// assets/images/password.png
   static const String imagesPassword = "assets/images/password.png";
+
+  /// Assets for imagesPersonAvatar
+  /// assets/images/person_avatar.png
+  static const String imagesPersonAvatar = "assets/images/person_avatar.png";
 
   /// Assets for imagesResetPassword
   /// assets/images/reset_password.png
