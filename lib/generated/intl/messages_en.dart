@@ -31,6 +31,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "avaliableAppointments":
+            MessageLookupByLibrary.simpleMessage("Available Appointments : "),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "chiefComplaint":
             MessageLookupByLibrary.simpleMessage("Chief Complaint"),
@@ -43,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "diagnosis": MessageLookupByLibrary.simpleMessage("Diagnosis"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "doctors": MessageLookupByLibrary.simpleMessage("Doctors"),
         "dontReceiveOTP":
             MessageLookupByLibrary.simpleMessage("Didn\'t receive OTP?"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
@@ -61,6 +64,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
         "gender": MessageLookupByLibrary.simpleMessage("gender"),
         "generalInfo": MessageLookupByLibrary.simpleMessage("General Info"),
+        "highlyRecommended":
+            MessageLookupByLibrary.simpleMessage("Highly Recommended"),
         "id": MessageLookupByLibrary.simpleMessage("ID"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "lastVisit": MessageLookupByLibrary.simpleMessage("Last Visit"),
@@ -70,6 +75,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "medicalSpecialites":
+            MessageLookupByLibrary.simpleMessage("Medical specialties"),
         "medicineRecord":
             MessageLookupByLibrary.simpleMessage("Medicine Records"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
@@ -91,6 +98,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendOTP": MessageLookupByLibrary.simpleMessage("Resend OTP"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
         "signup": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),

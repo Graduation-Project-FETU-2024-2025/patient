@@ -31,6 +31,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "avaliableAppointments":
+            MessageLookupByLibrary.simpleMessage("المواعيد المتاحة : "),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "chiefComplaint":
             MessageLookupByLibrary.simpleMessage("الشكوى الرئيسية"),
@@ -43,6 +45,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "diagnosis": MessageLookupByLibrary.simpleMessage("التشخيص"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
+        "doctors": MessageLookupByLibrary.simpleMessage("الأطباء"),
         "dontReceiveOTP":
             MessageLookupByLibrary.simpleMessage("لم يتم الاستلام؟"),
         "editProfile":
@@ -63,6 +66,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "gallery": MessageLookupByLibrary.simpleMessage("المعرض"),
         "gender": MessageLookupByLibrary.simpleMessage("النوع"),
         "generalInfo": MessageLookupByLibrary.simpleMessage("المعلومات العامة"),
+        "highlyRecommended": MessageLookupByLibrary.simpleMessage("موصى به "),
         "id": MessageLookupByLibrary.simpleMessage("المعرف"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "lastVisit": MessageLookupByLibrary.simpleMessage("آخر زيارة"),
@@ -72,6 +76,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول إلى حسابك"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
+        "medicalSpecialites":
+            MessageLookupByLibrary.simpleMessage("التخصصات الطبية"),
         "medicineRecord": MessageLookupByLibrary.simpleMessage("سجلات الأدوية"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
@@ -91,6 +97,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "signup": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),

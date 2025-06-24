@@ -370,6 +370,56 @@ class S {
     );
   }
 
+  /// `Medical specialties`
+  String get medicalSpecialites {
+    return Intl.message(
+      'Medical specialties',
+      name: 'medicalSpecialites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See All`
+  String get seeAll {
+    return Intl.message(
+      'See All',
+      name: 'seeAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Highly Recommended`
+  String get highlyRecommended {
+    return Intl.message(
+      'Highly Recommended',
+      name: 'highlyRecommended',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Doctors`
+  String get doctors {
+    return Intl.message(
+      'Doctors',
+      name: 'doctors',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Available Appointments : `
+  String get avaliableAppointments {
+    return Intl.message(
+      'Available Appointments : ',
+      name: 'avaliableAppointments',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `English`
   String get english {
     return Intl.message(
