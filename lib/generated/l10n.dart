@@ -280,6 +280,76 @@ class S {
     );
   }
 
+  /// `Birthday`
+  String get Birthday {
+    return Intl.message(
+      'Birthday',
+      name: 'Birthday',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Male`
+  String get male {
+    return Intl.message(
+      'Male',
+      name: 'male',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Female`
+  String get female {
+    return Intl.message(
+      'Female',
+      name: 'female',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Location`
+  String get location {
+    return Intl.message(
+      'Location',
+      name: 'location',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Sign Up`
+  String get signup {
+    return Intl.message(
+      'Sign Up',
+      name: 'signup',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Please select your gender`
+  String get Pleaseselectyourgender {
+    return Intl.message(
+      'Please select your gender',
+      name: 'Pleaseselectyourgender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create your new account`
+  String get createYourNewAccount {
+    return Intl.message(
+      'Create your new account',
+      name: 'createYourNewAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Something went wrong`
   String get someThingWentWrong {
     return Intl.message(
@@ -335,6 +405,296 @@ class S {
     return Intl.message(
       'Make Appointment',
       name: 'makeAnAppointment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medical specialties`
+  String get medicalSpecialites {
+    return Intl.message(
+      'Medical specialties',
+      name: 'medicalSpecialites',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `See All`
+  String get seeAll {
+    return Intl.message(
+      'See All',
+      name: 'seeAll',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Highly Recommended`
+  String get highlyRecommended {
+    return Intl.message(
+      'Highly Recommended',
+      name: 'highlyRecommended',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Doctors`
+  String get doctors {
+    return Intl.message(
+      'Doctors',
+      name: 'doctors',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Available Appointments : `
+  String get avaliableAppointments {
+    return Intl.message(
+      'Available Appointments : ',
+      name: 'avaliableAppointments',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `English`
+  String get english {
+    return Intl.message(
+      'English',
+      name: 'english',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Arabic`
+  String get arabic {
+    return Intl.message(
+      'Arabic',
+      name: 'arabic',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Language`
+  String get language {
+    return Intl.message(
+      'Language',
+      name: 'language',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Dark Mode`
+  String get darkMode {
+    return Intl.message(
+      'Dark Mode',
+      name: 'darkMode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Logout`
+  String get logout {
+    return Intl.message(
+      'Logout',
+      name: 'logout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Medicine Records`
+  String get medicineRecord {
+    return Intl.message(
+      'Medicine Records',
+      name: 'medicineRecord',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order Log`
+  String get orderLog {
+    return Intl.message(
+      'Order Log',
+      name: 'orderLog',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit Profile`
+  String get editProfile {
+    return Intl.message(
+      'Edit Profile',
+      name: 'editProfile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Gallery`
+  String get gallery {
+    return Intl.message(
+      'Gallery',
+      name: 'gallery',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Camera`
+  String get camera {
+    return Intl.message(
+      'Camera',
+      name: 'camera',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save`
+  String get save {
+    return Intl.message(
+      'Save',
+      name: 'save',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Patient History`
+  String get patientHistory {
+    return Intl.message(
+      'Patient History',
+      name: 'patientHistory',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `General Info`
+  String get generalInfo {
+    return Intl.message(
+      'General Info',
+      name: 'generalInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `gender`
+  String get gender {
+    return Intl.message(
+      'gender',
+      name: 'gender',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Address`
+  String get address {
+    return Intl.message(
+      'Address',
+      name: 'address',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Age`
+  String get age {
+    return Intl.message(
+      'Age',
+      name: 'age',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `ID`
+  String get id {
+    return Intl.message(
+      'ID',
+      name: 'id',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Contact`
+  String get contact {
+    return Intl.message(
+      'Contact',
+      name: 'contact',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone Number`
+  String get phoneNumber {
+    return Intl.message(
+      'Phone Number',
+      name: 'phoneNumber',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Last Visit`
+  String get lastVisit {
+    return Intl.message(
+      'Last Visit',
+      name: 'lastVisit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date of Visit`
+  String get DateOfVisit {
+    return Intl.message(
+      'Date of Visit',
+      name: 'DateOfVisit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Diagnosis`
+  String get diagnosis {
+    return Intl.message(
+      'Diagnosis',
+      name: 'diagnosis',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Chief Complaint`
+  String get chiefComplaint {
+    return Intl.message(
+      'Chief Complaint',
+      name: 'chiefComplaint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Unknown`
+  String get unknown {
+    return Intl.message(
+      'Unknown',
+      name: 'unknown',
       desc: '',
       args: [],
     );

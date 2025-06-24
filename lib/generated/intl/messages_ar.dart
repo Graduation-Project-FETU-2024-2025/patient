@@ -22,17 +22,38 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Birthday": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
+        "DateOfVisit": MessageLookupByLibrary.simpleMessage("تاريخ الزيارة"),
+        "Pleaseselectyourgender":
+            MessageLookupByLibrary.simpleMessage("الرجاء اختيار جنسك"),
         "aboutDoctor": MessageLookupByLibrary.simpleMessage("عن الطبيب"),
+        "address": MessageLookupByLibrary.simpleMessage("العنوان"),
+        "age": MessageLookupByLibrary.simpleMessage("العمر"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "avaliableAppointments":
+            MessageLookupByLibrary.simpleMessage("المواعيد المتاحة : "),
         "bookingPrice": MessageLookupByLibrary.simpleMessage("سعر الحجز"),
+        "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
+        "chiefComplaint":
+            MessageLookupByLibrary.simpleMessage("الشكوى الرئيسية"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "contact": MessageLookupByLibrary.simpleMessage("الاتصال"),
+        "createYourNewAccount":
+            MessageLookupByLibrary.simpleMessage("قم بإنشاء حسابك الجديد"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
+        "diagnosis": MessageLookupByLibrary.simpleMessage("التشخيص"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
+        "doctors": MessageLookupByLibrary.simpleMessage("الأطباء"),
         "dontReceiveOTP":
             MessageLookupByLibrary.simpleMessage("لم يتم الاستلام؟"),
+        "editProfile":
+            MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "enterNewPassword": MessageLookupByLibrary.simpleMessage(
             "أدخل كلمة مرور جديدة لإعادة تعيين كلمة المرور على حسابك. سنطلب منك هذه الكلمة السرية كلما قمت بتسجيل الدخول."),
         "enterOTP":
@@ -41,30 +62,51 @@ class MessageLookup extends MessageLookupByLibrary {
             "أدخل رمز إعادة التعيين المرسل إلى"),
         "enterYourEmail":
             MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
+        "female": MessageLookupByLibrary.simpleMessage("أنثى"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
+        "gallery": MessageLookupByLibrary.simpleMessage("المعرض"),
+        "gender": MessageLookupByLibrary.simpleMessage("النوع"),
+        "generalInfo": MessageLookupByLibrary.simpleMessage("المعلومات العامة"),
+        "highlyRecommended": MessageLookupByLibrary.simpleMessage("موصى به "),
+        "id": MessageLookupByLibrary.simpleMessage("المعرف"),
+        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "lastVisit": MessageLookupByLibrary.simpleMessage("آخر زيارة"),
+        "location": MessageLookupByLibrary.simpleMessage("الموقع"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول إلى حسابك"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "makeAnAppointment":
             MessageLookupByLibrary.simpleMessage("احجز موعدًا"),
+        "male": MessageLookupByLibrary.simpleMessage("ذكر"),
+        "medicalSpecialites":
+            MessageLookupByLibrary.simpleMessage("التخصصات الطبية"),
+        "medicineRecord": MessageLookupByLibrary.simpleMessage("سجلات الأدوية"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
         "onboarding": MessageLookupByLibrary.simpleMessage("كل الخدمات لصحتك"),
+        "orderLog": MessageLookupByLibrary.simpleMessage("سجل الطلبات"),
         "otpSent": MessageLookupByLibrary.simpleMessage(
             "تم إرسال رمز إعادة التعيين بنجاح"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordResetSuccess": MessageLookupByLibrary.simpleMessage(
             "تم إعادة تعيين كلمة المرور بنجاح"),
+        "patientHistory": MessageLookupByLibrary.simpleMessage("تاريخ المريض"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "register": MessageLookupByLibrary.simpleMessage("تسجيل"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
+        "signup": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "specialities": MessageLookupByLibrary.simpleMessage("التخصصات"),
+        "unknown": MessageLookupByLibrary.simpleMessage("غير معروف"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحبا بعودتك!")
       };
 }
