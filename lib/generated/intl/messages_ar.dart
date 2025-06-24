@@ -33,6 +33,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "هل لديك حساب بالفعل؟",
     ),
+    "appointmentRequest": MessageLookupByLibrary.simpleMessage("حجز موعد"),
     "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
     "avaliableAppointments": MessageLookupByLibrary.simpleMessage(
       "المواعيد المتاحة : ",
@@ -102,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordResetSuccess": MessageLookupByLibrary.simpleMessage(
       "تم إعادة تعيين كلمة المرور بنجاح",
     ),
+    "patientComment": MessageLookupByLibrary.simpleMessage("تعليق"),
     "patientHistory": MessageLookupByLibrary.simpleMessage("تاريخ المريض"),
     "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),

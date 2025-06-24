@@ -64,7 +64,9 @@
         "diagnosis":"التشخيص",
         "chiefComplaint":"الشكوى الرئيسية",
         "unknown":"غير معروف",
-        "today": "اليوم"
+        "today": "اليوم",
+        "appointmentRequest": "حجز موعد",
+        "patientComment": "تعليق"
 
 
 }

@@ -544,6 +544,21 @@ class S {
   String get today {
     return Intl.message('Today', name: 'today', desc: '', args: []);
   }
+
+  /// `Appointment Request`
+  String get appointmentRequest {
+    return Intl.message(
+      'Appointment Request',
+      name: 'appointmentRequest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Comment`
+  String get patientComment {
+    return Intl.message('Comment', name: 'patientComment', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

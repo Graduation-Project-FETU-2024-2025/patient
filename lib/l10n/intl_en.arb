@@ -64,5 +64,7 @@
         "diagnosis":"Diagnosis",
         "chiefComplaint":"Chief Complaint",
         "unknown":"Unknown",
-        "today": "Today"
+        "today": "Today",
+        "appointmentRequest": "Appointment Request",
+        "patientComment": "Comment"
 }

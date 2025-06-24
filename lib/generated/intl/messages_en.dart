@@ -33,6 +33,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
       "Already have an account?",
     ),
+    "appointmentRequest": MessageLookupByLibrary.simpleMessage(
+      "Appointment Request",
+    ),
     "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
     "avaliableAppointments": MessageLookupByLibrary.simpleMessage(
       "Available Appointments : ",
@@ -100,6 +103,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "passwordResetSuccess": MessageLookupByLibrary.simpleMessage(
       "Password reset successfully",
     ),
+    "patientComment": MessageLookupByLibrary.simpleMessage("Comment"),
     "patientHistory": MessageLookupByLibrary.simpleMessage("Patient History"),
     "phone": MessageLookupByLibrary.simpleMessage("Phone"),
     "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
