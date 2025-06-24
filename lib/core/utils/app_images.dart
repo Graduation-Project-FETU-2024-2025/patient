@@ -125,4 +125,9 @@ class AppImages {
   /// Assets for imagesProfile
   /// assets/images/profile.png
   static const String imagesProfile = "assets/images/profile.png";
+
+
+  /// Assets for imagesMedicin
+  /// assets/images/medicin.png
+  static const String imagesMedicin = "assets/images/medicin.png";
 }
