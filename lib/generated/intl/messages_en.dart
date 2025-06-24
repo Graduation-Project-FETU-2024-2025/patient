@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "DateOfVisit": MessageLookupByLibrary.simpleMessage("Date of Visit"),
         "Pleaseselectyourgender":
             MessageLookupByLibrary.simpleMessage("Please select your gender"),
+        "aboutDoctor": MessageLookupByLibrary.simpleMessage("About Doctor"),
         "address": MessageLookupByLibrary.simpleMessage("Address"),
         "age": MessageLookupByLibrary.simpleMessage("Age"),
         "alreadyHaveAnAccount":
@@ -33,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
         "avaliableAppointments":
             MessageLookupByLibrary.simpleMessage("Available Appointments : "),
+        "bookingPrice": MessageLookupByLibrary.simpleMessage("Booking Price"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "chiefComplaint":
             MessageLookupByLibrary.simpleMessage("Chief Complaint"),
@@ -74,6 +76,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "makeAnAppointment":
+            MessageLookupByLibrary.simpleMessage("Make Appointment"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
         "medicalSpecialites":
             MessageLookupByLibrary.simpleMessage("Medical specialties"),
@@ -102,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "signup": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
+        "specialities": MessageLookupByLibrary.simpleMessage("Specialities"),
         "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!")
       };

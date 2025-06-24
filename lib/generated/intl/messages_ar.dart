@@ -26,6 +26,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "DateOfVisit": MessageLookupByLibrary.simpleMessage("تاريخ الزيارة"),
         "Pleaseselectyourgender":
             MessageLookupByLibrary.simpleMessage("الرجاء اختيار جنسك"),
+        "aboutDoctor": MessageLookupByLibrary.simpleMessage("عن الطبيب"),
         "address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "age": MessageLookupByLibrary.simpleMessage("العمر"),
         "alreadyHaveAnAccount":
@@ -33,6 +34,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
         "avaliableAppointments":
             MessageLookupByLibrary.simpleMessage("المواعيد المتاحة : "),
+        "bookingPrice": MessageLookupByLibrary.simpleMessage("سعر الحجز"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "chiefComplaint":
             MessageLookupByLibrary.simpleMessage("الشكوى الرئيسية"),
@@ -75,6 +77,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول إلى حسابك"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+        "makeAnAppointment":
+            MessageLookupByLibrary.simpleMessage("احجز موعدًا"),
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "medicalSpecialites":
             MessageLookupByLibrary.simpleMessage("التخصصات الطبية"),
@@ -101,6 +105,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "signup": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
+        "specialities": MessageLookupByLibrary.simpleMessage("التخصصات"),
         "unknown": MessageLookupByLibrary.simpleMessage("غير معروف"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحبا بعودتك!")
       };

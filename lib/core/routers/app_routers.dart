@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:patient_app/core/routers/routing.dart';
 import 'package:patient_app/core/services/get_it.dart';
+import 'package:patient_app/features/all_Specialities/presentation/views/all_specialities_view.dart';
+import 'package:patient_app/features/doctor_details/presentation/views/doctor_details_view.dart';
 import 'package:patient_app/features/all_doctors/presentation/views/all_doctors.dart';
 import 'package:patient_app/features/edit_profile/data/repo/edit_profile_repo.dart';
 import 'package:patient_app/features/edit_profile/presentation/view/edit_profile_view.dart';
@@ -61,6 +63,11 @@ class AppRouters {
           create: (context) => SignUpCubit(getIt<SignUpRepo>()),
           child: const SignUpView(),
         ));
+      case Routing.doctorDetailsView:
+        return _buildRoute(const DoctorDetailsView());
+      case Routing.allSpecialitiesView:
+        return _buildRoute(const AllSpecialitiesView());
+        
       case Routing.homeView:
         return _buildRoute(const HomeView());
       case Routing.allDoctorsView:
