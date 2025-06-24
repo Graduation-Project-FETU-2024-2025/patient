@@ -22,7 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Birthday": MessageLookupByLibrary.simpleMessage("Birthday"),
         "DateOfVisit": MessageLookupByLibrary.simpleMessage("Date of Visit"),
+        "Pleaseselectyourgender":
+            MessageLookupByLibrary.simpleMessage("Please select your gender"),
         "address": MessageLookupByLibrary.simpleMessage("Address"),
         "age": MessageLookupByLibrary.simpleMessage("Age"),
         "alreadyHaveAnAccount":
@@ -34,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "contact": MessageLookupByLibrary.simpleMessage("Contact"),
+        "createYourNewAccount":
+            MessageLookupByLibrary.simpleMessage("Create your new account"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
         "diagnosis": MessageLookupByLibrary.simpleMessage("Diagnosis"),
         "doNotHaveAnAccount":
@@ -50,6 +55,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter OTP sent to"),
         "enterYourEmail":
             MessageLookupByLibrary.simpleMessage("Enter your email"),
+        "female": MessageLookupByLibrary.simpleMessage("Female"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
@@ -58,10 +64,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "id": MessageLookupByLibrary.simpleMessage("ID"),
         "language": MessageLookupByLibrary.simpleMessage("Language"),
         "lastVisit": MessageLookupByLibrary.simpleMessage("Last Visit"),
+        "location": MessageLookupByLibrary.simpleMessage("Location"),
         "login": MessageLookupByLibrary.simpleMessage("Login"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("Login to your account"),
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "male": MessageLookupByLibrary.simpleMessage("Male"),
         "medicineRecord":
             MessageLookupByLibrary.simpleMessage("Medicine Records"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
@@ -83,6 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendOTP": MessageLookupByLibrary.simpleMessage("Resend OTP"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "signup": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),

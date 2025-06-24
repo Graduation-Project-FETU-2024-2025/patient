@@ -23,6 +23,9 @@ import 'package:patient_app/features/profile/data/models/user_model.dart';
 import 'package:patient_app/features/sign_in/data/repository/sign_in_repo.dart';
 import 'package:patient_app/features/sign_in/presentation/view/sign_in_view.dart';
 import 'package:patient_app/features/sign_in/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
+import 'package:patient_app/features/sign_up/data/repos/sign_up_repo.dart';
+import 'package:patient_app/features/sign_up/presentation/view_models/sign_up/sign_up_cubit.dart';
+import 'package:patient_app/features/sign_up/presentation/views/sign_up_view.dart';
 import 'package:patient_app/features/splash/presentation/view/splash_view.dart';
 
 class AppRouters {
@@ -52,7 +55,10 @@ class AppRouters {
           ),
         );
       case Routing.signUp:
-        return _buildRoute(const Scaffold());
+        return _buildRoute(BlocProvider(
+          create: (context) => SignUpCubit(getIt<SignUpRepo>()),
+          child: const SignUpView(),
+        ));
       case Routing.medicalRecords:
         return _buildRoute(BlocProvider(
           create: (context) => MedicalRecordsCubit(getIt<MedicalRecordsRepo>())

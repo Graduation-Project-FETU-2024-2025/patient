@@ -22,7 +22,10 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "Birthday": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
         "DateOfVisit": MessageLookupByLibrary.simpleMessage("تاريخ الزيارة"),
+        "Pleaseselectyourgender":
+            MessageLookupByLibrary.simpleMessage("الرجاء اختيار جنسك"),
         "address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "age": MessageLookupByLibrary.simpleMessage("العمر"),
         "alreadyHaveAnAccount":
@@ -34,6 +37,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
         "contact": MessageLookupByLibrary.simpleMessage("الاتصال"),
+        "createYourNewAccount":
+            MessageLookupByLibrary.simpleMessage("قم بإنشاء حسابك الجديد"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
         "diagnosis": MessageLookupByLibrary.simpleMessage("التشخيص"),
         "doNotHaveAnAccount":
@@ -52,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
             "أدخل رمز إعادة التعيين المرسل إلى"),
         "enterYourEmail":
             MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
+        "female": MessageLookupByLibrary.simpleMessage("أنثى"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "gallery": MessageLookupByLibrary.simpleMessage("المعرض"),
@@ -60,10 +66,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "id": MessageLookupByLibrary.simpleMessage("المعرف"),
         "language": MessageLookupByLibrary.simpleMessage("اللغة"),
         "lastVisit": MessageLookupByLibrary.simpleMessage("آخر زيارة"),
+        "location": MessageLookupByLibrary.simpleMessage("الموقع"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول إلى حسابك"),
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
+        "male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "medicineRecord": MessageLookupByLibrary.simpleMessage("سجلات الأدوية"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
@@ -83,6 +91,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "signup": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "unknown": MessageLookupByLibrary.simpleMessage("غير معروف"),
