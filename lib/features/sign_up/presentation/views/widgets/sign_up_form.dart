@@ -44,7 +44,7 @@ class SignUpForm extends StatelessWidget {
                   child: cubit.pickedImage != null
                       ? null
                       : SvgPicture.asset(
-                          AppIcons.svgscamera,
+                          AppIcons.svgsCamera,
                           width: 30.w,
                           height: 30.h,
                         ),
