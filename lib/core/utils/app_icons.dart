@@ -51,6 +51,10 @@ class AppIcons {
   /// assets/svgs/theme.svg
   static const String svgsTheme = "assets/svgs/theme.svg";
 
+  /// Assets for svgsCamera
+  /// assets/svgs/camera.svg
+  static const String svgsCamera = "assets/svgs/camera.svg";
+
   /// Assets for svgsIconamooarrowUp
   /// assets/svgs/iconamooarrow_up.svg
   static const String svgsIconamooarrowUp = "assets/svgs/iconamooarrow_up.svg";

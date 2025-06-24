@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_icons.dart';
 import 'package:patient_app/generated/l10n.dart';
 import '../helpers/extentions.dart';
@@ -71,6 +72,10 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onTapOutside: (event) {
+        FocusScope.of(context).unfocus();
+      },
+      cursorColor: AppColors.primaryColor,
       controller: widget.controller,
       keyboardType: widget.keyboardType,
       obscureText: widget.obscureText,
