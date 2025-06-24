@@ -58,4 +58,8 @@ class AppIcons {
   /// Assets for svgsIconamooarrowUp
   /// assets/svgs/iconamooarrow_up.svg
   static const String svgsIconamooarrowUp = "assets/svgs/iconamooarrow_up.svg";
+
+  /// Assets for svgsIconClock
+  /// assets/svgs/clock.svg
+  static const String svgsIconClock = "assets/svgs/clock.svg";
 }

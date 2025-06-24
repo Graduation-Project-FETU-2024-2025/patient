@@ -130,4 +130,12 @@ class AppImages {
   /// Assets for imagesMedicin
   /// assets/images/medicin.png
   static const String imagesMedicin = "assets/images/medicin.png";
+
+  /// Assets for imageNoAppointment
+  /// assets/images/no_appointments.png
+  static const String imageNoAppointment = "assets/images/no_appointments.png";
+
+  /// Assets for imagesAvatar
+  /// assets/images/avatar.png
+  static const String imagesAvatar = "assets/images/avatar.png";
 }

@@ -63,5 +63,6 @@
         "DateOfVisit":"Date of Visit",
         "diagnosis":"Diagnosis",
         "chiefComplaint":"Chief Complaint",
-        "unknown":"Unknown"
+        "unknown":"Unknown",
+        "today": "Today"
 }
