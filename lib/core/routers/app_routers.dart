@@ -23,6 +23,7 @@ import 'package:patient_app/features/medical_records/data/repository/medical_rec
 import 'package:patient_app/features/medical_records/presentation/view/medical_records_view.dart';
 import 'package:patient_app/features/medical_records/presentation/view_model/medical_records_cubit/medical_records_cubit.dart';
 import 'package:patient_app/features/onboarding/presentation/view/onboarding_view.dart';
+import 'package:patient_app/features/orders_log/presentation/view/orders_log_view.dart';
 import 'package:patient_app/features/profile/data/models/user_model.dart';
 import 'package:patient_app/features/sign_in/data/repository/sign_in_repo.dart';
 import 'package:patient_app/features/sign_in/presentation/view/sign_in_view.dart';
@@ -43,6 +44,10 @@ class AppRouters {
       case Routing.onboarding:
         return _buildRoute(
           const OnboardingView(),
+        );
+      case Routing.ordersLog:
+        return _buildRoute(
+          const OrdersLogView(),
         );
       case Routing.signIn:
         return _buildRoute(

@@ -17,7 +17,7 @@ class HomeViewBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          HomeAppBar(),
+         const HomeAppBar(),
           Gap(20.h),
           Padding(
             padding: EdgeInsets.symmetric(

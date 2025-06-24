@@ -1,6 +1,11 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:patient_app/core/database/cache/cache_keys.dart';
+import 'package:patient_app/core/database/cache/cashe_helper.dart';
+import 'package:patient_app/core/functions/is_network_image.dart';
+import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
@@ -27,11 +32,18 @@ class HomeAppBar extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 20.r,
-              backgroundImage: AssetImage(AppImages.imagesResetPassword),
+              backgroundImage: isNetworkImage(getIt<CacheHelper>()
+                          .getString(key: CacheKeys.profileImage)) &&
+                      getIt<CacheHelper>()
+                              .getString(key: CacheKeys.profileImage) !=
+                          null
+                  ? CachedNetworkImageProvider(getIt<CacheHelper>()
+                      .getString(key: CacheKeys.profileImage)!)
+                  : const AssetImage(AppImages.imagesPersonAvatar),
             ),
             const Gap(10),
             Text(
-              'Hi, Khaled!',
+              'Hi, ${getIt<CacheHelper>().getString(key: CacheKeys.username)}!',
               style: AppStyles.semiBold20(context).copyWith(
                 color: Theme.of(context).brightness == Brightness.light
                     ? AppColors.white
