@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-import 'package:patient_app/core/helpers/extentions.dart';
-import 'package:patient_app/core/routers/routing.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
-import 'package:patient_app/core/widgets/custom_button.dart';
 import 'package:patient_app/features/forget_password/presentation/view/widgets/havent_recive_otp.dart';
 import 'package:patient_app/features/forget_password/presentation/view/widgets/otp_digits_section.dart';
+import 'package:patient_app/features/forget_password/presentation/view/widgets/verify_otp_button_bloc_consumer.dart';
 import 'package:patient_app/generated/l10n.dart';
 
 class OtpBody extends StatelessWidget {
@@ -41,11 +39,7 @@ class OtpBody extends StatelessWidget {
           Gap(20.h),
           const OTPDigitsSection(),
           Gap(20.h),
-          CustomButton(
-              onPressed: () {
-                context.pushNamed(Routing.restPassword);
-              },
-              text: S.of(context).next),
+           VerifyOTPButtonBlocConsumer(email: email,),
           Gap(20.h),
           const HaventReciveOTP(),
         ],
@@ -53,3 +47,4 @@ class OtpBody extends StatelessWidget {
     );
   }
 }
+

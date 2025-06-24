@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:patient_app/features/forget_password/view_model/otp_cubit/otp_state.dart';
-class OtpCubit extends Cubit<OtpState> {
-  OtpCubit() : super(OtpInitial());
+import 'package:patient_app/features/forget_password/data/repository/forget_password_repo.dart';
+import 'package:patient_app/features/forget_password/presentation/view_model/otp_cubit/otp_state.dart';
 
+class OtpCubit extends Cubit<OtpState> {
+  OtpCubit(this._forgetPasswordRepo) : super(OtpInitial());
+  final ForgetPasswordRepo _forgetPasswordRepo;
   static OtpCubit get(context) => BlocProvider.of<OtpCubit>(context);
   static final int _numberOTP = 4;
   List<TextEditingController> otpControllers =
@@ -11,20 +13,18 @@ class OtpCubit extends Cubit<OtpState> {
 
   List<FocusNode> otpFocusNodes =
       List.generate(_numberOTP, (index) => FocusNode());
-  // void submitOtp(String email) async {
-  //   emit(OtpCheckLoading());
-  //   String otp = '';
-  //   for (var element in otpControllers) {
-  //     otp += element.text;
-  //   }
-  //   final result = await _authRepo
-  //       .verifyOTP(OtpSignInRequestModel(email: email, otp: otp));
-  //   result.fold(
-  //     (apiErrorModel) => emit(OtpCheckFailure(apiErrorModel: apiErrorModel)),
-  //     (r) => emit(OtpCheckSuccess()),
-  //   );
-  // }
-
+  void submitOtp(String email) async {
+    emit(OtpCheckLoading());
+    String otp = '';
+    for (var element in otpControllers) {
+      otp += element.text;
+    }
+    final result = await _forgetPasswordRepo.verifyOTP(email, otp);
+    result.fold(
+      (apiErrorModel) => emit(OtpCheckFailure(apiErrorModel: apiErrorModel)),
+      (r) => emit(OtpCheckSuccess()),
+    );
+  }
 
   //   void resendOTP(String email) async {
   //   emit(ResendOTPLoading());

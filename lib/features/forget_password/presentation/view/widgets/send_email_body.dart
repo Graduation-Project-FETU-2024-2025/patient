@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
-import 'package:patient_app/core/helpers/extentions.dart';
-import 'package:patient_app/core/routers/routing.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
-import 'package:patient_app/core/widgets/custom_button.dart';
 import 'package:patient_app/core/widgets/custom_text_form_field.dart';
-import 'package:patient_app/features/forget_password/view_model/send_otp_cubit/send_otp_cubit.dart';
+import 'package:patient_app/features/forget_password/presentation/view/widgets/send_otp_button_bloc_consumer.dart';
+import 'package:patient_app/features/forget_password/presentation/view_model/send_otp_cubit/send_otp_cubit.dart';
 import 'package:patient_app/generated/l10n.dart';
 
 class SendEmailBody extends StatelessWidget {
@@ -47,22 +45,10 @@ class SendEmailBody extends StatelessWidget {
             ),
           ),
           Gap(40.h),
-          CustomButton(
-              onPressed: () {
-                if (context
-                    .read<SendOtpCubit>()
-                    .formKey
-                    .currentState!
-                    .validate()) {
-                  context.pushNamed(
-                    Routing.forgetPassword,
-                    argument: context.read<SendOtpCubit>().emailController.text,
-                  );
-                }
-              },
-              text: S.of(context).next),
+          const SendOTPButtonBlocConsumer(),
         ],
       ),
     );
   }
 }
+

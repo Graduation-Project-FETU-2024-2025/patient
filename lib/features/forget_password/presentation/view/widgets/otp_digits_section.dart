@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:patient_app/features/forget_password/presentation/view/widgets/otp_text_form_filed.dart';
-import 'package:patient_app/features/forget_password/view_model/otp_cubit/otp_cubit.dart';
+import 'package:patient_app/features/forget_password/presentation/view_model/otp_cubit/otp_cubit.dart';
 class OTPDigitsSection extends StatelessWidget {
   const OTPDigitsSection({
     super.key,

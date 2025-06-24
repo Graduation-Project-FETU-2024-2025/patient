@@ -23,19 +23,32 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "Birthday": MessageLookupByLibrary.simpleMessage("تاريخ الميلاد"),
+        "DateOfVisit": MessageLookupByLibrary.simpleMessage("تاريخ الزيارة"),
         "Pleaseselectyourgender":
             MessageLookupByLibrary.simpleMessage("الرجاء اختيار جنسك"),
+        "address": MessageLookupByLibrary.simpleMessage("العنوان"),
+        "age": MessageLookupByLibrary.simpleMessage("العمر"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
+        "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
+        "chiefComplaint":
+            MessageLookupByLibrary.simpleMessage("الشكوى الرئيسية"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "contact": MessageLookupByLibrary.simpleMessage("الاتصال"),
         "createYourNewAccount":
             MessageLookupByLibrary.simpleMessage("قم بإنشاء حسابك الجديد"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
+        "diagnosis": MessageLookupByLibrary.simpleMessage("التشخيص"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
         "dontReceiveOTP":
             MessageLookupByLibrary.simpleMessage("لم يتم الاستلام؟"),
+        "editProfile":
+            MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "english": MessageLookupByLibrary.simpleMessage("الإنجليزية"),
         "enterNewPassword": MessageLookupByLibrary.simpleMessage(
             "أدخل كلمة مرور جديدة لإعادة تعيين كلمة المرور على حسابك. سنطلب منك هذه الكلمة السرية كلما قمت بتسجيل الدخول."),
         "enterOTP":
@@ -47,26 +60,41 @@ class MessageLookup extends MessageLookupByLibrary {
         "female": MessageLookupByLibrary.simpleMessage("أنثى"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
-        "gender": MessageLookupByLibrary.simpleMessage("الجنس"),
-        "id": MessageLookupByLibrary.simpleMessage("الاى دى"),
+        "gallery": MessageLookupByLibrary.simpleMessage("المعرض"),
+        "gender": MessageLookupByLibrary.simpleMessage("النوع"),
+        "generalInfo": MessageLookupByLibrary.simpleMessage("المعلومات العامة"),
+        "id": MessageLookupByLibrary.simpleMessage("المعرف"),
+        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "lastVisit": MessageLookupByLibrary.simpleMessage("آخر زيارة"),
         "location": MessageLookupByLibrary.simpleMessage("الموقع"),
         "login": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "loginToYourAccount":
             MessageLookupByLibrary.simpleMessage("قم بتسجيل الدخول إلى حسابك"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
+        "medicineRecord": MessageLookupByLibrary.simpleMessage("سجلات الأدوية"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
         "onboarding": MessageLookupByLibrary.simpleMessage("كل الخدمات لصحتك"),
+        "orderLog": MessageLookupByLibrary.simpleMessage("سجل الطلبات"),
         "otpSent": MessageLookupByLibrary.simpleMessage(
             "تم إرسال رمز إعادة التعيين بنجاح"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "passwordResetSuccess": MessageLookupByLibrary.simpleMessage(
+            "تم إعادة تعيين كلمة المرور بنجاح"),
+        "patientHistory": MessageLookupByLibrary.simpleMessage("تاريخ المريض"),
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "register": MessageLookupByLibrary.simpleMessage("تسجيل"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
+        "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "signup": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+        "someThingWentWrong":
+            MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
+        "unknown": MessageLookupByLibrary.simpleMessage("غير معروف"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحبا بعودتك!")
       };
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:patient_app/features/forget_password/view_model/otp_cubit/otp_cubit.dart';
+import 'package:patient_app/features/forget_password/presentation/view_model/otp_cubit/otp_cubit.dart';
 
 class OtpTextFromFiled extends StatelessWidget {
   const OtpTextFromFiled({

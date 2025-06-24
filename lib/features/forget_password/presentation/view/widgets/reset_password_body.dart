@@ -4,13 +4,13 @@ import 'package:gap/gap.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
-import 'package:patient_app/core/widgets/custom_button.dart';
-import 'package:patient_app/core/widgets/custom_text_form_field.dart';
+import 'package:patient_app/features/forget_password/presentation/view/widgets/change_password_button_bloc_consumer.dart';
+import 'package:patient_app/features/forget_password/presentation/view/widgets/reset_password_form.dart';
 import 'package:patient_app/generated/l10n.dart';
 
 class ResetPasswordBody extends StatelessWidget {
-  const ResetPasswordBody({super.key});
-
+  const ResetPasswordBody({super.key, required this.email});
+  final String email;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -34,49 +34,13 @@ class ResetPasswordBody extends StatelessWidget {
             ),
           ),
           Gap(20.h),
-          CustomTextFormField(
-            hintText: S.of(context).newPassword,
-            obscureText: true,
-            keyboardType: TextInputType.visiblePassword,
-            prefixIcon: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                AppImages.imagesPassword,
-                height: 28.h,
-              ),
-            ),
-            suffixIcon: IconButton(
-              onPressed: () {},
-              icon: Image.asset(
-                AppImages.imagesUnvisable,
-                height: 28.h,
-              ),
-            ),
-          ),
+          const ResetPasswordForm(),
           Gap(20.h),
-          CustomTextFormField(
-            hintText: S.of(context).confirmPassword,
-            obscureText: true,
-            keyboardType: TextInputType.visiblePassword,
-            prefixIcon: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                AppImages.imagesPassword,
-                height: 28.h,
-              ),
-            ),
-            suffixIcon: IconButton(
-              onPressed: () {},
-              icon: Image.asset(
-                AppImages.imagesUnvisable,
-                height: 28.h,
-              ),
-            ),
-          ),
-          Gap(20.h),
-          CustomButton(onPressed: () {}, text: S.of(context).resetPassword),
+          ChangePasswordButtonBlocConsumer(email: email,),
         ],
       ),
     );
   }
 }
+
+
