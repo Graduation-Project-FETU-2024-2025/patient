@@ -62,4 +62,8 @@ class AppIcons {
   /// Assets for svgsIconClock
   /// assets/svgs/clock.svg
   static const String svgsIconClock = "assets/svgs/clock.svg";
+
+  /// Assets for svgsIconAttachment
+  /// assets/svgs/attachment.svg
+  static const String svgsIconAttachment = "assets/svgs/attachment.svg";
 }
