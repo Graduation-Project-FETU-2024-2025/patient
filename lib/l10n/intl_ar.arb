@@ -63,7 +63,8 @@
         "DateOfVisit":"تاريخ الزيارة",
         "diagnosis":"التشخيص",
         "chiefComplaint":"الشكوى الرئيسية",
-        "unknown":"غير معروف"
+        "unknown":"غير معروف",
+        "today": "اليوم"
 
 
 }
