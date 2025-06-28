@@ -46,9 +46,9 @@ class MedicalRecordSuccessBody extends StatelessWidget {
             Gap(15.h),
             MedicalInfoGrid(
               medicalInfo: {
-                S.of(context).gender: medicalRecordsModel?.gender ?? "Male",
+                S.of(context).gender: medicalRecordsModel?.gender,
                 S.of(context).address: "123 Main St, City, Country",
-                S.of(context).age: medicalRecordsModel?.age.toString() ?? "30",
+                S.of(context).age: medicalRecordsModel?.age.toString(),
               },
             ),
             Gap(30.h),
@@ -59,10 +59,8 @@ class MedicalRecordSuccessBody extends StatelessWidget {
             Gap(15.h),
             MedicalInfoGrid(
               medicalInfo: {
-                S.of(context).phoneNumber:
-                    medicalRecordsModel?.phoneNumber ?? "+1234567890",
-                S.of(context).email:
-                    medicalRecordsModel?.email ?? "khaled@gmail.com",
+                S.of(context).phoneNumber: medicalRecordsModel?.phoneNumber,
+                S.of(context).email: medicalRecordsModel?.email,
               },
             ),
             Gap(30.h),
@@ -76,15 +74,11 @@ class MedicalRecordSuccessBody extends StatelessWidget {
             MedicalInfoGrid(
               medicalInfo: {
                 S.of(context).DateOfVisit:
-                    medicalRecordsModel?.appointmentModel.date ?? "2023-10-01",
+                    medicalRecordsModel?.appointmentModel?.date ?? '',
                 S.of(context).diagnosis: medicalRecordsModel
-                        ?.appointmentModel.prescription.diagnosis ??
-                    "Flu-like symptoms",
+                    ?.appointmentModel?.prescription?.diagnosis ?? '',
                 S.of(context).chiefComplaint: medicalRecordsModel
-                        ?.appointmentModel
-                        .prescription
-                        .prescriptionProductDTOs ??
-                    "Fever and cough fjodfdksfjk fkldkf;lsdjf fdjlfdlkfjsdif fkd;lfjsdljfsdofj fpdkfposdjfiosdjf fkpdojfposdjf pdofjsdojf",
+                    ?.appointmentModel?.prescription?.prescriptionProductDTOs ?? '',
               },
             ),
           ],

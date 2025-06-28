@@ -22,103 +22,96 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
-    "Birthday": MessageLookupByLibrary.simpleMessage("Birthday"),
-    "DateOfVisit": MessageLookupByLibrary.simpleMessage("Date of Visit"),
-    "Pleaseselectyourgender": MessageLookupByLibrary.simpleMessage(
-      "Please select your gender",
-    ),
-    "aboutDoctor": MessageLookupByLibrary.simpleMessage("About Doctor"),
-    "address": MessageLookupByLibrary.simpleMessage("Address"),
-    "age": MessageLookupByLibrary.simpleMessage("Age"),
-    "alreadyHaveAnAccount": MessageLookupByLibrary.simpleMessage(
-      "Already have an account?",
-    ),
-    "appointmentRequest": MessageLookupByLibrary.simpleMessage(
-      "Appointment Request",
-    ),
-    "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
-    "avaliableAppointments": MessageLookupByLibrary.simpleMessage(
-      "Available Appointments : ",
-    ),
-    "bookingPrice": MessageLookupByLibrary.simpleMessage("Booking Price"),
-    "camera": MessageLookupByLibrary.simpleMessage("Camera"),
-    "chiefComplaint": MessageLookupByLibrary.simpleMessage("Chief Complaint"),
-    "confirmPassword": MessageLookupByLibrary.simpleMessage("Confirm Password"),
-    "contact": MessageLookupByLibrary.simpleMessage("Contact"),
-    "createYourNewAccount": MessageLookupByLibrary.simpleMessage(
-      "Create your new account",
-    ),
-    "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
-    "diagnosis": MessageLookupByLibrary.simpleMessage("Diagnosis"),
-    "doNotHaveAnAccount": MessageLookupByLibrary.simpleMessage(
-      "Don\'t have an account?",
-    ),
-    "doctors": MessageLookupByLibrary.simpleMessage("Doctors"),
-    "dontReceiveOTP": MessageLookupByLibrary.simpleMessage(
-      "Didn\'t receive OTP?",
-    ),
-    "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
-    "email": MessageLookupByLibrary.simpleMessage("Email"),
-    "english": MessageLookupByLibrary.simpleMessage("English"),
-    "enterNewPassword": MessageLookupByLibrary.simpleMessage(
-      "Enter a new password to reset the password on your account. We\'ll ask for this password whenever you log in.",
-    ),
-    "enterOTP": MessageLookupByLibrary.simpleMessage("Enter OTP"),
-    "enterOTPSentTo": MessageLookupByLibrary.simpleMessage("Enter OTP sent to"),
-    "enterYourEmail": MessageLookupByLibrary.simpleMessage("Enter your email"),
-    "female": MessageLookupByLibrary.simpleMessage("Female"),
-    "forgotPassword": MessageLookupByLibrary.simpleMessage("Forgot Password?"),
-    "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
-    "gender": MessageLookupByLibrary.simpleMessage("gender"),
-    "generalInfo": MessageLookupByLibrary.simpleMessage("General Info"),
-    "highlyRecommended": MessageLookupByLibrary.simpleMessage(
-      "Highly Recommended",
-    ),
-    "id": MessageLookupByLibrary.simpleMessage("ID"),
-    "language": MessageLookupByLibrary.simpleMessage("Language"),
-    "lastVisit": MessageLookupByLibrary.simpleMessage("Last Visit"),
-    "location": MessageLookupByLibrary.simpleMessage("Location"),
-    "login": MessageLookupByLibrary.simpleMessage("Login"),
-    "loginToYourAccount": MessageLookupByLibrary.simpleMessage(
-      "Login to your account",
-    ),
-    "logout": MessageLookupByLibrary.simpleMessage("Logout"),
-    "makeAnAppointment": MessageLookupByLibrary.simpleMessage(
-      "Make Appointment",
-    ),
-    "male": MessageLookupByLibrary.simpleMessage("Male"),
-    "medicalSpecialites": MessageLookupByLibrary.simpleMessage(
-      "Medical specialties",
-    ),
-    "medicineRecord": MessageLookupByLibrary.simpleMessage("Medicine Records"),
-    "name": MessageLookupByLibrary.simpleMessage("Name"),
-    "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
-    "next": MessageLookupByLibrary.simpleMessage("Next"),
-    "onboarding": MessageLookupByLibrary.simpleMessage(
-      "All Services for your health",
-    ),
-    "orderLog": MessageLookupByLibrary.simpleMessage("Order Log"),
-    "otpSent": MessageLookupByLibrary.simpleMessage("OTP sent successfully"),
-    "password": MessageLookupByLibrary.simpleMessage("Password"),
-    "passwordResetSuccess": MessageLookupByLibrary.simpleMessage(
-      "Password reset successfully",
-    ),
-    "patientComment": MessageLookupByLibrary.simpleMessage("Comment"),
-    "patientHistory": MessageLookupByLibrary.simpleMessage("Patient History"),
-    "phone": MessageLookupByLibrary.simpleMessage("Phone"),
-    "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
-    "register": MessageLookupByLibrary.simpleMessage("Register"),
-    "resendOTP": MessageLookupByLibrary.simpleMessage("Resend OTP"),
-    "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
-    "save": MessageLookupByLibrary.simpleMessage("Save"),
-    "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
-    "signup": MessageLookupByLibrary.simpleMessage("Sign Up"),
-    "someThingWentWrong": MessageLookupByLibrary.simpleMessage(
-      "Something went wrong",
-    ),
-    "specialities": MessageLookupByLibrary.simpleMessage("Specialities"),
-    "today": MessageLookupByLibrary.simpleMessage("Today"),
-    "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
-    "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
-  };
+        "Birthday": MessageLookupByLibrary.simpleMessage("Birthday"),
+        "DateOfVisit": MessageLookupByLibrary.simpleMessage("Date of Visit"),
+        "Pleaseselectyourgender":
+            MessageLookupByLibrary.simpleMessage("Please select your gender"),
+        "aboutDoctor": MessageLookupByLibrary.simpleMessage("About Doctor"),
+        "address": MessageLookupByLibrary.simpleMessage("Address"),
+        "age": MessageLookupByLibrary.simpleMessage("Age"),
+        "alreadyHaveAnAccount":
+            MessageLookupByLibrary.simpleMessage("Already have an account?"),
+        "appointmentRequest":
+            MessageLookupByLibrary.simpleMessage("Appointment Request"),
+        "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "avaliableAppointments":
+            MessageLookupByLibrary.simpleMessage("Available Appointments : "),
+        "bookingPrice": MessageLookupByLibrary.simpleMessage("Booking Price"),
+        "camera": MessageLookupByLibrary.simpleMessage("Camera"),
+        "chiefComplaint":
+            MessageLookupByLibrary.simpleMessage("Chief Complaint"),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "contact": MessageLookupByLibrary.simpleMessage("Contact"),
+        "createYourNewAccount":
+            MessageLookupByLibrary.simpleMessage("Create your new account"),
+        "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "diagnosis": MessageLookupByLibrary.simpleMessage("Diagnosis"),
+        "doNotHaveAnAccount":
+            MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
+        "doctors": MessageLookupByLibrary.simpleMessage("Doctors"),
+        "dontReceiveOTP":
+            MessageLookupByLibrary.simpleMessage("Didn\'t receive OTP?"),
+        "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
+        "email": MessageLookupByLibrary.simpleMessage("Email"),
+        "english": MessageLookupByLibrary.simpleMessage("English"),
+        "enterNewPassword": MessageLookupByLibrary.simpleMessage(
+            "Enter a new password to reset the password on your account. We\'ll ask for this password whenever you log in."),
+        "enterOTP": MessageLookupByLibrary.simpleMessage("Enter OTP"),
+        "enterOTPSentTo":
+            MessageLookupByLibrary.simpleMessage("Enter OTP sent to"),
+        "enterYourEmail":
+            MessageLookupByLibrary.simpleMessage("Enter your email"),
+        "female": MessageLookupByLibrary.simpleMessage("Female"),
+        "forgotPassword":
+            MessageLookupByLibrary.simpleMessage("Forgot Password?"),
+        "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
+        "gender": MessageLookupByLibrary.simpleMessage("gender"),
+        "generalInfo": MessageLookupByLibrary.simpleMessage("General Info"),
+        "highlyRecommended":
+            MessageLookupByLibrary.simpleMessage("Highly Recommended"),
+        "id": MessageLookupByLibrary.simpleMessage("ID"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "lastVisit": MessageLookupByLibrary.simpleMessage("Last Visit"),
+        "location": MessageLookupByLibrary.simpleMessage("Location"),
+        "login": MessageLookupByLibrary.simpleMessage("Login"),
+        "loginToYourAccount":
+            MessageLookupByLibrary.simpleMessage("Login to your account"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
+        "makeAnAppointment":
+            MessageLookupByLibrary.simpleMessage("Make Appointment"),
+        "male": MessageLookupByLibrary.simpleMessage("Male"),
+        "medicalSpecialites":
+            MessageLookupByLibrary.simpleMessage("Medical specialties"),
+        "medicineRecord":
+            MessageLookupByLibrary.simpleMessage("Medicine Records"),
+        "name": MessageLookupByLibrary.simpleMessage("Name"),
+        "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
+        "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "onboarding": MessageLookupByLibrary.simpleMessage(
+            "All Services for your health"),
+        "orderLog": MessageLookupByLibrary.simpleMessage("Order Log"),
+        "otpSent":
+            MessageLookupByLibrary.simpleMessage("OTP sent successfully"),
+        "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "passwordResetSuccess":
+            MessageLookupByLibrary.simpleMessage("Password reset successfully"),
+        "patientComment": MessageLookupByLibrary.simpleMessage("Comment"),
+        "patientHistory":
+            MessageLookupByLibrary.simpleMessage("Patient History"),
+        "phone": MessageLookupByLibrary.simpleMessage("Phone"),
+        "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
+        "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "resendOTP": MessageLookupByLibrary.simpleMessage("Resend OTP"),
+        "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
+        "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
+        "signup": MessageLookupByLibrary.simpleMessage("Sign Up"),
+        "someThingWentWrong":
+            MessageLookupByLibrary.simpleMessage("Something went wrong"),
+        "specialities": MessageLookupByLibrary.simpleMessage("Specialities"),
+        "today": MessageLookupByLibrary.simpleMessage("Today"),
+        "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!")
+      };
 }

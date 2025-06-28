@@ -13,7 +13,7 @@ class AppointmentModel {
   final String? userImage;
   final String type; // e.g., "NewVisit", "FollowUp"
   final String complaint; // e.g., "jhaskhldkshfjk"
-  final PrescriptionModel prescription;
+  final PrescriptionModel? prescription;
 
   AppointmentModel({
     required this.id,
@@ -45,7 +45,7 @@ class AppointmentModel {
       userImage: json['userImage'],
       type: json['type'] ?? '',
       complaint: json['complaint'] ?? '',
-      prescription: PrescriptionModel.fromJson(json['prescription']),
+      prescription: PrescriptionModel.fromJson(json['prescription']?? <Map<String, dynamic>>{}),
     );
   }
 }
