@@ -87,6 +87,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
+        "noOrdersYet":
+            MessageLookupByLibrary.simpleMessage("لا توجد طلبات حتى الآن"),
         "onboarding": MessageLookupByLibrary.simpleMessage("كل الخدمات لصحتك"),
         "orderLog": MessageLookupByLibrary.simpleMessage("سجل الطلبات"),
         "otpSent": MessageLookupByLibrary.simpleMessage(

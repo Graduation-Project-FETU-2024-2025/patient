@@ -66,5 +66,6 @@
         "unknown":"Unknown",
         "today": "Today",
         "appointmentRequest": "Appointment Request",
-        "patientComment": "Comment"
+        "patientComment": "Comment",
+        "noOrdersYet": "No orders yet"
 }

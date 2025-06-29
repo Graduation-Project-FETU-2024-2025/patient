@@ -138,4 +138,9 @@ class AppImages {
   /// Assets for imagesAvatar
   /// assets/images/avatar.png
   static const String imagesAvatar = "assets/images/avatar.png";
+
+
+  /// Assets for imagesNoItem
+  /// assets/images/no_item.png
+  static const String imagesNoItem = "assets/images/no_item.png";
 }
