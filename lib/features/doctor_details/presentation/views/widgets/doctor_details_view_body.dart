@@ -7,10 +7,12 @@ import 'package:patient_app/core/widgets/custom_button.dart';
 import 'package:patient_app/features/doctor_details/presentation/views/widgets/about_doctor.dart';
 import 'package:patient_app/features/doctor_details/presentation/views/widgets/booking_section.dart';
 import 'package:patient_app/features/doctor_details/presentation/views/widgets/doctor_info.dart';
+import 'package:patient_app/features/home/data/models/doctor_model.dart';
 import 'package:patient_app/generated/l10n.dart';
 
 class DoctorDetailsViewBody extends StatelessWidget {
-  const DoctorDetailsViewBody({super.key});
+  const DoctorDetailsViewBody({super.key, required this.doctorModel});
+  final DoctorModel doctorModel;
 
   @override
   Widget build(BuildContext context) {
@@ -36,18 +38,33 @@ class DoctorDetailsViewBody extends StatelessWidget {
           ),
           Gap(40.h),
           Text(
-            'Prof.Dr. Ali Ebrahim Baher',
+            doctorModel.clinicName ?? '',
             style: AppStyles.semiBold25(context).copyWith(
               fontSize: 24,
               color: AppColors.primaryColor,
             ),
           ),
+          Gap(10.h),
+          Text(
+            "Dr. ${doctorModel.fullName}",
+            style: AppStyles.semiBold14(context).copyWith(
+              color: Theme.of(context).brightness == Brightness.light
+                  ? AppColors.black.withValues(alpha: 0.4)
+                  : AppColors.white.withValues(alpha: 0.4),
+            ),
+          ),
           Gap(40.h),
-          DoctorInfo(),
+          DoctorInfo(
+            doctorModel: doctorModel,
+          ),
           Gap(80.h),
-          AboutDoctor(),
+          AboutDoctor(
+            aboutDoctor: doctorModel.about ?? 'ddddddddddddddddddddddddddddd',
+          ),
           Gap(40.h),
-          BookingSection(),
+          BookingSection(
+            doctorModel: doctorModel,
+          ),
           Gap(80.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,

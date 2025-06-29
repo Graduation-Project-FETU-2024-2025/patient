@@ -1,15 +1,21 @@
 class SpecialitiesModel {
-  final String name;
-  final String image;
+  final String arName;
+  final String enName;
+  final String id;
+  final String icon;
 
   SpecialitiesModel({
-    required this.name,
-    required this.image,
+    required this.arName,
+    required this.enName,
+    required this.id,
+    required this.icon,
   });
   factory SpecialitiesModel.fromJson(Map<String, dynamic> json) {
     return SpecialitiesModel(
-      name: json['name'] as String,
-      image: json['image'] as String,
+      arName: json['arName'] as String,
+      enName: json['enName'] as String,
+      id: json['id'] as String,
+      icon: json['icon'] as String,
     );
   }
 }
