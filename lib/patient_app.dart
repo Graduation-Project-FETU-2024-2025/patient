@@ -51,7 +51,7 @@ class PatientApp extends StatelessWidget {
               themeMode: context.watch<ChangeThemesCubit>().isDarkMode
                   ? ThemeMode.dark
                   : ThemeMode.light,
-              initialRoute: Routing.medicalRecords,
+              initialRoute: Routing.ordersLog,
               onGenerateRoute: AppRouters().generateRoute,
             );
           },
