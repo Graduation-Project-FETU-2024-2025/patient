@@ -8,7 +8,9 @@ import 'package:patient_app/generated/l10n.dart';
 class AboutDoctor extends StatelessWidget {
   const AboutDoctor({
     super.key,
+    required this.aboutDoctor,
   });
+  final String aboutDoctor;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,9 @@ class AboutDoctor extends StatelessWidget {
         Container(
           width: double.infinity,
           decoration: ShapeDecoration(
-            color: const Color(0xffE3E9FB),
+            color: Theme.of(context).brightness == Brightness.light
+                ? const Color(0xffE3E9FB)
+                : const Color(0xffE3E9FB).withValues(alpha: 0.3),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10),
             ),
