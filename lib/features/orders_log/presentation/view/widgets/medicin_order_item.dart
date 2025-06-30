@@ -1,14 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:patient_app/core/functions/is_network_image.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
-import 'package:patient_app/core/utils/app_icons.dart';
 import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
 import 'package:patient_app/features/orders_log/data/models/order_model.dart';
+import 'package:patient_app/features/orders_log/presentation/view/widgets/delete_order_bloc_listener.dart';
 
 class MedicineOrderItem extends StatelessWidget {
   const MedicineOrderItem({
@@ -51,9 +50,8 @@ class MedicineOrderItem extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             orderModel.status == 'Pending'
-                ? IconButton(
-                    onPressed: () {},
-                    icon: SvgPicture.asset(AppIcons.svgsDelete),
+                ? DeleteOrderBlocListener(
+                    orderId: orderModel.orderId,
                   )
                 : const SizedBox(),
             Text(
@@ -68,3 +66,5 @@ class MedicineOrderItem extends StatelessWidget {
     );
   }
 }
+
+

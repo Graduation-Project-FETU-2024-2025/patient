@@ -183,4 +183,10 @@ class OrderLogRepoFake implements OrderLogRepo {
       );
     }
   }
+  
+  @override
+  Future<Either<ApiErrorModel, String>> deleteOrder(String orderId) {
+    // TODO: implement deleteOrder
+    throw UnimplementedError();
+  }
 }
