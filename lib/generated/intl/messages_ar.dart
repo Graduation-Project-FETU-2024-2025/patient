@@ -89,6 +89,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
         "noOrdersYet":
             MessageLookupByLibrary.simpleMessage("لا توجد طلبات حتى الآن"),
+        "noVisitYet":
+            MessageLookupByLibrary.simpleMessage("لا توجد زيارات حتى الآن"),
         "onboarding": MessageLookupByLibrary.simpleMessage("كل الخدمات لصحتك"),
         "orderLog": MessageLookupByLibrary.simpleMessage("سجل الطلبات"),
         "otpSent": MessageLookupByLibrary.simpleMessage(
