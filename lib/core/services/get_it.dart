@@ -19,6 +19,8 @@ import 'package:patient_app/features/home/data/repos/get_top_doctors_repo.dart';
 import 'package:patient_app/features/home/data/repos/get_top_doctors_repo_impl.dart';
 import 'package:patient_app/features/medical_records/data/repository/medical_records_repo.dart';
 import 'package:patient_app/features/medical_records/data/repository/medical_records_repo_impl.dart';
+import 'package:patient_app/features/orders_log/data/repository/order_log_repo.dart';
+import 'package:patient_app/features/orders_log/data/repository/order_log_repo_impl.dart';
 import 'package:patient_app/features/profile/data/repo/profile_repo.dart';
 import 'package:patient_app/features/profile/data/repo/profile_repo_impl.dart';
 import 'package:patient_app/features/sign_in/data/repository/sign_in_repo.dart';
@@ -74,5 +76,9 @@ void setup() {
   );
   getIt.registerLazySingleton<GetTopDoctorsRepo>(
     () => GetTopDoctorsRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+
+  getIt.registerLazySingleton<OrderLogRepo>(
+    () => OrderLogRepoImpl(getIt<ApiConsumer>()),
   );
 }

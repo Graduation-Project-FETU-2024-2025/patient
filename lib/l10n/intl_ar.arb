@@ -66,7 +66,9 @@
         "unknown":"غير معروف",
         "today": "اليوم",
         "appointmentRequest": "حجز موعد",
-        "patientComment": "تعليق"
+        "patientComment": "تعليق",
+        "noOrdersYet": "لا توجد طلبات حتى الآن",
+        "noVisitYet": "لا توجد زيارات حتى الآن"
 
 
 }

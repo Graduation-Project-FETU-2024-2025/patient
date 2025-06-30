@@ -15,6 +15,8 @@ class EndPoints {
   static String getTopDoctors = "api/Doctors/top-rated";
   static String getDoctorsbySpeciality = "api/Doctors/specialization";
   static String getDoctorDetails = "api/Doctors";
+  static String userHistory = "api/profile/history";
+  static String orderLogs = "/api/orders";
 }
 
 class ApiKeys {
