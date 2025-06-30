@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
-import 'package:patient_app/generated/l10n.dart';
 
-class NoOrderWidget extends StatelessWidget {
-  const NoOrderWidget({super.key});
-
+class NoItemWidget extends StatelessWidget {
+  const NoItemWidget({super.key, required this.message});
+  final String message;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -14,9 +13,10 @@ class NoOrderWidget extends StatelessWidget {
       children: [
         Image.asset(AppImages.imagesNoItem),
         const SizedBox(height: 16),
-         Text(
-          S.of(context).noOrdersYet,
-          style: AppStyles.medium16(context).copyWith(color: AppColors.darkWhite),
+        Text(
+          message,
+          style:
+              AppStyles.medium16(context).copyWith(color: AppColors.darkWhite),
         ),
       ],
     );

@@ -67,5 +67,6 @@
         "today": "Today",
         "appointmentRequest": "Appointment Request",
         "patientComment": "Comment",
-        "noOrdersYet": "No orders yet"
+        "noOrdersYet": "No orders yet",
+        "noVisitYet": "No visit yet"
 }

@@ -8,7 +8,6 @@ import 'package:patient_app/features/orders_log/data/repository/order_log_repo.d
 class OrderLogRepoFake implements OrderLogRepo {
   @override
   Future<Either<ApiErrorModel, List<OrderModel>>> getOrders() async {
-
     await Future.delayed(const Duration(seconds: 2));
 
     Map<String, dynamic> response = {
@@ -163,12 +162,13 @@ class OrderLogRepoFake implements OrderLogRepo {
     try {
       List<OrderModel> orders = [];
       for (var order in response['data']) {
+        String orderStatus = order['status'];
         final orderList = order['orderItems'];
         if (orderList.isEmpty) {
           continue;
         } else {
           for (var item in orderList) {
-            orders.add(OrderModel.fromJson(item));
+            orders.add(OrderModel.fromJson(item).copyWith(status: orderStatus));
           }
         }
       }
