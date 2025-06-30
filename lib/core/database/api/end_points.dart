@@ -17,6 +17,13 @@ class EndPoints {
   static String getDoctorDetails = "api/Doctors";
   static String userHistory = "api/profile/history";
   static String orderLogs = "/api/orders";
+
+
+
+
+  static String deleteOrderLogs(String id)=> "/api/orders/$id";
+
+  
 }
 
 class ApiKeys {

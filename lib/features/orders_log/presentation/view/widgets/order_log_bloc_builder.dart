@@ -15,6 +15,10 @@ class OrdersLogBlocBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<OrderLogCubit, OrderLogState>(
+      buildWhen: (previous, current) =>
+          current is OrderLogLoading ||
+          current is OrderLogLoaded ||
+          current is OrderLogError,
       builder: (context, state) {
         if (state is OrderLogLoaded) {
           return state.orders.isEmpty

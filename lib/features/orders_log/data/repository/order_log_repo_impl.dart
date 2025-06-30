@@ -41,4 +41,23 @@ class OrderLogRepoImpl implements OrderLogRepo {
       return Left(ApiErrorHandler.handleError(e));
     }
   }
+
+  @override
+  Future<Either<ApiErrorModel, String>> deleteOrder(String orderId) async {
+    try {
+      final response =
+          await _apiConsumer.delete(EndPoints.deleteOrderLogs(orderId));
+
+      if (response.statusCode == 200) {
+        return Right(response.data['message']);
+      } else {
+        return Left(ApiErrorModel(
+          statusCode: response.statusCode,
+          message: response.data['message'] ?? 'Unknown error occurred',
+        ));
+      }
+    } catch (e) {
+      return Left(ApiErrorHandler.handleError(e));
+    }
+  }
 }
