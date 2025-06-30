@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:patient_app/core/functions/is_network_image.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
+import 'package:patient_app/core/utils/app_icons.dart';
 import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
 import 'package:patient_app/features/orders_log/data/models/order_model.dart';
@@ -45,10 +46,12 @@ class MedicineOrderItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset('assets/svgs/delete.svg'),
-            ),
+            orderModel.status == 'Pending'
+                ? IconButton(
+                    onPressed: () {},
+                    icon: SvgPicture.asset(AppIcons.svgsDelete),
+                  )
+                : const SizedBox(),
             Text(
               '\$${orderModel.systemProductPrice}',
               style: AppStyles.semiBold20(context).copyWith(

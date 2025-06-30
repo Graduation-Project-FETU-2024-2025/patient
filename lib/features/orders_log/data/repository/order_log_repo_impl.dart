@@ -25,12 +25,13 @@ class OrderLogRepoImpl implements OrderLogRepo {
       }
       List<OrderModel> orders = [];
       for (var order in response.data['data']) {
+        String orderStatus = order['status'];
         final orderList = order['orderItems'];
         if (orderList.isEmpty) {
           continue;
         } else {
           for (var item in orderList) {
-            orders.add(OrderModel.fromJson(item));
+            orders.add(OrderModel.fromJson(item).copyWith(status: orderStatus));
           }
         }
       }

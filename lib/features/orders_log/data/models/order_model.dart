@@ -1,24 +1,48 @@
+
 class OrderModel {
   final String orderId;
   final String systemProductCode;
   final String systemProductName;
   final String systemProductImage;
   final double systemProductPrice;
+  final String? status;
 
   OrderModel(
       {required this.orderId,
       required this.systemProductCode,
       required this.systemProductName,
       required this.systemProductImage,
-      required this.systemProductPrice});
+      required this.systemProductPrice,
+      this.status});
 
   factory OrderModel.fromJson(Map<String, dynamic> json) {
     return OrderModel(
+      status: json['status'] as String?,
       orderId: json['orderId'] as String,
       systemProductCode: json['systemProductCode'] as String,
       systemProductName: json['systemProductName'] as String,
       systemProductImage: json['systemProductImage'] as String,
       systemProductPrice: (json['systemProductPrice'] as num).toDouble(),
+    );
+  }
+
+  
+
+  OrderModel copyWith({
+    String? orderId,
+    String? systemProductCode,
+    String? systemProductName,
+    String? systemProductImage,
+    double? systemProductPrice,
+    String? status,
+  }) {
+    return OrderModel(
+      orderId: orderId ?? this.orderId,
+      systemProductCode: systemProductCode ?? this.systemProductCode,
+      systemProductName: systemProductName ?? this.systemProductName,
+      systemProductImage: systemProductImage ?? this.systemProductImage,
+      systemProductPrice: systemProductPrice ?? this.systemProductPrice,
+      status: status ?? this.status,
     );
   }
 }
