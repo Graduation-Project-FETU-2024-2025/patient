@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -21,7 +22,10 @@ class MedicineOrderItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         isNetworkImage(orderModel.systemProductImage)
-            ? Image.network(orderModel.systemProductImage)
+            ? CachedNetworkImage(
+                imageUrl: orderModel.systemProductImage,
+                height: 123.h,
+              )
             : Image.asset(AppImages.imagesMedicin),
         Gap(12.w),
         Column(

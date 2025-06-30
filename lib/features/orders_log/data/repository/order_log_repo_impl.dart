@@ -18,7 +18,7 @@ class OrderLogRepoImpl implements OrderLogRepo {
       final Response response =
           await _apiConsumer.get(EndPoints.orderLogs, queryParameter: {
         'pagesize': 5,
-        'pageindex': 2,
+        'pageindex': 1,
       });
       if (response.data['data'].isEmpty) {
         return const Right([]);
