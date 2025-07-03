@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:intl/intl.dart';
 import 'package:patient_app/core/helpers/extentions.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
@@ -11,7 +10,7 @@ import '../../../../../generated/l10n.dart';
 
 class AppointmentDetailsHeader extends StatelessWidget {
   const AppointmentDetailsHeader({super.key, required this.date});
-  final DateTime date;
+  final String date;
 
   @override
   Widget build(BuildContext context) {
@@ -49,14 +48,15 @@ class AppointmentDetailsHeader extends StatelessWidget {
             ],
           ),
           Spacer(),
-          Text(
-            '${DateFormat('d MMMM yyyy').format(date)},\n '
-            '${DateFormat('hh:mm a').format(date)} - '
-            '${DateFormat('hh:mm a').format(date.add(Duration(hours: 1)))}',
-            style: AppStyles.semiBold30(context).copyWith(
-              color: Theme.of(context).brightness == Brightness.light
-                  ? AppColors.white
-                  : AppColors.black,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              date,
+              style: AppStyles.semiBold30(context).copyWith(
+                color: Theme.of(context).brightness == Brightness.light
+                    ? AppColors.white
+                    : AppColors.black,
+              ),
             ),
           ),
           Spacer(),

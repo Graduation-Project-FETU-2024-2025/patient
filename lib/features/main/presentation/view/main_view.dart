@@ -8,6 +8,9 @@ import 'package:patient_app/features/home/presentation/views/home_view.dart';
 import 'package:patient_app/features/profile/data/repo/profile_repo.dart';
 import 'package:patient_app/features/profile/presentation/model_view/profile_cubit/profile_cubit.dart';
 import 'package:patient_app/features/profile/presentation/view/profile_view.dart';
+import '../../../schedule/data/repo/appointment_repo.dart';
+import '../../../schedule/presentation/view/schedule_screen.dart';
+import '../../../schedule/presentation/view_model/order_schedule/order_schedule_cubit.dart';
 
 class MainView extends StatefulWidget {
   const MainView({super.key});
@@ -24,9 +27,10 @@ class _MainViewState extends State<MainView> {
   double kBottomRadius = 20.0;
   List<Widget> screens = [
     const HomeView(),
-    const Scaffold(
-      body: Center(child: Text('Search Screen')),
-    ),
+    BlocProvider(
+        create: (context) => OrderScheduleCubit(getIt<AppointmentRepo>())..fetchAppointments(),
+        child: const ScheduleScreen(),
+      ),
     const Scaffold(
       body: Center(child: Text('Profile Screen')),
     ),

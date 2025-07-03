@@ -11,6 +11,7 @@ class EndPoints {
   static String verifyOtp = "api/auth/forgot-password";
   static String resetPassword = "api/Auth/change-password";
   static String getProfile = "api/profile";
+  static String getAppointments = "api/Appointments/users/";
 }
 
 class ApiKeys {

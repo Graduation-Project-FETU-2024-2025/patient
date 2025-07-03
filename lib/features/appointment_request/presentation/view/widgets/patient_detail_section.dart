@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -18,10 +19,9 @@ class PatientDetailsSection extends StatelessWidget {
       children: [
         CircleAvatar(
           radius: 50.r,
-          // backgroundImage: CachedNetworkImageProvider(
-          //   imageUrl,
-          // ),
-          backgroundImage: AssetImage(imageUrl),
+          backgroundImage: CachedNetworkImageProvider(
+            imageUrl,
+          ),
         ),
         Gap(15.w),
         Text(

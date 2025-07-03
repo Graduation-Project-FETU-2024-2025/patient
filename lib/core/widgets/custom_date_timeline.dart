@@ -7,14 +7,10 @@ import '../database/cache/cashe_helper.dart';
 import '../services/get_it.dart';
 import '../utils/app_styles.dart';
 
-class CustomDateTimeline extends StatefulWidget {
-  const CustomDateTimeline({super.key});
+class CustomDateTimeline extends StatelessWidget {
+  const CustomDateTimeline({super.key, this.onDateChange});
+  final void Function(DateTime)? onDateChange;
 
-  @override
-  State<CustomDateTimeline> createState() => _CustomDateTimelineState();
-}
-
-class _CustomDateTimelineState extends State<CustomDateTimeline> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -39,9 +35,7 @@ class _CustomDateTimelineState extends State<CustomDateTimeline> {
             dateTextStyle: AppStyles.semiBold12(context),
             selectionColor: AppColors.primaryColor,
             selectedTextColor: Colors.white,
-            onDateChange: (date) {
-              setState(() {});
-            },
+            onDateChange: onDateChange,
           ),
         ),
       ],
