@@ -14,5 +14,5 @@ abstract class Routing {
   static const String editProfile = '/editProfile';
   static const String medicalRecords = '/medicalRecords';
   static const String ordersLog = '/ordersLog';
-
+  static const String makeAppointment = '/makeAppointment';
 }

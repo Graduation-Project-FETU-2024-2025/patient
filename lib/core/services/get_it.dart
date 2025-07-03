@@ -13,6 +13,10 @@ import 'package:patient_app/features/edit_profile/data/repo/edit_profile_repo.da
 import 'package:patient_app/features/edit_profile/data/repo/edit_profile_repo_impl.dart';
 import 'package:patient_app/features/forget_password/data/repository/forget_password_repo.dart';
 import 'package:patient_app/features/forget_password/data/repository/forget_password_repo_impl.dart';
+import 'package:patient_app/features/make_appointment/data/repos/add_review_repo.dart';
+import 'package:patient_app/features/make_appointment/data/repos/add_review_repo_impl.dart';
+import 'package:patient_app/features/make_appointment/data/repos/make_appointment_repo.dart';
+import 'package:patient_app/features/make_appointment/data/repos/make_appointment_repo_impl.dart';
 import 'package:patient_app/features/home/data/repos/get_specialites_repo.dart';
 import 'package:patient_app/features/home/data/repos/get_specialities_repo_impl.dart';
 import 'package:patient_app/features/home/data/repos/get_top_doctors_repo.dart';
@@ -80,5 +84,13 @@ void setup() {
 
   getIt.registerLazySingleton<OrderLogRepo>(
     () => OrderLogRepoImpl(getIt<ApiConsumer>()),
+  );
+
+  getIt.registerLazySingleton<AddReviewRepo>(
+    () => AddReviewRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+
+  getIt.registerLazySingleton<MakeAppointmentRepo>(
+    () => MakeAppointmentRepoImpl(apiConsumer: getIt<ApiConsumer>()),
   );
 }

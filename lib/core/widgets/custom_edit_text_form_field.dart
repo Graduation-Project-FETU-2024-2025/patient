@@ -27,6 +27,9 @@ class CustomEditTextFormField extends StatelessWidget {
       controller.text = initialVal!;
     }
     return TextFormField(
+      onTapOutside: (event) {
+        FocusScope.of(context).unfocus();
+      },
       style: Theme.of(context)
           .textTheme
           .labelMedium!

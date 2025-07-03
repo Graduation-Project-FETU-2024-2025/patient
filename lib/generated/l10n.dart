@@ -740,6 +740,146 @@ class S {
     );
   }
 
+  /// `Book Appointment`
+  String get bookAppointment {
+    return Intl.message(
+      'Book Appointment',
+      name: 'bookAppointment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Date`
+  String get date {
+    return Intl.message(
+      'Date',
+      name: 'date',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Comment & Notes`
+  String get commentAndNotes {
+    return Intl.message(
+      'Comment & Notes',
+      name: 'commentAndNotes',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `write a note`
+  String get writeNote {
+    return Intl.message(
+      'write a note',
+      name: 'writeNote',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Book`
+  String get book {
+    return Intl.message(
+      'Book',
+      name: 'book',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Time`
+  String get time {
+    return Intl.message(
+      'Time',
+      name: 'time',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Successfully!`
+  String get successfully {
+    return Intl.message(
+      'Successfully!',
+      name: 'successfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have successfully completed the reservation process`
+  String get completeReservation {
+    return Intl.message(
+      'You have successfully completed the reservation process',
+      name: 'completeReservation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Write a comment...`
+  String get writeComment {
+    return Intl.message(
+      'Write a comment...',
+      name: 'writeComment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Comment`
+  String get comment {
+    return Intl.message(
+      'Comment',
+      name: 'comment',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add Rate`
+  String get addRate {
+    return Intl.message(
+      'Add Rate',
+      name: 'addRate',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Send`
+  String get send {
+    return Intl.message(
+      'Send',
+      name: 'send',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add review successfully`
+  String get addreviewSuccessfully {
+    return Intl.message(
+      'Add review successfully',
+      name: 'addreviewSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Attach Analysis`
+  String get attachAnalysis {
+    return Intl.message(
+      'Attach Analysis',
+      name: 'attachAnalysis',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `No visit yet`
   String get noVisitYet {
     return Intl.message(

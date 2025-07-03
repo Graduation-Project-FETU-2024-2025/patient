@@ -17,6 +17,8 @@ class EndPoints {
   static String getDoctorDetails = "api/Doctors";
   static String userHistory = "api/profile/history";
   static String orderLogs = "/api/orders";
+  static String makeAppointment = "api/Appointments/create";
+  static String addReview = "api/Review";
 
 
 

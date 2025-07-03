@@ -27,25 +27,39 @@ class MessageLookup extends MessageLookupByLibrary {
         "Pleaseselectyourgender":
             MessageLookupByLibrary.simpleMessage("Please select your gender"),
         "aboutDoctor": MessageLookupByLibrary.simpleMessage("About Doctor"),
+        "addRate": MessageLookupByLibrary.simpleMessage("Add Rate"),
         "address": MessageLookupByLibrary.simpleMessage("Address"),
+        "addreviewSuccessfully":
+            MessageLookupByLibrary.simpleMessage("Add review successfully"),
         "age": MessageLookupByLibrary.simpleMessage("Age"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account?"),
         "appointmentRequest":
             MessageLookupByLibrary.simpleMessage("Appointment Request"),
         "arabic": MessageLookupByLibrary.simpleMessage("Arabic"),
+        "attachAnalysis":
+            MessageLookupByLibrary.simpleMessage("Attach Analysis"),
         "avaliableAppointments":
             MessageLookupByLibrary.simpleMessage("Available Appointments : "),
+        "book": MessageLookupByLibrary.simpleMessage("Book"),
+        "bookAppointment":
+            MessageLookupByLibrary.simpleMessage("Book Appointment"),
         "bookingPrice": MessageLookupByLibrary.simpleMessage("Booking Price"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
         "chiefComplaint":
             MessageLookupByLibrary.simpleMessage("Chief Complaint"),
+        "comment": MessageLookupByLibrary.simpleMessage("Comment"),
+        "commentAndNotes":
+            MessageLookupByLibrary.simpleMessage("Comment & Notes"),
+        "completeReservation": MessageLookupByLibrary.simpleMessage(
+            "You have successfully completed the reservation process"),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "contact": MessageLookupByLibrary.simpleMessage("Contact"),
         "createYourNewAccount":
             MessageLookupByLibrary.simpleMessage("Create your new account"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
+        "date": MessageLookupByLibrary.simpleMessage("Date"),
         "diagnosis": MessageLookupByLibrary.simpleMessage("Diagnosis"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account?"),
@@ -108,12 +122,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
         "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
+        "send": MessageLookupByLibrary.simpleMessage("Send"),
         "signup": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "specialities": MessageLookupByLibrary.simpleMessage("Specialities"),
+        "successfully": MessageLookupByLibrary.simpleMessage("Successfully!"),
+        "time": MessageLookupByLibrary.simpleMessage("Time"),
         "today": MessageLookupByLibrary.simpleMessage("Today"),
         "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!")
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome Back!"),
+        "writeComment":
+            MessageLookupByLibrary.simpleMessage("Write a comment..."),
+        "writeNote": MessageLookupByLibrary.simpleMessage("write a note")
       };
 }
