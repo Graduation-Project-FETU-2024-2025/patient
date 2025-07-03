@@ -13,6 +13,8 @@ class EndPoints {
   static String getProfile = "api/profile";
   static String userHistory = "api/profile/history";
   static String orderLogs = "/api/orders";
+  static String makeAppointment = "api/Appointments/create";
+  static String addReview = "api/Review";
 }
 
 class ApiKeys {

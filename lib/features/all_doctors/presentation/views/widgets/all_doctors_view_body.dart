@@ -13,9 +13,9 @@ class AllDoctorsViewBody extends StatelessWidget {
     return SingleChildScrollView(
       child: Column(
         children: [
-          AllDoctorsAppBar(),
+          const AllDoctorsAppBar(),
           Gap(30.h),
-          AllDoctorsListView(),
+          const AllDoctorsListView(),
         ],
       ),
     );

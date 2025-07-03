@@ -24,7 +24,8 @@ class AppImages {
 
   /// Assets for imagesMedicinRecords
   /// assets/images/medicin_records.png
-  static const String imagesMedicinRecords = "assets/images/medicin_records.png";
+  static const String imagesMedicinRecords =
+      "assets/images/medicin_records.png";
 
   /// Assets for imagesOnboarding
   /// assets/images/onboarding.png
@@ -126,7 +127,6 @@ class AppImages {
   /// assets/images/profile.png
   static const String imagesProfile = "assets/images/profile.png";
 
-
   /// Assets for imagesMedicin
   /// assets/images/medicin.png
   static const String imagesMedicin = "assets/images/medicin.png";
@@ -139,8 +139,12 @@ class AppImages {
   /// assets/images/avatar.png
   static const String imagesAvatar = "assets/images/avatar.png";
 
-
   /// Assets for imagesNoItem
   /// assets/images/no_item.png
   static const String imagesNoItem = "assets/images/no_item.png";
+
+  /// Assets for imagesReservationSuccessfully
+  /// assets/images/reservation_successfully.png
+  static const String imagesReservationSuccessfully =
+      "assets/images/reservation_successfully.png";
 }

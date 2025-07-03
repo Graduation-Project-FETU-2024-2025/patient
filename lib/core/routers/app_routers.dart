@@ -19,6 +19,9 @@ import 'package:patient_app/features/forget_password/presentation/view_model/res
 import 'package:patient_app/features/forget_password/presentation/view_model/send_otp_cubit/send_otp_cubit.dart';
 import 'package:patient_app/features/home/presentation/views/home_view.dart';
 import 'package:patient_app/features/main/presentation/view/main_view.dart';
+import 'package:patient_app/features/make_appointment/data/repos/make_appointment_repo.dart';
+import 'package:patient_app/features/make_appointment/presentation/view_models/make_appointment/make_appointment_cubit.dart';
+import 'package:patient_app/features/make_appointment/presentation/views/make_appointment_view.dart';
 import 'package:patient_app/features/medical_records/data/repository/medical_records_repo.dart';
 import 'package:patient_app/features/medical_records/presentation/view/medical_records_view.dart';
 import 'package:patient_app/features/medical_records/presentation/view_model/medical_records_cubit/medical_records_cubit.dart';
@@ -113,6 +116,12 @@ class AppRouters {
           child: OtpView(
             email: argument as String,
           ),
+        ));
+      case Routing.makeAppointment:
+        return _buildRoute(BlocProvider(
+          create: (context) =>
+              MakeAppointmentCubit(getIt<MakeAppointmentRepo>()),
+          child: const MakeAppointmentView(),
         ));
       case Routing.main:
         return _buildRoute(const MainView());
