@@ -2,15 +2,19 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:patient_app/core/database/cache/cashe_helper.dart';
+import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
+import 'package:patient_app/features/home/data/models/doctor_model.dart';
 import 'package:patient_app/generated/l10n.dart';
 
 class BookingSection extends StatelessWidget {
   const BookingSection({
     super.key,
+    required this.doctorModel,
   });
-
+  final DoctorModel doctorModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -24,7 +28,9 @@ class BookingSection extends StatelessWidget {
         Container(
           width: double.infinity,
           decoration: ShapeDecoration(
-            color: Colors.white,
+            color: Theme.of(context).brightness == Brightness.light
+                ? AppColors.white
+                : AppColors.white.withValues(alpha: 0.2),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
@@ -48,16 +54,19 @@ class BookingSection extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: CachedNetworkImage(
-                    imageUrl:
+                    imageUrl: doctorModel.image ??
                         'https://www.shutterstock.com/image-photo/portrait-handsome-male-doctor-stethoscope-600nw-2480850611.jpg',
                     fit: BoxFit.cover,
                   ),
                 ),
                 Gap(10.w),
                 Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      'Dermatology',
+                      getIt<CacheHelper>().getCurrentLanguage() == 'en'
+                          ? doctorModel.specialization.enName
+                          : doctorModel.specialization.arName,
                       style: AppStyles.semiBold18(context)
                           .copyWith(color: AppColors.primaryColor),
                     ),
@@ -65,7 +74,7 @@ class BookingSection extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          '4.5',
+                          doctorModel.rating.toString(),
                           style: AppStyles.semiBold12(context),
                         ),
                         const Icon(
@@ -74,7 +83,7 @@ class BookingSection extends StatelessWidget {
                         ),
                         Gap(5.w),
                         Text(
-                          '(120 Reviews)',
+                          '(${doctorModel.reviewsCount} Reviews)',
                           style: AppStyles.semiBold12(context).copyWith(
                             fontSize: 11,
                             color:
@@ -87,9 +96,9 @@ class BookingSection extends StatelessWidget {
                     )
                   ],
                 ),
-                Spacer(),
+                const Spacer(),
                 Text(
-                  r'$150.00',
+                  '\$${doctorModel.price}',
                   style: AppStyles.semiBold15(context)
                       .copyWith(color: AppColors.red),
                 )

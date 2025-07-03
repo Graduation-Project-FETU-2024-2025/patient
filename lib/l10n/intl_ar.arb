@@ -81,5 +81,9 @@
         "addRate":"اضافة تقييم",
         "send":"ارسال",
         "addreviewSuccessfully":"تم اضافة التقييم بنجاح",
-        "attachAnalysis" : "ارفاق التحليل"
-      }
+        "attachAnalysis" : "ارفاق التحليل",
+      
+        "noVisitYet": "لا توجد زيارات حتى الآن"
+
+
+}

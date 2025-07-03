@@ -4,7 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:patient_app/core/routers/routing.dart';
 import 'package:patient_app/core/services/get_it.dart';
+import 'package:patient_app/features/all_Specialities/data/repos/get_all_specialities_repo.dart';
+import 'package:patient_app/features/all_Specialities/presentation/view_models/get_all_specialites/get_all_specialities_cubit.dart';
 import 'package:patient_app/features/all_Specialities/presentation/views/all_specialities_view.dart';
+import 'package:patient_app/features/all_doctors/data/repos/get_all_doctors_repo.dart';
+import 'package:patient_app/features/all_doctors/presentation/view_models/get_all_doctors/get_all_doctors_cubit.dart';
+import 'package:patient_app/features/doctor_details/data/repos/get_details_doctor_repo.dart';
+import 'package:patient_app/features/doctor_details/presentation/view_models/doctor_details/doctor_details_cubit.dart';
 import 'package:patient_app/features/doctor_details/presentation/views/doctor_details_view.dart';
 import 'package:patient_app/features/all_doctors/presentation/views/all_doctors.dart';
 import 'package:patient_app/features/edit_profile/data/repo/edit_profile_repo.dart';
@@ -78,14 +84,35 @@ class AppRouters {
           child: const SignUpView(),
         ));
       case Routing.doctorDetailsView:
-        return _buildRoute(const DoctorDetailsView());
+        final String doctorId = argument as String;
+        return _buildRoute(
+          BlocProvider(
+            create: (context) => DoctorDetailsCubit(
+              getIt<GetDetailsDoctorRepo>(),
+            )..getDoctorsDetails(doctorId: doctorId),
+            child: const DoctorDetailsView(),
+          ),
+        );
       case Routing.allSpecialitiesView:
-        return _buildRoute(const AllSpecialitiesView());
+        return _buildRoute(
+          BlocProvider(
+            create: (context) => GetAllSpecialitiesCubit(
+              getIt<GetAllSpecialitiesRepo>(),
+            )..getAllSpecialities(),
+            child: const AllSpecialitiesView(),
+          ),
+        );
 
       case Routing.homeView:
         return _buildRoute(const HomeView());
       case Routing.allDoctorsView:
-        return _buildRoute(const AllDoctors());
+        final String specialityId = argument as String;
+        return _buildRoute(BlocProvider(
+          create: (context) => GetAllDoctorsCubit(
+            getIt<GetAllDoctorsRepo>(),
+          )..getAllDoctors(specialityId: specialityId),
+          child: const AllDoctors(),
+        ));
 
       case Routing.medicalRecords:
         return _buildRoute(BlocProvider(

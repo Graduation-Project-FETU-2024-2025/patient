@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:patient_app/features/orders_log/presentation/view/widgets/no_order_widget.dart';
+import 'package:patient_app/core/widgets/no_item_widget.dart';
 import 'package:patient_app/features/orders_log/presentation/view/widgets/order_log_success_body.dart';
 import 'package:patient_app/features/orders_log/presentation/view/widgets/shimmer_medicine_order_item.dart';
 import 'package:patient_app/features/orders_log/presentation/view_model/cubit/order_log_cubit.dart';
@@ -15,10 +15,17 @@ class OrdersLogBlocBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<OrderLogCubit, OrderLogState>(
+      buildWhen: (previous, current) =>
+          current is OrderLogLoading ||
+          current is OrderLogLoaded ||
+          current is OrderLogError,
       builder: (context, state) {
         if (state is OrderLogLoaded) {
           return state.orders.isEmpty
-              ? const SliverToBoxAdapter(child: NoOrderWidget())
+              ? SliverToBoxAdapter(
+                  child: NoItemWidget(
+                  message: S.of(context).noOrdersYet,
+                ))
               : OrderLogSuccessBody(orders: state.orders);
         } else if (state is OrderLogError) {
           return SliverToBoxAdapter(

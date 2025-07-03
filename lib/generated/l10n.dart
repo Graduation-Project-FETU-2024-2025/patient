@@ -879,6 +879,16 @@ class S {
       args: [],
     );
   }
+
+  /// `No visit yet`
+  String get noVisitYet {
+    return Intl.message(
+      'No visit yet',
+      name: 'noVisitYet',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
+import 'package:patient_app/core/widgets/no_item_widget.dart';
 import 'package:patient_app/features/medical_records/data/models/medical_records_model.dart';
 import 'package:patient_app/features/medical_records/presentation/view/widgets/medical_info_grid.dart';
 import 'package:patient_app/features/medical_records/presentation/view/widgets/user_name_section.dart';
@@ -71,16 +72,22 @@ class MedicalRecordSuccessBody extends StatelessWidget {
               style: AppStyles.medium18(context),
             ),
             Gap(15.h),
-            MedicalInfoGrid(
-              medicalInfo: {
-                S.of(context).DateOfVisit:
-                    medicalRecordsModel?.appointmentModel?.date ?? '',
-                S.of(context).diagnosis: medicalRecordsModel
-                    ?.appointmentModel?.prescription?.diagnosis ?? '',
-                S.of(context).chiefComplaint: medicalRecordsModel
-                    ?.appointmentModel?.prescription?.prescriptionProductDTOs ?? '',
-              },
-            ),
+            medicalRecordsModel?.appointmentModel == null
+                ? NoItemWidget(message: S.of(context).noVisitYet)
+                : MedicalInfoGrid(
+                    medicalInfo: {
+                      S.of(context).DateOfVisit:
+                          medicalRecordsModel?.appointmentModel?.date ?? '',
+                      S.of(context).diagnosis: medicalRecordsModel
+                              ?.appointmentModel?.prescription?.diagnosis ??
+                          '',
+                      S.of(context).chiefComplaint: medicalRecordsModel
+                              ?.appointmentModel
+                              ?.prescription
+                              ?.prescriptionProductDTOs ??
+                          '',
+                    },
+                  ),
           ],
         ),
       ),

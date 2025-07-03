@@ -15,4 +15,15 @@ class OrderLogCubit extends Cubit<OrderLogState> {
       (orders) => emit(OrderLogLoaded(orders)),
     );
   }
+
+
+  void deleteOrder(String orderId) async {
+    emit(OrderLogDeleting());
+    final result = await _orderLogRepo.deleteOrder(orderId);
+    result.fold(
+      (error) => emit(OrderLogDeletedFailure(errorModel: error)),
+      (message) => emit(OrderLogDeleted(message)),
+    );
+  }
+
 }

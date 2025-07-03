@@ -1,12 +1,13 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:patient_app/core/functions/is_network_image.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
 import 'package:patient_app/features/orders_log/data/models/order_model.dart';
+import 'package:patient_app/features/orders_log/presentation/view/widgets/delete_order_bloc_listener.dart';
 
 class MedicineOrderItem extends StatelessWidget {
   const MedicineOrderItem({
@@ -20,7 +21,10 @@ class MedicineOrderItem extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         isNetworkImage(orderModel.systemProductImage)
-            ? Image.network(orderModel.systemProductImage)
+            ? CachedNetworkImage(
+                imageUrl: orderModel.systemProductImage,
+                height: 123.h,
+              )
             : Image.asset(AppImages.imagesMedicin),
         Gap(12.w),
         Column(
@@ -45,10 +49,11 @@ class MedicineOrderItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            IconButton(
-              onPressed: () {},
-              icon: SvgPicture.asset('assets/svgs/delete.svg'),
-            ),
+            orderModel.status == 'Pending'
+                ? DeleteOrderBlocListener(
+                    orderId: orderModel.orderId,
+                  )
+                : const SizedBox(),
             Text(
               '\$${orderModel.systemProductPrice}',
               style: AppStyles.semiBold20(context).copyWith(
@@ -61,3 +66,5 @@ class MedicineOrderItem extends StatelessWidget {
     );
   }
 }
+
+

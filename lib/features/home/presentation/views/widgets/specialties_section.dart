@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:patient_app/core/database/cache/cashe_helper.dart';
+import 'package:patient_app/core/routers/routing.dart';
 import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_icons.dart';
@@ -27,7 +28,8 @@ class SpecialtiesSection extends StatelessWidget {
             ),
             const Spacer(),
             GestureDetector(
-              onTap: () {},
+              onTap: () =>
+                  Navigator.pushNamed(context, Routing.allSpecialitiesView),
               child: Text(
                 S.of(context).seeAll,
                 style: AppStyles.semiBold10(context).copyWith(
@@ -46,7 +48,7 @@ class SpecialtiesSection extends StatelessWidget {
           ],
         ),
         Gap(10.h),
-        SpecialtiesListView()
+        const SpecialtiesListView()
       ],
     );
   }
