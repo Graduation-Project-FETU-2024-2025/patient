@@ -7,7 +7,7 @@ class MedicalRecordsModel {
   final String phoneNumber;
   final int age;
   final String gender;
-  final AppointmentModel appointmentModel;
+  final AppointmentModel? appointmentModel;
   MedicalRecordsModel(
       {required this.image,
       required this.name,
@@ -15,7 +15,7 @@ class MedicalRecordsModel {
       required this.phoneNumber,
       required this.age,
       required this.gender,
-      required this.appointmentModel});
+      this.appointmentModel});
 
   factory MedicalRecordsModel.fromJson(Map<String, dynamic> json) {
     return MedicalRecordsModel(
@@ -25,9 +25,9 @@ class MedicalRecordsModel {
       phoneNumber: json['phoneNumber'] ?? '',
       age: json['age'] ?? 0,
       gender: json['gender'] ?? '',
-      appointmentModel: AppointmentModel.fromJson(json['appointment']),
+      appointmentModel: json['appointment'] != null
+          ? AppointmentModel.fromJson(json['appointment'])
+          : null,
     );
   }
 }
-
-

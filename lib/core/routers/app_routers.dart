@@ -4,7 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:patient_app/core/routers/routing.dart';
 import 'package:patient_app/core/services/get_it.dart';
+import 'package:patient_app/features/all_Specialities/data/repos/get_all_specialities_repo.dart';
+import 'package:patient_app/features/all_Specialities/presentation/view_models/get_all_specialites/get_all_specialities_cubit.dart';
 import 'package:patient_app/features/all_Specialities/presentation/views/all_specialities_view.dart';
+import 'package:patient_app/features/all_doctors/data/repos/get_all_doctors_repo.dart';
+import 'package:patient_app/features/all_doctors/presentation/view_models/get_all_doctors/get_all_doctors_cubit.dart';
+import 'package:patient_app/features/doctor_details/data/repos/get_details_doctor_repo.dart';
+import 'package:patient_app/features/doctor_details/presentation/view_models/doctor_details/doctor_details_cubit.dart';
 import 'package:patient_app/features/doctor_details/presentation/views/doctor_details_view.dart';
 import 'package:patient_app/features/all_doctors/presentation/views/all_doctors.dart';
 import 'package:patient_app/features/edit_profile/data/repo/edit_profile_repo.dart';
@@ -19,11 +25,16 @@ import 'package:patient_app/features/forget_password/presentation/view_model/res
 import 'package:patient_app/features/forget_password/presentation/view_model/send_otp_cubit/send_otp_cubit.dart';
 import 'package:patient_app/features/home/presentation/views/home_view.dart';
 import 'package:patient_app/features/main/presentation/view/main_view.dart';
+import 'package:patient_app/features/make_appointment/data/repos/make_appointment_repo.dart';
+import 'package:patient_app/features/make_appointment/presentation/view_models/make_appointment/make_appointment_cubit.dart';
+import 'package:patient_app/features/make_appointment/presentation/views/make_appointment_view.dart';
 import 'package:patient_app/features/medical_records/data/repository/medical_records_repo.dart';
 import 'package:patient_app/features/medical_records/presentation/view/medical_records_view.dart';
 import 'package:patient_app/features/medical_records/presentation/view_model/medical_records_cubit/medical_records_cubit.dart';
 import 'package:patient_app/features/onboarding/presentation/view/onboarding_view.dart';
+import 'package:patient_app/features/orders_log/data/repository/order_log_repo.dart';
 import 'package:patient_app/features/orders_log/presentation/view/orders_log_view.dart';
+import 'package:patient_app/features/orders_log/presentation/view_model/cubit/order_log_cubit.dart';
 import 'package:patient_app/features/profile/data/models/user_model.dart';
 import 'package:patient_app/features/sign_in/data/repository/sign_in_repo.dart';
 import 'package:patient_app/features/sign_in/presentation/view/sign_in_view.dart';
@@ -47,7 +58,11 @@ class AppRouters {
         );
       case Routing.ordersLog:
         return _buildRoute(
-          const OrdersLogView(),
+          BlocProvider(
+            create: (context) =>
+                OrderLogCubit(getIt<OrderLogRepo>())..getOrders(),
+            child: const OrdersLogView(),
+          ),
         );
       case Routing.signIn:
         return _buildRoute(
@@ -69,14 +84,35 @@ class AppRouters {
           child: const SignUpView(),
         ));
       case Routing.doctorDetailsView:
-        return _buildRoute(const DoctorDetailsView());
+        final String doctorId = argument as String;
+        return _buildRoute(
+          BlocProvider(
+            create: (context) => DoctorDetailsCubit(
+              getIt<GetDetailsDoctorRepo>(),
+            )..getDoctorsDetails(doctorId: doctorId),
+            child: const DoctorDetailsView(),
+          ),
+        );
       case Routing.allSpecialitiesView:
-        return _buildRoute(const AllSpecialitiesView());
-        
+        return _buildRoute(
+          BlocProvider(
+            create: (context) => GetAllSpecialitiesCubit(
+              getIt<GetAllSpecialitiesRepo>(),
+            )..getAllSpecialities(),
+            child: const AllSpecialitiesView(),
+          ),
+        );
+
       case Routing.homeView:
         return _buildRoute(const HomeView());
       case Routing.allDoctorsView:
-        return _buildRoute(const AllDoctors());
+        final String specialityId = argument as String;
+        return _buildRoute(BlocProvider(
+          create: (context) => GetAllDoctorsCubit(
+            getIt<GetAllDoctorsRepo>(),
+          )..getAllDoctors(specialityId: specialityId),
+          child: const AllDoctors(),
+        ));
 
       case Routing.medicalRecords:
         return _buildRoute(BlocProvider(
@@ -107,6 +143,12 @@ class AppRouters {
           child: OtpView(
             email: argument as String,
           ),
+        ));
+      case Routing.makeAppointment:
+        return _buildRoute(BlocProvider(
+          create: (context) =>
+              MakeAppointmentCubit(getIt<MakeAppointmentRepo>()),
+          child: const MakeAppointmentView(),
         ));
       case Routing.main:
         return _buildRoute(const MainView());

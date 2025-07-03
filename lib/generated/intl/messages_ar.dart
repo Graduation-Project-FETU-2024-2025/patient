@@ -27,24 +27,36 @@ class MessageLookup extends MessageLookupByLibrary {
         "Pleaseselectyourgender":
             MessageLookupByLibrary.simpleMessage("الرجاء اختيار جنسك"),
         "aboutDoctor": MessageLookupByLibrary.simpleMessage("عن الطبيب"),
+        "addRate": MessageLookupByLibrary.simpleMessage("اضافة تقييم"),
         "address": MessageLookupByLibrary.simpleMessage("العنوان"),
+        "addreviewSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم اضافة التقييم بنجاح"),
         "age": MessageLookupByLibrary.simpleMessage("العمر"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("هل لديك حساب بالفعل؟"),
         "appointmentRequest": MessageLookupByLibrary.simpleMessage("حجز موعد"),
         "arabic": MessageLookupByLibrary.simpleMessage("العربية"),
+        "attachAnalysis": MessageLookupByLibrary.simpleMessage("ارفاق التحليل"),
         "avaliableAppointments":
             MessageLookupByLibrary.simpleMessage("المواعيد المتاحة : "),
+        "book": MessageLookupByLibrary.simpleMessage("احجز"),
+        "bookAppointment": MessageLookupByLibrary.simpleMessage("حجز موعد"),
         "bookingPrice": MessageLookupByLibrary.simpleMessage("سعر الحجز"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
         "chiefComplaint":
             MessageLookupByLibrary.simpleMessage("الشكوى الرئيسية"),
+        "comment": MessageLookupByLibrary.simpleMessage("تعليق"),
+        "commentAndNotes":
+            MessageLookupByLibrary.simpleMessage("التعليق والملاحظات"),
+        "completeReservation": MessageLookupByLibrary.simpleMessage(
+            "لقد أكملت عملية الحجز بنجاح "),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
         "contact": MessageLookupByLibrary.simpleMessage("الاتصال"),
         "createYourNewAccount":
             MessageLookupByLibrary.simpleMessage("قم بإنشاء حسابك الجديد"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
+        "date": MessageLookupByLibrary.simpleMessage("التاريخ"),
         "diagnosis": MessageLookupByLibrary.simpleMessage("التشخيص"),
         "doNotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟"),
@@ -89,6 +101,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
         "noAppointment":
             MessageLookupByLibrary.simpleMessage("لاتوجد حجوزات متاحه"),
+        "noOrdersYet":
+            MessageLookupByLibrary.simpleMessage("لا توجد طلبات حتى الآن"),
+        "noVisitYet":
+            MessageLookupByLibrary.simpleMessage("لا توجد زيارات حتى الآن"),
         "onboarding": MessageLookupByLibrary.simpleMessage("كل الخدمات لصحتك"),
         "orderLog": MessageLookupByLibrary.simpleMessage("سجل الطلبات"),
         "otpSent": MessageLookupByLibrary.simpleMessage(
@@ -106,12 +122,17 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
         "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
+        "send": MessageLookupByLibrary.simpleMessage("ارسال"),
         "signup": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "specialities": MessageLookupByLibrary.simpleMessage("التخصصات"),
+        "successfully": MessageLookupByLibrary.simpleMessage("تم بنجاح!"),
+        "time": MessageLookupByLibrary.simpleMessage("الوقت"),
         "today": MessageLookupByLibrary.simpleMessage("اليوم"),
         "unknown": MessageLookupByLibrary.simpleMessage("غير معروف"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحبا بعودتك!")
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("مرحبا بعودتك!"),
+        "writeComment": MessageLookupByLibrary.simpleMessage("كتابة تعليق..."),
+        "writeNote": MessageLookupByLibrary.simpleMessage(" اكتب ملاحظة")
       };
 }

@@ -67,7 +67,24 @@
         "today": "اليوم",
         "appointmentRequest": "حجز موعد",
         "patientComment": "تعليق",
-        "noAppointment":"لاتوجد حجوزات متاحه"
+        "noAppointment":"لاتوجد حجوزات متاحه",
+        "noOrdersYet": "لا توجد طلبات حتى الآن",
+        "bookAppointment":"حجز موعد",
+        "date":"التاريخ",
+        "commentAndNotes":"التعليق والملاحظات",
+        "writeNote":" اكتب ملاحظة",
+        "book":"احجز",
+        "time":"الوقت",
+        "successfully":"تم بنجاح!",
+        "completeReservation":"لقد أكملت عملية الحجز بنجاح ",
+        "writeComment":"كتابة تعليق...",
+        "comment":"تعليق",
+        "addRate":"اضافة تقييم",
+        "send":"ارسال",
+        "addreviewSuccessfully":"تم اضافة التقييم بنجاح",
+        "attachAnalysis" : "ارفاق التحليل",
+      
+        "noVisitYet": "لا توجد زيارات حتى الآن"
 
 
 }

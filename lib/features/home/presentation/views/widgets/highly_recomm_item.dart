@@ -1,15 +1,19 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:patient_app/core/database/cache/cashe_helper.dart';
+import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
-import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
+import 'package:patient_app/features/home/data/models/doctor_model.dart';
 
 class HighlyRecommItem extends StatelessWidget {
   const HighlyRecommItem({
     super.key,
+    required this.doctorModel,
   });
-
+  final DoctorModel doctorModel;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +22,9 @@ class HighlyRecommItem extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(6.r),
         ),
-        color: AppColors.white,
+        color: Theme.of(context).brightness == Brightness.light
+            ? AppColors.white
+            : AppColors.white.withValues(alpha: 0.2),
         shadows: [
           const BoxShadow(
             color: Color(0x3F000000),
@@ -37,7 +43,8 @@ class HighlyRecommItem extends StatelessWidget {
               height: 102,
               decoration: ShapeDecoration(
                 image: DecorationImage(
-                  image: AssetImage(AppImages.imagesDoctor),
+                  image: CachedNetworkImageProvider(doctorModel.image ??
+                      'https://www.shutterstock.com/image-photo/portrait-handsome-male-doctor-stethoscope-600nw-2480850611.jpg'),
                   fit: BoxFit.cover,
                 ),
                 shape: RoundedRectangleBorder(
@@ -50,14 +57,16 @@ class HighlyRecommItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Prof.Dr. Ali Ebrahim Baher',
+                  doctorModel.fullName,
                   style: AppStyles.semiBold15(context),
                 ),
                 Gap(5.h),
                 Text(
-                  'Dermatology | Mayo Clinic',
+                  '${getIt<CacheHelper>().getCurrentLanguage() == 'en' ? doctorModel.specialization.enName : doctorModel.specialization.arName} | ${doctorModel.clinicName}',
                   style: AppStyles.semiBold12(context).copyWith(
-                    color: AppColors.black.withValues(alpha: .4),
+                    color: Theme.of(context).brightness == Brightness.light
+                        ? AppColors.black.withValues(alpha: .4)
+                        : AppColors.white.withValues(alpha: .4),
                   ),
                 ),
                 Gap(5.h),
@@ -70,9 +79,12 @@ class HighlyRecommItem extends StatelessWidget {
                     ),
                     Gap(5.w),
                     Text(
-                      '4.4 (120 Reviews)',
+                      '${doctorModel.rating} (${doctorModel.reviewsCount} Reviews)',
                       style: AppStyles.semiBold10(context).copyWith(
-                          color: AppColors.black.withValues(alpha: .4)),
+                        color: Theme.of(context).brightness == Brightness.light
+                            ? AppColors.black.withValues(alpha: .4)
+                            : AppColors.white.withValues(alpha: .4),
+                      ),
                     ),
                   ],
                 )

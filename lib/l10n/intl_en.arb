@@ -67,5 +67,21 @@
         "today": "Today",
         "appointmentRequest": "Appointment Request",
         "patientComment": "Comment",
-        "noAppointment":"No appointments available"
+        "noAppointment":"No appointments available",
+        "noOrdersYet": "No orders yet",
+        "bookAppointment":"Book Appointment",
+        "date":"Date",
+        "commentAndNotes":"Comment & Notes",
+        "writeNote":"write a note",
+        "book":"Book",
+        "time":"Time",
+        "successfully":"Successfully!",
+        "completeReservation":"You have successfully completed the reservation process",
+        "writeComment":"Write a comment...",
+        "comment":"Comment",
+        "addRate":"Add Rate",
+        "send":"Send",
+        "addreviewSuccessfully":"Add review successfully",
+        "attachAnalysis" : "Attach Analysis",
+        "noVisitYet": "No visit yet"
 }

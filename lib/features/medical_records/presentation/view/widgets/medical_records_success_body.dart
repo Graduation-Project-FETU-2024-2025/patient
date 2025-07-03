@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
+import 'package:patient_app/core/widgets/no_item_widget.dart';
 import 'package:patient_app/features/medical_records/data/models/medical_records_model.dart';
 import 'package:patient_app/features/medical_records/presentation/view/widgets/medical_info_grid.dart';
 import 'package:patient_app/features/medical_records/presentation/view/widgets/user_name_section.dart';
@@ -46,9 +47,9 @@ class MedicalRecordSuccessBody extends StatelessWidget {
             Gap(15.h),
             MedicalInfoGrid(
               medicalInfo: {
-                S.of(context).gender: medicalRecordsModel?.gender ?? "Male",
+                S.of(context).gender: medicalRecordsModel?.gender,
                 S.of(context).address: "123 Main St, City, Country",
-                S.of(context).age: medicalRecordsModel?.age.toString() ?? "30",
+                S.of(context).age: medicalRecordsModel?.age.toString(),
               },
             ),
             Gap(30.h),
@@ -59,10 +60,8 @@ class MedicalRecordSuccessBody extends StatelessWidget {
             Gap(15.h),
             MedicalInfoGrid(
               medicalInfo: {
-                S.of(context).phoneNumber:
-                    medicalRecordsModel?.phoneNumber ?? "+1234567890",
-                S.of(context).email:
-                    medicalRecordsModel?.email ?? "khaled@gmail.com",
+                S.of(context).phoneNumber: medicalRecordsModel?.phoneNumber,
+                S.of(context).email: medicalRecordsModel?.email,
               },
             ),
             Gap(30.h),
@@ -73,20 +72,22 @@ class MedicalRecordSuccessBody extends StatelessWidget {
               style: AppStyles.medium18(context),
             ),
             Gap(15.h),
-            MedicalInfoGrid(
-              medicalInfo: {
-                S.of(context).DateOfVisit:
-                    medicalRecordsModel?.appointmentModel.date ?? "2023-10-01",
-                S.of(context).diagnosis: medicalRecordsModel
-                        ?.appointmentModel.prescription.diagnosis ??
-                    "Flu-like symptoms",
-                S.of(context).chiefComplaint: medicalRecordsModel
-                        ?.appointmentModel
-                        .prescription
-                        .prescriptionProductDTOs ??
-                    "Fever and cough fjodfdksfjk fkldkf;lsdjf fdjlfdlkfjsdif fkd;lfjsdljfsdofj fpdkfposdjfiosdjf fkpdojfposdjf pdofjsdojf",
-              },
-            ),
+            medicalRecordsModel?.appointmentModel == null
+                ? NoItemWidget(message: S.of(context).noVisitYet)
+                : MedicalInfoGrid(
+                    medicalInfo: {
+                      S.of(context).DateOfVisit:
+                          medicalRecordsModel?.appointmentModel?.date ?? '',
+                      S.of(context).diagnosis: medicalRecordsModel
+                              ?.appointmentModel?.prescription?.diagnosis ??
+                          '',
+                      S.of(context).chiefComplaint: medicalRecordsModel
+                              ?.appointmentModel
+                              ?.prescription
+                              ?.prescriptionProductDTOs ??
+                          '',
+                    },
+                  ),
           ],
         ),
       ),
