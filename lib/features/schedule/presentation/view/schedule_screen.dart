@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import '../../../../core/utils/app_styles.dart';
 import '../../../../core/widgets/custom_date_timeline.dart';
 import '../../../../generated/l10n.dart';
+import '../view_model/order_schedule/order_schedule_cubit.dart';
 import 'widgets/patient_schedule_container_list_view.dart';
 
 class ScheduleScreen extends StatelessWidget {
@@ -24,7 +26,11 @@ class ScheduleScreen extends StatelessWidget {
               ),
             ),
             SliverToBoxAdapter(child: Gap(30.h)),
-            const SliverToBoxAdapter(child: const CustomDateTimeline()),
+            SliverToBoxAdapter(child: CustomDateTimeline(
+              onDateChange: (date) {
+                context.read<OrderScheduleCubit>().changeSelectedDate(date);
+              },
+            )),
             SliverToBoxAdapter(child: Gap(30.h)),
             const PatientScheduleContainerListView(),
             SliverToBoxAdapter(

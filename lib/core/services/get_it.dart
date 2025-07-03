@@ -27,10 +27,13 @@ import 'package:patient_app/features/orders_log/data/repository/order_log_repo.d
 import 'package:patient_app/features/orders_log/data/repository/order_log_repo_impl.dart';
 import 'package:patient_app/features/profile/data/repo/profile_repo.dart';
 import 'package:patient_app/features/profile/data/repo/profile_repo_impl.dart';
+import 'package:patient_app/features/schedule/data/repo/appointment_repo.dart';
 import 'package:patient_app/features/sign_in/data/repository/sign_in_repo.dart';
 import 'package:patient_app/features/sign_in/data/repository/sign_in_repo_impl.dart';
 import 'package:patient_app/features/sign_up/data/repos/sign_up_repo.dart';
 import 'package:patient_app/features/sign_up/data/repos/sign_up_repo_impl.dart';
+
+import '../../features/schedule/data/repo/appointment_repo_impl.dart';
 
 final getIt = GetIt.instance;
 
@@ -65,6 +68,9 @@ void setup() {
 
   getIt.registerLazySingleton<MedicalRecordsRepo>(
     () => MedicalRecordsRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+  getIt.registerLazySingleton<AppointmentRepo>(
+    () => AppointmentRepoImpl(getIt<ApiConsumer>()),
   );
   getIt.registerLazySingleton<GetAllDoctorsRepo>(
     () => GetAllDoctorsRepoImpl(apiConsumer: getIt<ApiConsumer>()),

@@ -730,6 +730,16 @@ class S {
     );
   }
 
+  /// `No appointments available`
+  String get noAppointment {
+    return Intl.message(
+      'No appointments available',
+      name: 'noAppointment',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `No orders yet`
   String get noOrdersYet {
     return Intl.message(

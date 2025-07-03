@@ -11,6 +11,7 @@ class EndPoints {
   static String verifyOtp = "api/auth/forgot-password";
   static String resetPassword = "api/Auth/change-password";
   static String getProfile = "api/profile";
+  static String getAppointments = "api/Appointments/users/";
   static String getSpecialities = "api/Specialization";
   static String getTopDoctors = "api/Doctors/top-rated";
   static String getDoctorsbySpeciality = "api/Doctors/specialization";

@@ -102,6 +102,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),
+        "noAppointment":
+            MessageLookupByLibrary.simpleMessage("No appointments available"),
         "noOrdersYet": MessageLookupByLibrary.simpleMessage("No orders yet"),
         "noVisitYet": MessageLookupByLibrary.simpleMessage("No visit yet"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
