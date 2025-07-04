@@ -101,6 +101,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
         "noAppointment":
             MessageLookupByLibrary.simpleMessage("لاتوجد حجوزات متاحه"),
+        "noDoctorsFound": MessageLookupByLibrary.simpleMessage(
+            "لا يوجد أطباء في هذه القسم حتى الان"),
         "noOrdersYet":
             MessageLookupByLibrary.simpleMessage("لا توجد طلبات حتى الآن"),
         "noVisitYet":

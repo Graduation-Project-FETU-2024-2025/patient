@@ -50,7 +50,7 @@ class DoctorInfo extends StatelessWidget {
             const Icon(Icons.star, color: Colors.amber),
             Gap(10.w),
             Text(
-              '${doctorModel.rating} (${doctorModel.reviewsCount} Reviews)',
+              '${doctorModel.rating.toStringAsFixed(1)} (${doctorModel.reviewsCount} Reviews)',
               style: AppStyles.semiBold15(context).copyWith(
                 color: Theme.of(context).brightness == Brightness.light
                     ? AppColors.black.withValues(alpha: 0.4)

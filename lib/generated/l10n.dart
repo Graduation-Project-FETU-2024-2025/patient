@@ -899,6 +899,16 @@ class S {
       args: [],
     );
   }
+
+  /// `No doctors in this section yet!`
+  String get noDoctorsFound {
+    return Intl.message(
+      'No doctors in this section yet!',
+      name: 'noDoctorsFound',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

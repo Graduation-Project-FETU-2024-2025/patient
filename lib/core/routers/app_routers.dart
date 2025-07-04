@@ -23,6 +23,7 @@ import 'package:patient_app/features/forget_password/presentation/view/reset_pas
 import 'package:patient_app/features/forget_password/presentation/view_model/otp_cubit/otp_cubit.dart';
 import 'package:patient_app/features/forget_password/presentation/view_model/reset_password_cubit/reset_password_cubit.dart';
 import 'package:patient_app/features/forget_password/presentation/view_model/send_otp_cubit/send_otp_cubit.dart';
+import 'package:patient_app/features/home/data/models/doctor_model.dart';
 import 'package:patient_app/features/home/presentation/views/home_view.dart';
 import 'package:patient_app/features/main/presentation/view/main_view.dart';
 import 'package:patient_app/features/make_appointment/data/repos/make_appointment_repo.dart';
@@ -145,10 +146,13 @@ class AppRouters {
           ),
         ));
       case Routing.makeAppointment:
+        final doctorModel = argument as DoctorModel;
         return _buildRoute(BlocProvider(
           create: (context) =>
               MakeAppointmentCubit(getIt<MakeAppointmentRepo>()),
-          child: const MakeAppointmentView(),
+          child: MakeAppointmentView(
+            doctorModel: doctorModel,
+          ),
         ));
       case Routing.main:
         return _buildRoute(const MainView());

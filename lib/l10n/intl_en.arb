@@ -83,5 +83,6 @@
         "send":"Send",
         "addreviewSuccessfully":"Add review successfully",
         "attachAnalysis" : "Attach Analysis",
-        "noVisitYet": "No visit yet"
+        "noVisitYet": "No visit yet",
+        "noDoctorsFound":"No doctors in this section yet!"
 }

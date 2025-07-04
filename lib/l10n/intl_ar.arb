@@ -84,7 +84,8 @@
         "addreviewSuccessfully":"تم اضافة التقييم بنجاح",
         "attachAnalysis" : "ارفاق التحليل",
       
-        "noVisitYet": "لا توجد زيارات حتى الآن"
+        "noVisitYet": "لا توجد زيارات حتى الآن",
+        "noDoctorsFound":"لا يوجد أطباء في هذه القسم حتى الان"
 
 
 }
