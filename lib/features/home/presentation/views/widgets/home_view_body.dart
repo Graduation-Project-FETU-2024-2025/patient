@@ -32,7 +32,7 @@ class HomeViewBody extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const AdvertisingListView(),
+                const AdvertisingPageView(),
                 Gap(50.h),
                 BlocProvider(
                   create: (context) => GetSpecialitiesCubit(

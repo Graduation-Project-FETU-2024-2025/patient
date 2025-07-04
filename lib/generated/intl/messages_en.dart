@@ -104,6 +104,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("Next"),
         "noAppointment":
             MessageLookupByLibrary.simpleMessage("No appointments available"),
+        "noDoctorsFound": MessageLookupByLibrary.simpleMessage(
+            "No doctors in this section yet!"),
         "noOrdersYet": MessageLookupByLibrary.simpleMessage("No orders yet"),
         "noVisitYet": MessageLookupByLibrary.simpleMessage("No visit yet"),
         "onboarding": MessageLookupByLibrary.simpleMessage(

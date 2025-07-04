@@ -60,7 +60,7 @@ class DoctorDetailsViewBody extends StatelessWidget {
           ),
           Gap(80.h),
           AboutDoctor(
-            aboutDoctor: doctorModel.about ?? 'ddddddddddddddddddddddddddddd',
+            aboutDoctor: doctorModel.about ?? 'N/A',
           ),
           Gap(40.h),
           BookingSection(
@@ -71,8 +71,9 @@ class DoctorDetailsViewBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CustomButton(
-                onPressed: () =>
-                    Navigator.pushNamed(context, Routing.makeAppointment),
+                onPressed: () => Navigator.pushNamed(
+                    context, Routing.makeAppointment,
+                    arguments: doctorModel),
                 text: S.of(context).makeAnAppointment,
               ),
             ],
