@@ -83,9 +83,13 @@
         "send":"ارسال",
         "addreviewSuccessfully":"تم اضافة التقييم بنجاح",
         "attachAnalysis" : "ارفاق التحليل",
-      
         "noVisitYet": "لا توجد زيارات حتى الآن",
-        "noDoctorsFound":"لا يوجد أطباء في هذه القسم حتى الان"
+        "noDoctorsFound":"لا يوجد أطباء في هذه القسم حتى الان",
+        "requiredAnalysis": "التحاليل المطلوبه",
+        "fileDownloadSuccessfully": "تم تحميل الملف بنجاح",
+        "storagePermissionDenied": "تم رفض إذن التخزين",
+        "downloadDirectoryNotFound": "تعذر العثور على مجلد التحميل",
+        "noDownloadLink": "لا يوجد رابط للتحميل"
 
 
 }

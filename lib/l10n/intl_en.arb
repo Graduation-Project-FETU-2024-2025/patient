@@ -84,5 +84,11 @@
         "addreviewSuccessfully":"Add review successfully",
         "attachAnalysis" : "Attach Analysis",
         "noVisitYet": "No visit yet",
-        "noDoctorsFound":"No doctors in this section yet!"
+        "noDoctorsFound":"No doctors in this section yet!",
+        "requiredAnalysis" : "Required Analysis",
+        "fileDownloadSuccessfully" : "File Downloaded Successfully",
+        "storagePermissionDenied": "Storage permission denied",
+        "noDownloadLink": "No download link available",
+        "downloadDirectoryNotFound": "Could not find the download directory"
+
 }

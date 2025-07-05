@@ -66,6 +66,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "doctors": MessageLookupByLibrary.simpleMessage("Doctors"),
         "dontReceiveOTP":
             MessageLookupByLibrary.simpleMessage("Didn\'t receive OTP?"),
+        "downloadDirectoryNotFound": MessageLookupByLibrary.simpleMessage(
+            "Could not find the download directory"),
         "editProfile": MessageLookupByLibrary.simpleMessage("Edit Profile"),
         "email": MessageLookupByLibrary.simpleMessage("Email"),
         "english": MessageLookupByLibrary.simpleMessage("English"),
@@ -77,6 +79,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterYourEmail":
             MessageLookupByLibrary.simpleMessage("Enter your email"),
         "female": MessageLookupByLibrary.simpleMessage("Female"),
+        "fileDownloadSuccessfully": MessageLookupByLibrary.simpleMessage(
+            "File Downloaded Successfully"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("Forgot Password?"),
         "gallery": MessageLookupByLibrary.simpleMessage("Gallery"),
@@ -106,6 +110,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("No appointments available"),
         "noDoctorsFound": MessageLookupByLibrary.simpleMessage(
             "No doctors in this section yet!"),
+        "noDownloadLink":
+            MessageLookupByLibrary.simpleMessage("No download link available"),
         "noOrdersYet": MessageLookupByLibrary.simpleMessage("No orders yet"),
         "noVisitYet": MessageLookupByLibrary.simpleMessage("No visit yet"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
@@ -122,6 +128,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("Phone"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("Phone Number"),
         "register": MessageLookupByLibrary.simpleMessage("Register"),
+        "requiredAnalysis":
+            MessageLookupByLibrary.simpleMessage("Required Analysis"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("Resend OTP"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
@@ -131,6 +139,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("Something went wrong"),
         "specialities": MessageLookupByLibrary.simpleMessage("Specialities"),
+        "storagePermissionDenied":
+            MessageLookupByLibrary.simpleMessage("Storage permission denied"),
         "successfully": MessageLookupByLibrary.simpleMessage("Successfully!"),
         "time": MessageLookupByLibrary.simpleMessage("Time"),
         "today": MessageLookupByLibrary.simpleMessage("Today"),
