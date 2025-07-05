@@ -20,6 +20,7 @@ class EndPoints {
   static String orderLogs = "/api/orders";
   static String makeAppointment = "api/Appointments/create";
   static String addReview = "api/Review";
+  static String createOrder = "api/orders";
 
 
 

@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Please select your gender"),
         "aboutDoctor": MessageLookupByLibrary.simpleMessage("About Doctor"),
         "addRate": MessageLookupByLibrary.simpleMessage("Add Rate"),
+        "addToCart": MessageLookupByLibrary.simpleMessage("Add to Cart"),
         "address": MessageLookupByLibrary.simpleMessage("Address"),
         "addreviewSuccessfully":
             MessageLookupByLibrary.simpleMessage("Add review successfully"),
@@ -56,6 +57,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "contact": MessageLookupByLibrary.simpleMessage("Contact"),
+        "createOrder": MessageLookupByLibrary.simpleMessage("Create Order"),
         "createYourNewAccount":
             MessageLookupByLibrary.simpleMessage("Create your new account"),
         "darkMode": MessageLookupByLibrary.simpleMessage("Dark Mode"),
@@ -98,6 +100,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "makeAnAppointment":
             MessageLookupByLibrary.simpleMessage("Make Appointment"),
+        "makeOrder": MessageLookupByLibrary.simpleMessage("Make Order"),
         "male": MessageLookupByLibrary.simpleMessage("Male"),
         "medicalSpecialites":
             MessageLookupByLibrary.simpleMessage("Medical specialties"),
@@ -133,6 +136,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendOTP": MessageLookupByLibrary.simpleMessage("Resend OTP"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
+        "searchHint": MessageLookupByLibrary.simpleMessage("Search Medicines"),
         "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "signup": MessageLookupByLibrary.simpleMessage("Sign Up"),

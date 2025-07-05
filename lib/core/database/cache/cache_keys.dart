@@ -8,4 +8,5 @@ abstract class CacheKeys {
   static const String profileImage = "profileImage";
   static const String id = "id";
   static const String theme = "theme";
+  static const String email = "email";
 }

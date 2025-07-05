@@ -900,6 +900,56 @@ class S {
     );
   }
 
+  /// `Search Medicines`
+  String get searchHint {
+    return Intl.message(
+      'Search Medicines',
+      name: 'searchHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Create Order`
+  String get createOrder {
+    return Intl.message(
+      'Create Order',
+      name: 'createOrder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Make Order`
+  String get makeOrder {
+    return Intl.message(
+      'Make Order',
+      name: 'makeOrder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add to Cart`
+  String get addToCart {
+    return Intl.message(
+      'Add to Cart',
+      name: 'addToCart',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `No doctors in this section yet!`
   String get noDoctorsFound {
     return Intl.message(

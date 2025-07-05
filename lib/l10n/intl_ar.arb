@@ -83,7 +83,13 @@
         "send":"ارسال",
         "addreviewSuccessfully":"تم اضافة التقييم بنجاح",
         "attachAnalysis" : "ارفاق التحليل",
+      
         "noVisitYet": "لا توجد زيارات حتى الآن",
+        "searchHint":"ابحث عن الأدوية",
+        "search":"بحث",
+        "createOrder":"إنشاء طلب",
+        "makeOrder":"عمل طلب",
+        "addToCart":"إضافة إلى السلة",
         "noDoctorsFound":"لا يوجد أطباء في هذه القسم حتى الان",
         "requiredAnalysis": "التحاليل المطلوبه",
         "fileDownloadSuccessfully": "تم تحميل الملف بنجاح",
