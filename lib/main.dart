@@ -6,9 +6,11 @@ import 'package:patient_app/core/global_cubits/change_themes_cubit/change_themes
 import 'package:patient_app/core/helpers/bloc_observer.dart';
 import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/patient_app.dart';
+import 'package:permission_handler/permission_handler.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Permission.storage.isGranted; 
   Bloc.observer = MyBlocObserver();
   setup();
   await getIt<CacheHelper>().init();

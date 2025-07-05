@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:intl/intl.dart';
 import 'package:patient_app/features/schedule/data/models/appointment_model.dart';
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_icons.dart';
 import '../../../../core/utils/app_styles.dart';
 import '../../../../generated/l10n.dart';
 import 'widgets/appointment_detail_header.dart';
 import 'widgets/patient_detail_section.dart';
+import 'widgets/required_analysis_container.dart';
 
 class AppointmentRequestView extends StatelessWidget {
   const AppointmentRequestView({super.key, required this.appointmentModel});
@@ -58,27 +56,8 @@ class AppointmentRequestView extends StatelessWidget {
                   ),
                 ),
                 Gap(20.h),
-                Container(
-                  height: 60,
-                  width: 255,
-                  decoration: BoxDecoration(
-                      color: AppColors.primaryColor.withValues(alpha: 0.2),
-                      borderRadius: BorderRadius.circular(7)),
-                  child: Padding(
-                    padding: const EdgeInsets.all(13.0),
-                    child: Row(
-                      spacing: 8,
-                      children: [
-                                GestureDetector(
-                                  onTap: (){},
-                                  child: SvgPicture.asset(AppIcons.svgsIconAttachment,)),
-                        Text(
-                          appointmentModel.prescription ?? "",
-                          style: AppStyles.semiBold18(context),
-                        )
-                      ],
-                    ),
-                  ),
+                RequiredAnalysisContainer(
+                  fileUrl: appointmentModel.fileUrl,
                 ),
                 Gap(50.h),
               ],

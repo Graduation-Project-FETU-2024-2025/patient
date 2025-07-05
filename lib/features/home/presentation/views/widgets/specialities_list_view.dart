@@ -20,7 +20,7 @@ class SpecialtiesListView extends StatelessWidget {
       builder: (context, state) {
         if (state is GetSpecialitiesSuccess) {
           return SizedBox(
-            height: 100.h,
+            height: 120.h,
             child: ListView.builder(
               shrinkWrap: true,
               physics: const BouncingScrollPhysics(),

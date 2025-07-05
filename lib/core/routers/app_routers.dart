@@ -9,6 +9,7 @@ import 'package:patient_app/features/all_Specialities/presentation/view_models/g
 import 'package:patient_app/features/all_Specialities/presentation/views/all_specialities_view.dart';
 import 'package:patient_app/features/all_doctors/data/repos/get_all_doctors_repo.dart';
 import 'package:patient_app/features/all_doctors/presentation/view_models/get_all_doctors/get_all_doctors_cubit.dart';
+import 'package:patient_app/features/appointment_request/presentation/view/appointment_request_view.dart';
 import 'package:patient_app/features/doctor_details/data/repos/get_details_doctor_repo.dart';
 import 'package:patient_app/features/doctor_details/presentation/view_models/doctor_details/doctor_details_cubit.dart';
 import 'package:patient_app/features/doctor_details/presentation/views/doctor_details_view.dart';
@@ -23,6 +24,7 @@ import 'package:patient_app/features/forget_password/presentation/view/reset_pas
 import 'package:patient_app/features/forget_password/presentation/view_model/otp_cubit/otp_cubit.dart';
 import 'package:patient_app/features/forget_password/presentation/view_model/reset_password_cubit/reset_password_cubit.dart';
 import 'package:patient_app/features/forget_password/presentation/view_model/send_otp_cubit/send_otp_cubit.dart';
+import 'package:patient_app/features/home/data/models/doctor_model.dart';
 import 'package:patient_app/features/home/presentation/views/home_view.dart';
 import 'package:patient_app/features/main/presentation/view/main_view.dart';
 import 'package:patient_app/features/make_appointment/data/repos/make_appointment_repo.dart';
@@ -36,6 +38,7 @@ import 'package:patient_app/features/orders_log/data/repository/order_log_repo.d
 import 'package:patient_app/features/orders_log/presentation/view/orders_log_view.dart';
 import 'package:patient_app/features/orders_log/presentation/view_model/cubit/order_log_cubit.dart';
 import 'package:patient_app/features/profile/data/models/user_model.dart';
+import 'package:patient_app/features/schedule/data/models/appointment_model.dart';
 import 'package:patient_app/features/sign_in/data/repository/sign_in_repo.dart';
 import 'package:patient_app/features/sign_in/presentation/view/sign_in_view.dart';
 import 'package:patient_app/features/sign_in/presentation/view_model/sign_in_cubit/sign_in_cubit.dart';
@@ -43,6 +46,8 @@ import 'package:patient_app/features/sign_up/data/repos/sign_up_repo.dart';
 import 'package:patient_app/features/sign_up/presentation/view_models/sign_up/sign_up_cubit.dart';
 import 'package:patient_app/features/sign_up/presentation/views/sign_up_view.dart';
 import 'package:patient_app/features/splash/presentation/view/splash_view.dart';
+
+import '../../features/appointment_request/presentation/view_model/cubit/file_download_cubit.dart';
 
 class AppRouters {
   Route generateRoute(RouteSettings settings) {
@@ -145,13 +150,23 @@ class AppRouters {
           ),
         ));
       case Routing.makeAppointment:
+        final doctorModel = argument as DoctorModel;
         return _buildRoute(BlocProvider(
           create: (context) =>
               MakeAppointmentCubit(getIt<MakeAppointmentRepo>()),
-          child: const MakeAppointmentView(),
+          child: MakeAppointmentView(
+            doctorModel: doctorModel,
+          ),
         ));
       case Routing.main:
         return _buildRoute(const MainView());
+      case Routing.appointmentDetail:
+        return _buildRoute(BlocProvider(
+          create: (context) => FileDownloadCubit(),
+          child: AppointmentRequestView(
+            appointmentModel: argument as AppointmentModel,
+          ),
+        ));
       default:
         return _buildRoute(
           Scaffold(

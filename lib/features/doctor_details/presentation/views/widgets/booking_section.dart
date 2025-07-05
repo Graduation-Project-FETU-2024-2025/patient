@@ -74,7 +74,7 @@ class BookingSection extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          doctorModel.rating.toString(),
+                          doctorModel.rating.toStringAsFixed(1),
                           style: AppStyles.semiBold12(context),
                         ),
                         const Icon(

@@ -65,6 +65,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "doctors": MessageLookupByLibrary.simpleMessage("الأطباء"),
         "dontReceiveOTP":
             MessageLookupByLibrary.simpleMessage("لم يتم الاستلام؟"),
+        "downloadDirectoryNotFound": MessageLookupByLibrary.simpleMessage(
+            "تعذر العثور على مجلد التحميل"),
         "editProfile":
             MessageLookupByLibrary.simpleMessage("تعديل الملف الشخصي"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
@@ -78,6 +80,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "enterYourEmail":
             MessageLookupByLibrary.simpleMessage("أدخل بريدك الإلكتروني"),
         "female": MessageLookupByLibrary.simpleMessage("أنثى"),
+        "fileDownloadSuccessfully":
+            MessageLookupByLibrary.simpleMessage("تم تحميل الملف بنجاح"),
         "forgotPassword":
             MessageLookupByLibrary.simpleMessage("هل نسيت كلمة المرور؟"),
         "gallery": MessageLookupByLibrary.simpleMessage("المعرض"),
@@ -104,6 +108,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "next": MessageLookupByLibrary.simpleMessage("التالى"),
         "noAppointment":
             MessageLookupByLibrary.simpleMessage("لاتوجد حجوزات متاحه"),
+        "noDoctorsFound": MessageLookupByLibrary.simpleMessage(
+            "لا يوجد أطباء في هذه القسم حتى الان"),
+        "noDownloadLink":
+            MessageLookupByLibrary.simpleMessage("لا يوجد رابط للتحميل"),
         "noOrdersYet":
             MessageLookupByLibrary.simpleMessage("لا توجد طلبات حتى الآن"),
         "noVisitYet":
@@ -120,6 +128,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "phone": MessageLookupByLibrary.simpleMessage("الهاتف"),
         "phoneNumber": MessageLookupByLibrary.simpleMessage("رقم الهاتف"),
         "register": MessageLookupByLibrary.simpleMessage("تسجيل"),
+        "requiredAnalysis":
+            MessageLookupByLibrary.simpleMessage("التحاليل المطلوبه"),
         "resendOTP": MessageLookupByLibrary.simpleMessage("إعادة إرسال"),
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
@@ -132,6 +142,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "someThingWentWrong":
             MessageLookupByLibrary.simpleMessage("حدث خطأ ما"),
         "specialities": MessageLookupByLibrary.simpleMessage("التخصصات"),
+        "storagePermissionDenied":
+            MessageLookupByLibrary.simpleMessage("تم رفض إذن التخزين"),
         "successfully": MessageLookupByLibrary.simpleMessage("تم بنجاح!"),
         "time": MessageLookupByLibrary.simpleMessage("الوقت"),
         "today": MessageLookupByLibrary.simpleMessage("اليوم"),

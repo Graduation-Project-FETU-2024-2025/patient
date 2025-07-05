@@ -89,7 +89,13 @@
         "search":"بحث",
         "createOrder":"إنشاء طلب",
         "makeOrder":"عمل طلب",
-        "addToCart":"إضافة إلى السلة"
+        "addToCart":"إضافة إلى السلة",
+        "noDoctorsFound":"لا يوجد أطباء في هذه القسم حتى الان",
+        "requiredAnalysis": "التحاليل المطلوبه",
+        "fileDownloadSuccessfully": "تم تحميل الملف بنجاح",
+        "storagePermissionDenied": "تم رفض إذن التخزين",
+        "downloadDirectoryNotFound": "تعذر العثور على مجلد التحميل",
+        "noDownloadLink": "لا يوجد رابط للتحميل"
 
 
 }

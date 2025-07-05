@@ -43,7 +43,9 @@ class AboutDoctor extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 43),
             child: Text(
-              'A doctor is a medical professional who has completed the necessary education and training to diagnose, treat, and prevent illnesses and injuries in individuals.',
+              aboutDoctor,
+              maxLines: 5,
+              overflow: TextOverflow.ellipsis,
               style: AppStyles.semiBold15(context).copyWith(
                 color: Theme.of(context).brightness == Brightness.light
                     ? AppColors.black.withValues(alpha: 0.6)

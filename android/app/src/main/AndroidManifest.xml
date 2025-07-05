@@ -1,5 +1,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
-    <application
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    android:maxSdkVersion="28" />
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+<!-- لإصدارات Android 10 إلى 12 -->
+<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+<!-- لـ Android 10 إلى 12 -->
+<uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+
+<!-- لـ Android 9 وأقل -->
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    android:maxSdkVersion="28"/>
+<!-- لإصدارات Android 13+ -->
+<uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+<uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+<uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />    
+<application
+android:requestLegacyExternalStorage="true"
         android:label="patient_app"
         android:name="${applicationName}"
         android:enableOnBackInvokedCallback="true"

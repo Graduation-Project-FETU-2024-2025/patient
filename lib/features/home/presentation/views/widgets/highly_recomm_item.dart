@@ -79,7 +79,7 @@ class HighlyRecommItem extends StatelessWidget {
                     ),
                     Gap(5.w),
                     Text(
-                      '${doctorModel.rating} (${doctorModel.reviewsCount} Reviews)',
+                      '${doctorModel.rating.toStringAsFixed(1)} (${doctorModel.reviewsCount} Reviews)',
                       style: AppStyles.semiBold10(context).copyWith(
                         color: Theme.of(context).brightness == Brightness.light
                             ? AppColors.black.withValues(alpha: .4)

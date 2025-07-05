@@ -8,6 +8,7 @@ import 'package:patient_app/core/utils/app_styles.dart';
 import 'package:patient_app/core/widgets/custom_button.dart';
 import 'package:patient_app/core/widgets/custom_edit_text_form_field.dart';
 import 'package:patient_app/core/widgets/toast.dart';
+import 'package:patient_app/features/home/data/models/doctor_model.dart';
 import 'package:patient_app/features/make_appointment/data/repos/add_review_repo.dart';
 import 'package:patient_app/features/make_appointment/presentation/view_models/add_review/add_review_cubit.dart';
 import 'package:patient_app/features/make_appointment/presentation/view_models/make_appointment/make_appointment_cubit.dart';
@@ -19,7 +20,7 @@ import 'package:patient_app/features/make_appointment/presentation/views/widgets
 import 'package:patient_app/generated/l10n.dart';
 
 class MakeAppointmentViewBody extends StatelessWidget {
-  MakeAppointmentViewBody({super.key});
+  MakeAppointmentViewBody({super.key, required this.doctorModel});
   final List<String> timeSlots = [
     '08:00 AM',
     '09:00 AM',
@@ -28,6 +29,7 @@ class MakeAppointmentViewBody extends StatelessWidget {
     '12:00 AM',
     '3:00 PM',
   ];
+  final DoctorModel doctorModel;
 
   @override
   Widget build(BuildContext context) {
@@ -85,9 +87,8 @@ class MakeAppointmentViewBody extends StatelessWidget {
                           : CustomButton(
                               onPressed: () {
                                 cubit.makeAppointment(
-                                  doctorName: 'llkkjjb',
-                                  clinicId:
-                                      '9397cc11-3968-4b77-9817-a2391351939c',
+                                  doctorName: doctorModel.fullName,
+                                  clinicId: doctorModel.id,
                                 );
                               },
                               text: S.of(context).book,
