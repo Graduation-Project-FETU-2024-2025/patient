@@ -1,6 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
@@ -8,6 +7,7 @@ import 'package:patient_app/core/utils/app_icons.dart';
 import 'package:patient_app/core/widgets/custom_button.dart';
 import 'package:patient_app/core/widgets/search_text_field.dart';
 import 'package:patient_app/features/orders/presentation/view/widgets/custom_medicine_card_grid.dart';
+import 'package:patient_app/features/orders/presentation/view_model/order_cubit/order_cubit.dart';
 
 class OrdersView extends StatelessWidget {
   const OrdersView({super.key});
@@ -37,7 +37,9 @@ class OrdersView extends StatelessWidget {
                 onChanged: (value) async {
                   Future.delayed(const Duration(milliseconds: 500), () {
                     // Simulate a search operation
-                    log('Searching for: $value');
+                    if (context.mounted) {
+                      context.read<OrderCubit>().searchMedicine(value);
+                    }
                   });
                 },
                 onPressed: () {},
