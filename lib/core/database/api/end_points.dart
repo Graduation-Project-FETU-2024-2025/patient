@@ -22,12 +22,9 @@ class EndPoints {
   static String addReview = "api/Review";
   static String createOrder = "api/orders";
 
-
-
-
-  static String deleteOrderLogs(String id)=> "/api/orders/$id";
-
-  
+  static String deleteOrderLogs(String id) => "/api/orders/$id";
+  static String searchMedicine(String query) =>
+      "api/Product/with-branches?page=1&pageSize=30&search=$query";
 }
 
 class ApiKeys {
