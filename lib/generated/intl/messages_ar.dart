@@ -28,6 +28,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("الرجاء اختيار جنسك"),
         "aboutDoctor": MessageLookupByLibrary.simpleMessage("عن الطبيب"),
         "addRate": MessageLookupByLibrary.simpleMessage("اضافة تقييم"),
+        "addToCart": MessageLookupByLibrary.simpleMessage("إضافة إلى السلة"),
         "address": MessageLookupByLibrary.simpleMessage("العنوان"),
         "addreviewSuccessfully":
             MessageLookupByLibrary.simpleMessage("تم اضافة التقييم بنجاح"),
@@ -53,6 +54,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
         "contact": MessageLookupByLibrary.simpleMessage("الاتصال"),
+        "createOrder": MessageLookupByLibrary.simpleMessage("إنشاء طلب"),
         "createYourNewAccount":
             MessageLookupByLibrary.simpleMessage("قم بإنشاء حسابك الجديد"),
         "darkMode": MessageLookupByLibrary.simpleMessage("الوضع المظلم"),
@@ -92,6 +94,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "makeAnAppointment":
             MessageLookupByLibrary.simpleMessage("احجز موعدًا"),
+        "makeOrder": MessageLookupByLibrary.simpleMessage("عمل طلب"),
         "male": MessageLookupByLibrary.simpleMessage("ذكر"),
         "medicalSpecialites":
             MessageLookupByLibrary.simpleMessage("التخصصات الطبية"),

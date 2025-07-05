@@ -1,9 +1,7 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:patient_app/features/orders/data/models/medicine_model.dart';
 import 'package:patient_app/features/orders/presentation/view/widgets/custom_medicine_card.dart';
-
 
 class SuccessBody extends StatelessWidget {
   const SuccessBody({
@@ -18,7 +16,7 @@ class SuccessBody extends StatelessWidget {
         crossAxisCount: 2,
         mainAxisSpacing: 20.h,
         crossAxisSpacing: 20.w,
-        childAspectRatio: 1,
+        childAspectRatio: .9,
       ),
       delegate: SliverChildBuilderDelegate(
         (context, index) {

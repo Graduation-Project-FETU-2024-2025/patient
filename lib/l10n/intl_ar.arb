@@ -86,7 +86,10 @@
       
         "noVisitYet": "لا توجد زيارات حتى الآن",
         "searchHint":"ابحث عن الأدوية",
-        "search":"بحث"
+        "search":"بحث",
+        "createOrder":"إنشاء طلب",
+        "makeOrder":"عمل طلب",
+        "addToCart":"إضافة إلى السلة"
 
 
 }

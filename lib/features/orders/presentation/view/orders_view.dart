@@ -4,9 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:patient_app/core/utils/app_icons.dart';
-import 'package:patient_app/core/widgets/custom_button.dart';
 import 'package:patient_app/core/widgets/search_text_field.dart';
 import 'package:patient_app/features/orders/presentation/view/widgets/custom_medicine_card_grid.dart';
+import 'package:patient_app/features/orders/presentation/view/widgets/make_oder_button_bloc_consumer.dart';
 import 'package:patient_app/features/orders/presentation/view_model/order_cubit/order_cubit.dart';
 
 class OrdersView extends StatelessWidget {
@@ -57,7 +57,7 @@ class OrdersView extends StatelessWidget {
                   const Expanded(
                     child: SizedBox(),
                   ),
-                  CustomButton(onPressed: () {}, text: 'Add to Cart'),
+                  const MakeOrderButtonBlocConsumer(),
                 ],
               ),
             )
@@ -67,3 +67,5 @@ class OrdersView extends StatelessWidget {
     );
   }
 }
+
+

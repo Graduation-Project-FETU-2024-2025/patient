@@ -17,26 +17,26 @@ class CustomMedicineCardGrid extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<OrderCubit, OrderState>(
       buildWhen: (previous, current) =>
-          current is OrderLoadedSuccess ||
-          current is OrderLoading ||
-          current is OrderLoadedFailure ||
+          current is SearchLoadedSuccess ||
+          current is SearchLoading ||
+          current is SearchLoadedFailure ||
           current is OrderInitial,
       builder: (context, state) {
-        if (state is OrderLoadedSuccess) {
+        if (state is SearchLoadedSuccess) {
           return SuccessBody(medicines: state.medicines);
-        } else if (state is OrderLoadedFailure) {
+        } else if (state is SearchLoadedFailure) {
           return SliverToBoxAdapter(
             child: Center(
               child: Text('Error: ${state.errorModel.message}'),
             ),
           );
-        } else if (state is OrderLoading) {
+        } else if (state is SearchLoading) {
           return SliverGrid(
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
               mainAxisSpacing: 20.h,
               crossAxisSpacing: 20.w,
-              childAspectRatio: 1,
+              childAspectRatio: .9,
             ),
             delegate: SliverChildBuilderDelegate(
               (context, index) {

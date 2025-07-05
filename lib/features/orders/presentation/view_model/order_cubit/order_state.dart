@@ -5,16 +5,33 @@ sealed class OrderState {}
 
 final class OrderInitial extends OrderState {}
 
-final class OrderLoading extends OrderState {}
+final class SearchLoading extends OrderState {}
 
-final class OrderLoadedSuccess extends OrderState {
+final class SearchLoadedSuccess extends OrderState {
   final List<MedicineModel> medicines;
 
-  OrderLoadedSuccess({required this.medicines});
+  SearchLoadedSuccess({required this.medicines});
 }
 
-final class OrderLoadedFailure extends OrderState {
+final class SearchLoadedFailure extends OrderState {
   final ApiErrorModel errorModel;
 
-  OrderLoadedFailure({required this.errorModel});
+  SearchLoadedFailure({required this.errorModel});
+}
+
+
+final class OrderMakingLoading extends OrderState {}
+
+
+final class OrderMakingSuccess extends OrderState {
+  final String message;
+
+  OrderMakingSuccess({required this.message});
+}
+
+
+final class OrderMakingFailure extends OrderState {
+  final ApiErrorModel errorModel;
+
+  OrderMakingFailure({required this.errorModel});
 }

@@ -85,5 +85,8 @@
         "attachAnalysis" : "Attach Analysis",
         "noVisitYet": "No visit yet",
         "searchHint":"Search Medicines",
-        "search":"Search"
+        "search":"Search",
+        "createOrder":"Create Order",
+        "makeOrder":"Make Order",
+        "addToCart":"Add to Cart"
 }

@@ -102,8 +102,7 @@ void setup() {
     () => MakeAppointmentRepoImpl(apiConsumer: getIt<ApiConsumer>()),
   );
 
-
- getIt.registerLazySingleton<OrderMedicineRepo>(
-    () => OrderMedicineRepoFake(),
+  getIt.registerLazySingleton<OrderMedicineRepo>(
+    () => OrderMedicineRepoFake(getIt<ApiConsumer>()),
   );
 }
