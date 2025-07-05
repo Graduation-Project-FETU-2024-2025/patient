@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:patient_app/core/helpers/extentions.dart';
 import 'package:patient_app/core/routers/routing.dart';
 import 'package:patient_app/features/schedule/presentation/view_model/order_schedule/order_schedule_cubit.dart';
+import '../../../../../core/widgets/no_item_widget.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../data/models/appointment_model.dart';
 import 'patient_schedule_container.dart';
@@ -33,7 +34,9 @@ class PatientScheduleContainerListView extends StatelessWidget {
 
           if (appointments.isEmpty) {
             return SliverToBoxAdapter(
-              child: Center(child: Text(S.of(context).noAppointment)),
+              child: NoItemWidget(
+                message: S.of(context).noAppointment,
+              ),
             );
           }
 
