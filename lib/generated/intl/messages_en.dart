@@ -123,6 +123,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "resendOTP": MessageLookupByLibrary.simpleMessage("Resend OTP"),
         "resetPassword": MessageLookupByLibrary.simpleMessage("Reset Password"),
         "save": MessageLookupByLibrary.simpleMessage("Save"),
+        "search": MessageLookupByLibrary.simpleMessage("Search"),
+        "searchHint": MessageLookupByLibrary.simpleMessage("Search Medicines"),
         "seeAll": MessageLookupByLibrary.simpleMessage("See All"),
         "send": MessageLookupByLibrary.simpleMessage("Send"),
         "signup": MessageLookupByLibrary.simpleMessage("Sign Up"),

@@ -71,4 +71,8 @@ class AppIcons {
   /// Assets for svgsDelete
   /// assets/svgs/delete.svg
   static const String svgsDelete = "assets/svgs/delete.svg";
+
+  /// Assets for svgsCart
+  /// assets/svgs/cart.svg
+  static const String svgsCart = "assets/svgs/cart.svg";
 }

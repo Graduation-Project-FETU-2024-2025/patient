@@ -121,6 +121,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "resetPassword":
             MessageLookupByLibrary.simpleMessage("إعادة تعيين كلمة المرور"),
         "save": MessageLookupByLibrary.simpleMessage("حفظ"),
+        "search": MessageLookupByLibrary.simpleMessage("بحث"),
+        "searchHint": MessageLookupByLibrary.simpleMessage("ابحث عن الأدوية"),
         "seeAll": MessageLookupByLibrary.simpleMessage("عرض الكل"),
         "send": MessageLookupByLibrary.simpleMessage("ارسال"),
         "signup": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),

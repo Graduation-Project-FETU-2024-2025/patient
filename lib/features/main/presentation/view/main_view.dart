@@ -5,6 +5,7 @@ import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/features/home/presentation/views/home_view.dart';
+import 'package:patient_app/features/orders/presentation/view/orders_view.dart';
 import 'package:patient_app/features/profile/data/repo/profile_repo.dart';
 import 'package:patient_app/features/profile/presentation/model_view/profile_cubit/profile_cubit.dart';
 import 'package:patient_app/features/profile/presentation/view/profile_view.dart';
@@ -31,9 +32,7 @@ class _MainViewState extends State<MainView> {
         create: (context) => OrderScheduleCubit(getIt<AppointmentRepo>())..fetchAppointments(),
         child: const ScheduleScreen(),
       ),
-    const Scaffold(
-      body: Center(child: Text('Profile Screen')),
-    ),
+    const OrdersView(),
     BlocProvider(
       create: (context) => ProfileCubit(getIt<ProfileRepo>())..getProfileEmitter(),
       child: const ProfileView(),

@@ -899,6 +899,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Search Medicines`
+  String get searchHint {
+    return Intl.message(
+      'Search Medicines',
+      name: 'searchHint',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Search`
+  String get search {
+    return Intl.message(
+      'Search',
+      name: 'search',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
