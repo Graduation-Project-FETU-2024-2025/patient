@@ -8,11 +8,13 @@ class PatientDetailsSection extends StatelessWidget {
   const PatientDetailsSection({
     super.key,
     required this.imageUrl,
-    required this.name,
+    required this.doctorName,
+    required this.clinicName,
   });
 
   final String imageUrl;
-  final String name;
+  final String doctorName;
+  final String clinicName;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -25,7 +27,7 @@ class PatientDetailsSection extends StatelessWidget {
         ),
         Gap(15.w),
         Text(
-          name,
+          '$doctorName | $clinicName',
           style: AppStyles.semiBold20(context),
         ),
       ],

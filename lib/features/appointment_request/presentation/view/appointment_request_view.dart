@@ -38,8 +38,10 @@ class AppointmentRequestView extends StatelessWidget {
             child: Column(
               children: [
                 PatientDetailsSection(
-                    imageUrl: appointmentModel.userImage,
-                    name: appointmentModel.userName),
+                  imageUrl: appointmentModel.userImage,
+                  doctorName: appointmentModel.doctorName,
+                  clinicName: appointmentModel.clinicName,
+                ),
                 Gap(40.h),
                 Align(
                   alignment: Alignment.centerLeft,
