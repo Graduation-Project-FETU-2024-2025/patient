@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:patient_app/core/database/cache/cashe_helper.dart';
+import 'package:patient_app/core/functions/is_network_image.dart';
 import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
+import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
 import 'package:patient_app/features/home/data/models/doctor_model.dart';
 
@@ -43,8 +45,9 @@ class HighlyRecommItem extends StatelessWidget {
               height: 102,
               decoration: ShapeDecoration(
                 image: DecorationImage(
-                  image: CachedNetworkImageProvider(doctorModel.image ??
-                      'https://www.shutterstock.com/image-photo/portrait-handsome-male-doctor-stethoscope-600nw-2480850611.jpg'),
+                  image: isNetworkImage(doctorModel.image)
+                      ? CachedNetworkImageProvider(doctorModel.image!)
+                      : const AssetImage(AppImages.imagesNoClinicImg),
                   fit: BoxFit.cover,
                 ),
                 shape: RoundedRectangleBorder(

@@ -21,6 +21,7 @@ class EndPoints {
   static String makeAppointment = "api/Appointments/create";
   static String addReview = "api/Review";
   static String createOrder = "api/orders";
+  static String getAllDoctors = "api/Doctors";
 
   static String deleteOrderLogs(String id) => "/api/orders/$id";
   static String searchMedicine(String query) =>

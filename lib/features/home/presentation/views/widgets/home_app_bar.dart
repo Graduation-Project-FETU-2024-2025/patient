@@ -51,6 +51,15 @@ class HomeAppBar extends StatelessWidget {
               ),
             ),
             const Spacer(),
+            Container(
+              width: 30,
+              height: 30,
+              decoration: const ShapeDecoration(
+                shape: CircleBorder(),
+                color: AppColors.white,
+              ),
+              child: Image.asset(AppImages.imagesNotification),
+            ),
           ],
         ),
       ),

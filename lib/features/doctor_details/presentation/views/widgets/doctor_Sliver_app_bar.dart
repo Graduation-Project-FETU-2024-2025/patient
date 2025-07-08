@@ -3,21 +3,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:patient_app/core/database/cache/cashe_helper.dart';
+import 'package:patient_app/core/functions/is_network_image.dart';
 import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_icons.dart';
+import 'package:patient_app/core/utils/app_images.dart';
 import '../../../../../core/utils/app_colors.dart';
 
 class DoctorSliverAppBar extends StatelessWidget {
-  const DoctorSliverAppBar(
-      {super.key,
-      required this.img,
-      required this.isBtnValid,
-      required this.height,
-      this.isLocalImage = false});
+  const DoctorSliverAppBar({
+    super.key,
+    required this.img,
+    required this.isBtnValid,
+    required this.height,
+  });
   final String img;
   final bool isBtnValid;
   final double height;
-  final bool isLocalImage;
 
   @override
   Widget build(BuildContext context) {
@@ -42,17 +43,17 @@ class DoctorSliverAppBar extends StatelessWidget {
       elevation: 0.0,
       stretch: true,
       flexibleSpace: FlexibleSpaceBar(
-        background: isLocalImage
-            ? Image.asset(
-                img,
-                fit: BoxFit.cover,
-              )
-            : CachedNetworkImage(
+        background: isNetworkImage(img)
+            ? CachedNetworkImage(
                 imageUrl: img,
                 fit: BoxFit.cover,
                 placeholder: (context, url) =>
                     const Center(child: CircularProgressIndicator()),
                 errorWidget: (context, url, error) => const Icon(Icons.error),
+              )
+            : Image.asset(
+                AppImages.imagesNoClinicImg,
+                fit: BoxFit.cover,
               ),
         stretchModes: const [
           StretchMode.blurBackground,
