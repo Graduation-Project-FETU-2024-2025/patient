@@ -45,7 +45,7 @@ class AppointmentModel {
       userImage: json['userImage'],
       type: json['type'] ?? '',
       complaint: json['complaint'] ?? '',
-      prescription: PrescriptionModel.fromJson(json['prescription']?? <Map<String, dynamic>>{}),
+      prescription: json['prescription'] != null ? PrescriptionModel.fromJson(json['prescription']) : null,
     );
   }
 }
