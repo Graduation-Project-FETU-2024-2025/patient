@@ -10,6 +10,7 @@ class GetAllDoctorsCubit extends Cubit<GetAllDoctorsState> {
   GetAllDoctorsCubit(this.getAllDoctorsRepo) : super(GetAllDoctorsInitial());
   final GetAllDoctorsRepo getAllDoctorsRepo;
   void getAllDoctors({required String specialityId}) async {
+    emit(GetAllDoctorsLoading());
     final result = await getAllDoctorsRepo.getAllDoctors(
       specialityId: specialityId,
     );

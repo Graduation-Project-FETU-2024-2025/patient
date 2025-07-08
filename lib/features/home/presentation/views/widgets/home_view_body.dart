@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -10,8 +9,6 @@ import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_icons.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
-import 'package:patient_app/features/home/data/repos/get_specialites_repo.dart';
-import 'package:patient_app/features/home/data/repos/get_top_doctors_repo.dart';
 import 'package:patient_app/features/home/presentation/view_models/get_specialites/get_specialities_cubit.dart';
 import 'package:patient_app/features/home/presentation/view_models/get_top_doctors/get_top_doctors_cubit.dart';
 import 'package:patient_app/features/home/presentation/views/widgets/advertising_list_view.dart';
@@ -25,69 +22,67 @@ class HomeViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          const HomeAppBar(),
-          Gap(20.h),
-          Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: 32.w,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const AdvertisingPageView(),
-                Gap(50.h),
-                BlocProvider(
-                  create: (context) => GetSpecialitiesCubit(
-                    getIt<GetSpecialitesRepo>(),
-                  )..getSpecialities(),
-                  child: const SpecialtiesSection(),
-                ),
-                Gap(50.h),
-                Row(
-                  children: [
-                    Text(
-                      S.of(context).highlyRecommended,
-                      style:
-                          AppStyles.semiBold25(context).copyWith(fontSize: 24),
-                    ),
-                    const Spacer(),
-                    GestureDetector(
-                      onTap: () => Navigator.pushNamed(
-                        context,
-                        Routing.doctors,
+    return RefreshIndicator(
+      color: AppColors.primaryColor,
+      onRefresh: () async {
+        context.read<GetSpecialitiesCubit>().getSpecialities();
+        context.read<GetTopDoctorsCubit>().getTopDoctors();
+      },
+      child: SingleChildScrollView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        child: Column(
+          children: [
+            const HomeAppBar(),
+            Gap(20.h),
+            Padding(
+              padding: EdgeInsets.symmetric(
+                horizontal: 32.w,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const AdvertisingPageView(),
+                  Gap(50.h),
+                  const SpecialtiesSection(),
+                  Gap(50.h),
+                  Row(
+                    children: [
+                      Text(
+                        S.of(context).highlyRecommended,
+                        style: AppStyles.semiBold25(context)
+                            .copyWith(fontSize: 24),
                       ),
-                      child: Text(
-                        S.of(context).seeAll,
-                        style: AppStyles.semiBold10(context).copyWith(
-                          color: AppColors.primaryColor,
+                      const Spacer(),
+                      GestureDetector(
+                        onTap: () => Navigator.pushNamed(
+                          context,
+                          Routing.doctors,
+                        ),
+                        child: Text(
+                          S.of(context).seeAll,
+                          style: AppStyles.semiBold10(context).copyWith(
+                            color: AppColors.primaryColor,
+                          ),
                         ),
                       ),
-                    ),
-                    getIt<CacheHelper>().getCurrentLanguage() == 'ar'
-                        ? Transform.rotate(
-                            angle: 180 * 3.14 / 180,
-                            child:
-                                SvgPicture.asset(AppIcons.svgsIconamooarrowUp),
-                          )
-                        : SvgPicture.asset(
-                            AppIcons.svgsIconamooarrowUp,
-                          ),
-                  ],
-                ),
-                Gap(30.h),
-                BlocProvider(
-                  create: (context) => GetTopDoctorsCubit(
-                    getIt<GetTopDoctorsRepo>(),
-                  )..getTopDoctors(),
-                  child: const HighlyRecommListView(),
-                ),
-              ],
-            ),
-          )
-        ],
+                      getIt<CacheHelper>().getCurrentLanguage() == 'ar'
+                          ? Transform.rotate(
+                              angle: 180 * 3.14 / 180,
+                              child: SvgPicture.asset(
+                                  AppIcons.svgsIconamooarrowUp),
+                            )
+                          : SvgPicture.asset(
+                              AppIcons.svgsIconamooarrowUp,
+                            ),
+                    ],
+                  ),
+                  Gap(30.h),
+                  const HighlyRecommListView(),
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
   }

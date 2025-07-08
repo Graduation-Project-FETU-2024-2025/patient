@@ -119,7 +119,7 @@ class AppRouters {
           create: (context) => GetAllDoctorsCubit(
             getIt<GetAllDoctorsRepo>(),
           )..getAllDoctors(specialityId: specialityId),
-          child: const AllDoctors(),
+          child: AllDoctors(specialityId: specialityId),
         ));
 
       case Routing.medicalRecords:
