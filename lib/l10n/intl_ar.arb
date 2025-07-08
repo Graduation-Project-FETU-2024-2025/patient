@@ -95,7 +95,8 @@
         "fileDownloadSuccessfully": "تم تحميل الملف بنجاح",
         "storagePermissionDenied": "تم رفض إذن التخزين",
         "downloadDirectoryNotFound": "تعذر العثور على مجلد التحميل",
-        "noDownloadLink": "لا يوجد رابط للتحميل"
+        "noDownloadLink": "لا يوجد رابط للتحميل",
+        "none": "لا يوجد"
 
 
 }

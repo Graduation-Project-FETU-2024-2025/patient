@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:intl/intl.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
 import 'package:patient_app/core/widgets/no_item_widget.dart';
 import 'package:patient_app/features/medical_records/data/models/medical_records_model.dart';
@@ -76,16 +77,22 @@ class MedicalRecordSuccessBody extends StatelessWidget {
                 ? NoItemWidget(message: S.of(context).noVisitYet)
                 : MedicalInfoGrid(
                     medicalInfo: {
-                      S.of(context).DateOfVisit:
-                          medicalRecordsModel?.appointmentModel?.date ?? '',
+                      S.of(context).DateOfVisit: DateFormat('d MMMM, y',
+                              Localizations.localeOf(context).toString())
+                          .format(
+                        DateTime.parse(
+                          medicalRecordsModel?.appointmentModel?.date ??
+                              "2025-07-09T00:00:00",
+                        ),
+                      ),
                       S.of(context).diagnosis: medicalRecordsModel
                               ?.appointmentModel?.prescription?.diagnosis ??
-                          '',
+                          S.of(context).none,
                       S.of(context).chiefComplaint: medicalRecordsModel
                               ?.appointmentModel
                               ?.prescription
                               ?.prescriptionProductDTOs ??
-                          '',
+                          S.of(context).none,
                     },
                   ),
           ],

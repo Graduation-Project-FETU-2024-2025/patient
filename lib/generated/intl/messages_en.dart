@@ -117,6 +117,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("No download link available"),
         "noOrdersYet": MessageLookupByLibrary.simpleMessage("No orders yet"),
         "noVisitYet": MessageLookupByLibrary.simpleMessage("No visit yet"),
+        "none": MessageLookupByLibrary.simpleMessage("None"),
         "onboarding": MessageLookupByLibrary.simpleMessage(
             "All Services for your health"),
         "orderLog": MessageLookupByLibrary.simpleMessage("Order Log"),

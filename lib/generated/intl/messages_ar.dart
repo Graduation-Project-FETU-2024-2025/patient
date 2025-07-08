@@ -116,6 +116,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("لا توجد طلبات حتى الآن"),
         "noVisitYet":
             MessageLookupByLibrary.simpleMessage("لا توجد زيارات حتى الآن"),
+        "none": MessageLookupByLibrary.simpleMessage("لا يوجد"),
         "onboarding": MessageLookupByLibrary.simpleMessage("كل الخدمات لصحتك"),
         "orderLog": MessageLookupByLibrary.simpleMessage("سجل الطلبات"),
         "otpSent": MessageLookupByLibrary.simpleMessage(

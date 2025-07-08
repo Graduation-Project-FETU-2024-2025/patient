@@ -94,6 +94,7 @@
         "fileDownloadSuccessfully" : "File Downloaded Successfully",
         "storagePermissionDenied": "Storage permission denied",
         "noDownloadLink": "No download link available",
-        "downloadDirectoryNotFound": "Could not find the download directory"
+        "downloadDirectoryNotFound": "Could not find the download directory",
+        "none": "None"
 
 }
