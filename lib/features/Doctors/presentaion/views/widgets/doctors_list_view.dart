@@ -76,6 +76,7 @@ class DoctorsListView extends StatelessWidget {
                     child: AllDoctorsItem(
                       doctorModel: DoctorModel(
                         id: 'id',
+                        clinicId: 'clinicId',
                         price: 0,
                         fullName: 'fullName',
                         clinicName: 'clinicName',

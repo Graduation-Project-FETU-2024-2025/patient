@@ -88,7 +88,7 @@ class MakeAppointmentViewBody extends StatelessWidget {
                               onPressed: () {
                                 cubit.makeAppointment(
                                   doctorName: doctorModel.fullName,
-                                  clinicId: doctorModel.id,
+                                  clinicId: doctorModel.clinicId,
                                 );
                               },
                               text: S.of(context).book,
