@@ -17,7 +17,7 @@ class DoctorDetailsView extends StatelessWidget {
             return CustomScrollView(
               slivers: [
                 DoctorSliverAppBar(
-                  img: state.doctorModel.image ?? "",
+                  img: state.doctorModel.image!,
                   isBtnValid: false,
                   height: MediaQuery.of(context).size.height * 0.3,
                 ),

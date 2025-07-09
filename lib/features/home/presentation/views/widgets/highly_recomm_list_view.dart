@@ -65,6 +65,7 @@ class HighlyRecommListView extends StatelessWidget {
                   child: HighlyRecommItem(
                     doctorModel: DoctorModel(
                       id: 'id',
+                      clinicId: 'clinicId',
                       price: 0,
                       fullName: 'fullName',
                       clinicName: 'clinicName',

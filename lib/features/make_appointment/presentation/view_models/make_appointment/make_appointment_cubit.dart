@@ -21,10 +21,26 @@ class MakeAppointmentCubit extends Cubit<MakeAppointmentState> {
   void makeAppointment(
       {required String doctorName, required String clinicId}) async {
     final userId = await SecureStorage.instance.getData(key: CacheKeys.id);
+    final timeParts = selectedTimeSlot!.split(' ');
+    final hourMinute = timeParts[0].split(':');
+    int hour = int.parse(hourMinute[0]);
+    final int minute = int.parse(hourMinute[1]);
+    final isPM = timeParts[1] == 'PM';
+
+    if (isPM && hour != 12) hour += 12;
+    if (!isPM && hour == 12) hour = 0;
+
+    final fullDateTime = DateTime(
+      appointmentDate!.year,
+      appointmentDate!.month,
+      appointmentDate!.day,
+      hour,
+      minute,
+    );
     emit(MakeAppointmentLoading());
     final result = await makeAppointmentRepo.makeAppointment(
       makeAppointmentRequest: MakeAppointmentRequest(
-        date: appointmentDate!.toIso8601String(),
+        date: fullDateTime.toIso8601String(),
         clinicId: clinicId,
         userId: userId!,
         doctorName: doctorName,

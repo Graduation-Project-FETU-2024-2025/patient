@@ -5,23 +5,21 @@ import 'package:gap/gap.dart';
 import 'package:patient_app/core/routers/routing.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
+import 'package:patient_app/features/Doctors/presentaion/view_models/doctors/doctors_cubit.dart';
 import 'package:patient_app/features/all_Specialities/data/models/specialities_model.dart';
-import 'package:patient_app/features/all_doctors/presentation/view_models/get_all_doctors/get_all_doctors_cubit.dart';
 import 'package:patient_app/features/all_doctors/presentation/views/widgets/all_doctors_item.dart';
 import 'package:patient_app/features/home/data/models/doctor_model.dart';
 import 'package:patient_app/generated/l10n.dart';
 import 'package:skeletonizer/skeletonizer.dart';
 
-class AllDoctorsListView extends StatelessWidget {
-  const AllDoctorsListView({
-    super.key,
-  });
+class DoctorsListView extends StatelessWidget {
+  const DoctorsListView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<GetAllDoctorsCubit, GetAllDoctorsState>(
+    return BlocBuilder<DoctorsCubit, DoctorsState>(
       builder: (context, state) {
-        if (state is GetAllDoctorsSucess) {
+        if (state is DoctorsSuccess) {
           if (state.doctors.isEmpty) {
             return Center(
               child: Column(
@@ -57,7 +55,7 @@ class AllDoctorsListView extends StatelessWidget {
               padding: EdgeInsets.zero,
             ),
           );
-        } else if (state is GetAllDoctorsFailure) {
+        } else if (state is DoctorsFailure) {
           return Center(
             child: Text(state.apiErrorModel.message!),
           );

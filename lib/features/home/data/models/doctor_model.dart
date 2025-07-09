@@ -2,6 +2,7 @@ import 'package:patient_app/features/all_Specialities/data/models/specialities_m
 
 class DoctorModel {
   final String id;
+  final String clinicId;
   final String fullName;
   final String? clinicName;
   final String? clinicAddress;
@@ -16,6 +17,7 @@ class DoctorModel {
 
   DoctorModel({
     required this.id,
+    required this.clinicId,
     required this.fullName,
     this.clinicName,
     this.clinicAddress,
@@ -31,6 +33,7 @@ class DoctorModel {
   factory DoctorModel.fromJson(Map<String, dynamic> json) {
     return DoctorModel(
         id: json['id'] ?? '',
+        clinicId: json['clinicId'] ?? '',
         fullName: json['fullName'] ?? '',
         clinicName: json['clinicName'],
         clinicAddress: json['clinicAddress'],

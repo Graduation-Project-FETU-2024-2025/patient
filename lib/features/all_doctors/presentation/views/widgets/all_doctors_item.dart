@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:patient_app/core/database/cache/cashe_helper.dart';
+import 'package:patient_app/core/functions/is_network_image.dart';
 import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
+import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/features/home/data/models/doctor_model.dart';
 import 'package:patient_app/generated/l10n.dart';
 
@@ -42,9 +44,11 @@ class AllDoctorsItem extends StatelessWidget {
               height: 102,
               decoration: ShapeDecoration(
                 image: DecorationImage(
-                  image: CachedNetworkImageProvider(
-                    doctorModel.image!,
-                  ),
+                  image: isNetworkImage(doctorModel.image)
+                      ? CachedNetworkImageProvider(
+                          doctorModel.image!,
+                        )
+                      : const AssetImage(AppImages.imagesNoClinicImg),
                   fit: BoxFit.cover,
                 ),
                 shape: RoundedRectangleBorder(
@@ -79,7 +83,7 @@ class AllDoctorsItem extends StatelessWidget {
                     ),
                     Gap(5.w),
                     Text(
-                      '${doctorModel.rating} (${doctorModel.reviewsCount} Reviews)',
+                      '${doctorModel.rating.toStringAsFixed(1)} (${doctorModel.reviewsCount} Reviews)',
                       style: AppStyles.semiBold10(context).copyWith(
                         color: Theme.of(context).brightness == Brightness.light
                             ? AppColors.black.withValues(alpha: .4)

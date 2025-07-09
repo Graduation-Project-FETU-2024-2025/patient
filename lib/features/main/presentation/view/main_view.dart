@@ -4,6 +4,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
+import 'package:patient_app/features/home/data/repos/get_specialites_repo.dart';
+import 'package:patient_app/features/home/data/repos/get_top_doctors_repo.dart';
+import 'package:patient_app/features/home/presentation/view_models/get_specialites/get_specialities_cubit.dart';
+import 'package:patient_app/features/home/presentation/view_models/get_top_doctors/get_top_doctors_cubit.dart';
 import 'package:patient_app/features/home/presentation/views/home_view.dart';
 import 'package:patient_app/features/orders/data/repository/order_medicine_repo.dart';
 import 'package:patient_app/features/orders/presentation/view/orders_view.dart';
@@ -29,7 +33,21 @@ class _MainViewState extends State<MainView> {
   double kIconSize = 24.0;
   double kBottomRadius = 20.0;
   List<Widget> screens = [
-    const HomeView(),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => GetSpecialitiesCubit(
+            getIt<GetSpecialitesRepo>(),
+          )..getSpecialities(),
+        ),
+        BlocProvider(
+          create: (context) => GetTopDoctorsCubit(
+            getIt<GetTopDoctorsRepo>(),
+          )..getTopDoctors(),
+        ),
+      ],
+      child: const HomeView(),
+    ),
     BlocProvider(
       create: (context) =>
           OrderScheduleCubit(getIt<AppointmentRepo>())..fetchAppointments(),

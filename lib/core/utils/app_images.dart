@@ -140,11 +140,19 @@ class AppImages {
   static const String imagesAvatar = "assets/images/avatar.png";
 
   /// Assets for imagesNoItem
-  /// assets/images/no_item.png
-  static const String imagesNoItem = "assets/images/no_item.png";
+  /// assets/images/no-item.png
+  static const String imagesNoItem = "assets/images/no-item.png";
 
   /// Assets for imagesReservationSuccessfully
   /// assets/images/reservation_successfully.png
   static const String imagesReservationSuccessfully =
       "assets/images/reservation_successfully.png";
+
+  /// Assets for imagesNoItem
+  /// assets/images/noclinicimg.png
+  static const String imagesNoClinicImg = "assets/images/noclinicimg.png";
+
+  /// Assets for imagesNotification
+  /// assets/images/notification.png
+  static const String imagesNotification = "assets/images/notification.png";
 }

@@ -11,6 +11,7 @@ class GetAllSpecialitiesCubit extends Cubit<GetAllSpecialitiesState> {
       : super(GetAllSpecialitiesInitial());
   final GetAllSpecialitiesRepo getAllSpecialitiesRepo;
   void getAllSpecialities() async {
+    emit(GetAllSpecialitiesLoading());
     final result = await getAllSpecialitiesRepo.getSpecialities();
     result.fold(
       (error) => emit(
