@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:patient_app/core/database/cache/cashe_helper.dart';
+import 'package:patient_app/core/functions/is_network_image.dart';
 import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
@@ -31,7 +32,9 @@ class SpecialitiesItem extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: CachedNetworkImage(
-                imageUrl: specialitiesModel.icon,
+                imageUrl: isNetworkImage(specialitiesModel.icon)
+                    ? specialitiesModel.icon
+                    : 'https://previews.123rf.com/images/djvstock/djvstock1701/djvstock170111065/70282730-color-heart-cardiology-with-hands-image-icon-vector-illustration.jpg',
                 fit: BoxFit.cover,
               ),
             ),
