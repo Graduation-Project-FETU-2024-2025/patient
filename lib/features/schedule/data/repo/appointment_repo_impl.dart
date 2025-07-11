@@ -17,12 +17,11 @@ class AppointmentRepoImpl implements AppointmentRepo {
 
   @override
   Future<Either<ApiErrorModel, List<AppointmentModel>>> getOrders() async {
-    final clinicId = await SecureStorage.instance.getData(key: CacheKeys.id);
-    log('user id $clinicId');
-    try {
-      final response = await api.get(
-          '${EndPoints.getAppointments}efd12de3-9c39-49f5-8e52-530bcede1868');
+    final userId = await SecureStorage.instance.getData(key: CacheKeys.id);
 
+    log('user id $userId');
+    try {
+      final response = await api.get('${EndPoints.getAppointments}$userId');
       if (response.data['data'] is List) {
         final List<AppointmentModel> appointments =
             (response.data['data'] as List)
