@@ -1,10 +1,10 @@
 class PrescriptionModel {
   final String doctorId;
   final String appointmentId;
-  final String tests; // e.g., "pla pla pla"
-  final String? nextAppointment; // e.g., "2025-01-01T00:00:00"
-  final String diagnosis; // e.g., "Any thing"
-  final String? prescriptionProductDTOs; // e.g., 'this is a test prescription'
+  final String tests;
+  final String? nextAppointment;
+  final String diagnosis;
+  final String? prescriptionProductDTOs; 
 
   PrescriptionModel({
     required this.doctorId,
