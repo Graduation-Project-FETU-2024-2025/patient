@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:patient_app/core/routers/routing.dart';
 import 'package:patient_app/core/services/get_it.dart';
+import 'package:patient_app/features/Doctors/data/repos/doctors_repo.dart';
+import 'package:patient_app/features/Doctors/presentaion/view_models/doctors/doctors_cubit.dart';
+import 'package:patient_app/features/Doctors/presentaion/views/doctors_view.dart';
 import 'package:patient_app/features/all_Specialities/data/repos/get_all_specialities_repo.dart';
 import 'package:patient_app/features/all_Specialities/presentation/view_models/get_all_specialites/get_all_specialities_cubit.dart';
 import 'package:patient_app/features/all_Specialities/presentation/views/all_specialities_view.dart';
@@ -116,7 +119,7 @@ class AppRouters {
           create: (context) => GetAllDoctorsCubit(
             getIt<GetAllDoctorsRepo>(),
           )..getAllDoctors(specialityId: specialityId),
-          child: const AllDoctors(),
+          child: AllDoctors(specialityId: specialityId),
         ));
 
       case Routing.medicalRecords:
@@ -160,6 +163,11 @@ class AppRouters {
         ));
       case Routing.main:
         return _buildRoute(const MainView());
+      case Routing.doctors:
+        return _buildRoute(BlocProvider(
+          create: (context) => DoctorsCubit(getIt<DoctorsRepo>())..getDoctors(),
+          child: const DoctorsView(),
+        ));
       case Routing.appointmentDetail:
         return _buildRoute(BlocProvider(
           create: (context) => FileDownloadCubit(),

@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:patient_app/core/database/cache/cashe_helper.dart';
+import 'package:patient_app/core/functions/is_network_image.dart';
 import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
+import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
 import 'package:patient_app/features/home/data/models/doctor_model.dart';
 import 'package:patient_app/generated/l10n.dart';
@@ -53,11 +55,13 @@ class BookingSection extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: CachedNetworkImage(
-                    imageUrl: doctorModel.image ??
-                        'https://www.shutterstock.com/image-photo/portrait-handsome-male-doctor-stethoscope-600nw-2480850611.jpg',
-                    fit: BoxFit.cover,
-                  ),
+                  child: isNetworkImage(doctorModel.image)
+                      ? CachedNetworkImage(
+                          imageUrl: doctorModel.image!,
+                          fit: BoxFit.cover,
+                        )
+                      : Image.asset(AppImages.imagesNoClinicImg,
+                          fit: BoxFit.cover),
                 ),
                 Gap(10.w),
                 Column(

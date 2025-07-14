@@ -1,10 +1,9 @@
-import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/intl.dart';
-import '../../../../../core/functions/is_network_image.dart';
+import 'package:patient_app/core/utils/app_images.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_icons.dart';
 import '../../../../../core/utils/app_styles.dart';
@@ -37,13 +36,7 @@ class PatientScheduleContainer extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 25.r,
-            backgroundImage: isNetworkImage(
-              appointmentModel.userImage,
-            )
-                ? CachedNetworkImageProvider(
-                    appointmentModel.userImage,
-                  )
-                : AssetImage(appointmentModel.userImage),
+            backgroundImage: const AssetImage(AppImages.imagesNoClinicImg),
           ),
           Gap(10.w),
           Column(
@@ -51,7 +44,7 @@ class PatientScheduleContainer extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                appointmentModel.userName,
+                'dr.${appointmentModel.doctorName} | ${appointmentModel.clinicName}',
                 style: AppStyles.semiBold15(context)
                     .copyWith(color: AppColors.white),
               ),

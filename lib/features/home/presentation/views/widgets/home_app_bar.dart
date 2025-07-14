@@ -45,12 +45,19 @@ class HomeAppBar extends StatelessWidget {
             Text(
               'Hi, ${getIt<CacheHelper>().getString(key: CacheKeys.username)}!',
               style: AppStyles.semiBold20(context).copyWith(
-                color: Theme.of(context).brightness == Brightness.light
-                    ? AppColors.white
-                    : AppColors.black,
+                color: AppColors.white,
               ),
             ),
             const Spacer(),
+            Container(
+              width: 30,
+              height: 30,
+              decoration: const ShapeDecoration(
+                shape: CircleBorder(),
+                color: AppColors.white,
+              ),
+              child: Image.asset(AppImages.imagesNotification),
+            ),
           ],
         ),
       ),
