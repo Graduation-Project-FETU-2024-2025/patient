@@ -1,6 +1,7 @@
 import 'package:animated_notch_bottom_bar/animated_notch_bottom_bar/animated_notch_bottom_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:patient_app/core/global_cubits/cart_cubit/cart_cubit.dart';
 import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
@@ -53,8 +54,15 @@ class _MainViewState extends State<MainView> {
           OrderScheduleCubit(getIt<AppointmentRepo>())..fetchAppointments(),
       child: const ScheduleScreen(),
     ),
-    BlocProvider(
-      create: (context) => OrderCubit(getIt<OrderMedicineRepo>()),
+    MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => OrderCubit(getIt<OrderMedicineRepo>()),
+        ),
+        BlocProvider(
+          create: (context) => getIt<CartCubit>()..getAllMedicinesInCart(),
+        ),
+      ],
       child: const OrdersView(),
     ),
     BlocProvider(

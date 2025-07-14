@@ -3,6 +3,7 @@ import 'package:patient_app/core/database/api/api_consumer.dart';
 import 'package:patient_app/core/database/api/dio_consumer.dart';
 import 'package:patient_app/core/database/api/dio_factory.dart';
 import 'package:patient_app/core/database/cache/cashe_helper.dart';
+import 'package:patient_app/core/global_cubits/cart_cubit/cart_cubit.dart';
 import 'package:patient_app/features/Doctors/data/repos/doctors_repo.dart';
 import 'package:patient_app/features/Doctors/data/repos/doctors_repo_impl.dart';
 import 'package:patient_app/features/all_Specialities/data/repos/get_all_specialities_repo.dart';
@@ -109,5 +110,9 @@ void setup() {
   );
   getIt.registerLazySingleton<DoctorsRepo>(
     () => DoctorsRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+
+  getIt.registerFactory<CartCubit>(
+    () => CartCubit(),
   );
 }

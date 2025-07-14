@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:patient_app/core/global_cubits/cart_cubit/cart_cubit.dart';
 import 'package:patient_app/core/widgets/custom_button.dart';
 import 'package:patient_app/core/widgets/custom_loading_widget.dart';
 import 'package:patient_app/core/widgets/toast.dart';
@@ -36,7 +37,9 @@ class MakeOrderButtonBlocConsumer extends StatelessWidget {
             ? const CustomLoadingWidget()
             : CustomButton(
                 onPressed: () {
-                  context.read<OrderCubit>().makeOrder();
+                  // context.read<OrderCubit>().makeOrder();
+                  context.read<CartCubit>().addItemToCart(
+                      medicines: context.read<OrderCubit>().medicinesInCart);
                 },
                 text: S.of(context).makeOrder,
               );

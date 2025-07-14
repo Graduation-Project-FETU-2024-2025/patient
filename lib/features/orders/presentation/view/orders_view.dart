@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:gap/gap.dart';
-import 'package:patient_app/core/utils/app_icons.dart';
 import 'package:patient_app/core/widgets/search_text_field.dart';
+import 'package:patient_app/features/orders/presentation/view/widgets/custom_cart_button.dart';
 import 'package:patient_app/features/orders/presentation/view/widgets/custom_medicine_card_grid.dart';
 import 'package:patient_app/features/orders/presentation/view/widgets/make_oder_button_bloc_consumer.dart';
 import 'package:patient_app/features/orders/presentation/view_model/order_cubit/order_cubit.dart';
@@ -19,14 +18,8 @@ class OrdersView extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 32.0.w),
         child: CustomScrollView(
           slivers: [
-            SliverToBoxAdapter(
-              child: Align(
-                alignment: AlignmentDirectional.topEnd,
-                child: CircleAvatar(
-                    radius: 15.r,
-                    backgroundColor: const Color(0xffD9E1F9),
-                    child: SvgPicture.asset(AppIcons.svgsCart)),
-              ),
+            const SliverToBoxAdapter(
+              child: CustomCartButton(),
             ),
             SliverToBoxAdapter(
               child: Gap(40.h),
