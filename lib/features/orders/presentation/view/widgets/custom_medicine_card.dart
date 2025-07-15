@@ -6,7 +6,7 @@ import 'package:patient_app/core/functions/is_network_image.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
-import 'package:patient_app/features/orders/data/models/medicine_model.dart';
+import 'package:patient_app/core/models/medicine_model.dart';
 import 'package:patient_app/features/orders/presentation/view/widgets/add_to_cart_button.dart';
 
 class CustomMedicineCard extends StatelessWidget {

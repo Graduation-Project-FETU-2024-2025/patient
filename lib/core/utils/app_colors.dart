@@ -10,6 +10,6 @@ abstract class AppColors {
   static const Color white = Color(0xffFFFFFF);
   static const Color gradient1 = Color(0xffDFE9F3);
   static const Color red = Color(0xffFA0909);
-  static Color lightRed = Color(0xffFA0909).withOpacity(.3);
+  static Color lightRed =const Color(0xffFA0909).withValues(alpha: .3);
   static const Color darkWhite = Color(0xff7F7F7F);
 }

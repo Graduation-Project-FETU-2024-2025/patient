@@ -18,4 +18,6 @@ abstract class Routing {
 
   static const String makeAppointment = '/makeAppointment';
   static const String doctors = '/doctors';
+  static const String cart = '/cart';
+  static const String orderView = '/orderView';
 }

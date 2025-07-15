@@ -44,6 +44,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "bookAppointment": MessageLookupByLibrary.simpleMessage("حجز موعد"),
         "bookingPrice": MessageLookupByLibrary.simpleMessage("سعر الحجز"),
         "camera": MessageLookupByLibrary.simpleMessage("الكاميرا"),
+        "checkout": MessageLookupByLibrary.simpleMessage("ادفع"),
         "chiefComplaint":
             MessageLookupByLibrary.simpleMessage("الشكوى الرئيسية"),
         "comment": MessageLookupByLibrary.simpleMessage("تعليق"),
@@ -103,6 +104,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "medicalSpecialites":
             MessageLookupByLibrary.simpleMessage("التخصصات الطبية"),
         "medicineRecord": MessageLookupByLibrary.simpleMessage("سجلات الأدوية"),
+        "myCart": MessageLookupByLibrary.simpleMessage("السلة"),
         "name": MessageLookupByLibrary.simpleMessage("الاسم"),
         "newPassword": MessageLookupByLibrary.simpleMessage("كلمة مرور جديدة"),
         "next": MessageLookupByLibrary.simpleMessage("التالى"),

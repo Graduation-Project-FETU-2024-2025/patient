@@ -47,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Book Appointment"),
         "bookingPrice": MessageLookupByLibrary.simpleMessage("Booking Price"),
         "camera": MessageLookupByLibrary.simpleMessage("Camera"),
+        "checkout": MessageLookupByLibrary.simpleMessage("checkout"),
         "chiefComplaint":
             MessageLookupByLibrary.simpleMessage("Chief Complaint"),
         "comment": MessageLookupByLibrary.simpleMessage("Comment"),
@@ -106,6 +107,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Medical specialties"),
         "medicineRecord":
             MessageLookupByLibrary.simpleMessage("Medicine Records"),
+        "myCart": MessageLookupByLibrary.simpleMessage("My Cart"),
         "name": MessageLookupByLibrary.simpleMessage("Name"),
         "newPassword": MessageLookupByLibrary.simpleMessage("New Password"),
         "next": MessageLookupByLibrary.simpleMessage("Next"),

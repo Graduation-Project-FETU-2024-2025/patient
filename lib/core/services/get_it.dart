@@ -3,13 +3,14 @@ import 'package:patient_app/core/database/api/api_consumer.dart';
 import 'package:patient_app/core/database/api/dio_consumer.dart';
 import 'package:patient_app/core/database/api/dio_factory.dart';
 import 'package:patient_app/core/database/cache/cashe_helper.dart';
-import 'package:patient_app/core/global_cubits/cart_cubit/cart_cubit.dart';
 import 'package:patient_app/features/Doctors/data/repos/doctors_repo.dart';
 import 'package:patient_app/features/Doctors/data/repos/doctors_repo_impl.dart';
 import 'package:patient_app/features/all_Specialities/data/repos/get_all_specialities_repo.dart';
 import 'package:patient_app/features/all_Specialities/data/repos/get_all_specialities_repo_impl.dart';
 import 'package:patient_app/features/all_doctors/data/repos/get_all_doctors_repo.dart';
 import 'package:patient_app/features/all_doctors/data/repos/get_all_doctors_repo_impl.dart';
+import 'package:patient_app/features/cart/data/repository/checkout_repo.dart';
+import 'package:patient_app/features/cart/data/repository/checkout_repo_impl.dart';
 import 'package:patient_app/features/doctor_details/data/repos/get_details_doctor_repo.dart';
 import 'package:patient_app/features/doctor_details/data/repos/get_details_doctor_repo_impl.dart';
 import 'package:patient_app/features/edit_profile/data/repo/edit_profile_repo.dart';
@@ -111,8 +112,7 @@ void setup() {
   getIt.registerLazySingleton<DoctorsRepo>(
     () => DoctorsRepoImpl(apiConsumer: getIt<ApiConsumer>()),
   );
-
-  getIt.registerFactory<CartCubit>(
-    () => CartCubit(),
+  getIt.registerLazySingleton<CheckoutRepo>(
+    () => CheckoutRepoImpl(getIt<ApiConsumer>()),
   );
 }

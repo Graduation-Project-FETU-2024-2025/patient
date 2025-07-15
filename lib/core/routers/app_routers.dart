@@ -13,6 +13,9 @@ import 'package:patient_app/features/all_Specialities/presentation/views/all_spe
 import 'package:patient_app/features/all_doctors/data/repos/get_all_doctors_repo.dart';
 import 'package:patient_app/features/all_doctors/presentation/view_models/get_all_doctors/get_all_doctors_cubit.dart';
 import 'package:patient_app/features/appointment_request/presentation/view/appointment_request_view.dart';
+import 'package:patient_app/features/cart/data/repository/checkout_repo.dart';
+import 'package:patient_app/features/cart/presentation/view/cart_view.dart';
+import 'package:patient_app/features/cart/presentation/view_model/checkout_cubit/checkout_cubit.dart';
 import 'package:patient_app/features/doctor_details/data/repos/get_details_doctor_repo.dart';
 import 'package:patient_app/features/doctor_details/presentation/view_models/doctor_details/doctor_details_cubit.dart';
 import 'package:patient_app/features/doctor_details/presentation/views/doctor_details_view.dart';
@@ -37,6 +40,7 @@ import 'package:patient_app/features/medical_records/data/repository/medical_rec
 import 'package:patient_app/features/medical_records/presentation/view/medical_records_view.dart';
 import 'package:patient_app/features/medical_records/presentation/view_model/medical_records_cubit/medical_records_cubit.dart';
 import 'package:patient_app/features/onboarding/presentation/view/onboarding_view.dart';
+import 'package:patient_app/core/models/medicine_model.dart';
 import 'package:patient_app/features/orders_log/data/repository/order_log_repo.dart';
 import 'package:patient_app/features/orders_log/presentation/view/orders_log_view.dart';
 import 'package:patient_app/features/orders_log/presentation/view_model/cubit/order_log_cubit.dart';
@@ -173,6 +177,13 @@ class AppRouters {
           create: (context) => FileDownloadCubit(),
           child: AppointmentRequestView(
             appointmentModel: argument as AppointmentModel,
+          ),
+        ));
+      case Routing.cart:
+        return _buildRoute(BlocProvider(
+          create: (context) => CheckoutCubit(getIt<CheckoutRepo>()),
+          child: CartView(
+            medicinesInCart: argument as List<MedicineModel>,
           ),
         ));
       default:

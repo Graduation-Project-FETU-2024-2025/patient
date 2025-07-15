@@ -5,7 +5,6 @@ import 'package:gap/gap.dart';
 import 'package:patient_app/core/widgets/search_text_field.dart';
 import 'package:patient_app/features/orders/presentation/view/widgets/custom_cart_button.dart';
 import 'package:patient_app/features/orders/presentation/view/widgets/custom_medicine_card_grid.dart';
-import 'package:patient_app/features/orders/presentation/view/widgets/make_oder_button_bloc_consumer.dart';
 import 'package:patient_app/features/orders/presentation/view_model/order_cubit/order_cubit.dart';
 
 class OrdersView extends StatelessWidget {
@@ -26,7 +25,7 @@ class OrdersView extends StatelessWidget {
             ),
             SliverToBoxAdapter(
               child: SearchTextField(
-                controller: TextEditingController(),
+                controller: context.read<OrderCubit>().searchController,
                 onChanged: (value) async {
                   Future.delayed(const Duration(milliseconds: 500), () {
                     // Simulate a search operation
@@ -50,7 +49,7 @@ class OrdersView extends StatelessWidget {
                   const Expanded(
                     child: SizedBox(),
                   ),
-                  const MakeOrderButtonBlocConsumer(),
+                  // const MakeOrderButtonBlocConsumer(), // TODO: Remove it if it's not used
                 ],
               ),
             )

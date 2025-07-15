@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:patient_app/features/orders/data/models/medicine_model.dart';
+import 'package:patient_app/core/models/medicine_model.dart';
 import 'package:patient_app/features/orders/presentation/view_model/order_cubit/order_cubit.dart';
 
 class AddToCartButton extends StatefulWidget {

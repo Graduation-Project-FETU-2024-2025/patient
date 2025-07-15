@@ -95,6 +95,8 @@
         "storagePermissionDenied": "Storage permission denied",
         "noDownloadLink": "No download link available",
         "downloadDirectoryNotFound": "Could not find the download directory",
-        "none": "None"
+        "none": "None",
+        "myCart":"My Cart",
+        "checkout":"checkout"
 
 }
