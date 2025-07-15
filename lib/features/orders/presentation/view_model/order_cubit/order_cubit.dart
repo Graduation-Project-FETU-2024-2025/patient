@@ -30,13 +30,19 @@ class OrderCubit extends Cubit<OrderState> {
   }
 
   void clearCart() {
-    medicinesInCart.clear();
+    // medicinesInCart.clear();
     searchController.clear();
-    _searchMedicine('');
+    emit(OrderInitial());
+    // _searchMedicine('');
   }
 
   bool isMedicineInCart(MedicineModel medicine) {
     return medicinesInCart.contains(medicine);
+  }
+
+  void updateMedicineInCart(List<MedicineModel> medicine) {
+    medicinesInCart = medicine;
+    emit(UpdateMedicineInCart());
   }
 
   void addToCart(MedicineModel medicine) {

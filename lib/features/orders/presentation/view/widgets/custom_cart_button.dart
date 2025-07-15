@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -33,8 +34,13 @@ class CustomCartButton extends StatelessWidget {
                         .pushNamed(Routing.cart,
                             argument:
                                 context.read<OrderCubit>().medicinesInCart)
-                        .then((_) {
+                        .then((value) {
                       if (context.mounted) {
+                        if (value != null) {
+                          context
+                              .read<OrderCubit>()
+                              .updateMedicineInCart(value);
+                        }
                         context.read<OrderCubit>().clearCart();
                       }
                     });
