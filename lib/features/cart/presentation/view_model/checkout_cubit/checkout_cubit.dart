@@ -39,6 +39,10 @@ class CheckoutCubit extends Cubit<CheckoutState> {
     log('Total Price: $totalPrice');
   }
 
+  void clearCart() {
+    medicinesInCart.clear();
+    emit(ItemCountUpdated(medicinesInCart: medicinesInCart));
+  }
 
   void makeOrder() async {
     emit(OrderMakingLoading());
