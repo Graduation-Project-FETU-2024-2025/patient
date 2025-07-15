@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:patient_app/core/models/medicine_model.dart';
@@ -9,8 +11,16 @@ class OrderCubit extends Cubit<OrderState> {
   final OrderMedicineRepo _medicineRepo;
   final TextEditingController searchController = TextEditingController();
   List<MedicineModel> medicinesInCart = [];
+  Timer? _debounce;
 
-  Future<void> searchMedicine(String query) async {
+  Future<void> debounceSearch(String query) async {
+    if (_debounce?.isActive ?? false) _debounce!.cancel();
+    _debounce = Timer(const Duration(milliseconds: 500), () {
+      _searchMedicine(query);
+    });
+  }
+
+  Future<void> _searchMedicine(String query) async {
     emit(SearchLoading());
     final result = await _medicineRepo.searchMedicine(query);
     result.fold(
@@ -22,7 +32,7 @@ class OrderCubit extends Cubit<OrderState> {
   void clearCart() {
     medicinesInCart.clear();
     searchController.clear();
-    searchMedicine('');
+    _searchMedicine('');
   }
 
   bool isMedicineInCart(MedicineModel medicine) {
@@ -44,6 +54,7 @@ class OrderCubit extends Cubit<OrderState> {
   @override
   Future<void> close() {
     searchController.dispose();
+    _debounce?.cancel();
     return super.close();
   }
 }

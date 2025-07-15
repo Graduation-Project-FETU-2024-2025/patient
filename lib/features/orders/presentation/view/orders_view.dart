@@ -27,12 +27,7 @@ class OrdersView extends StatelessWidget {
               child: SearchTextField(
                 controller: context.read<OrderCubit>().searchController,
                 onChanged: (value) async {
-                  Future.delayed(const Duration(milliseconds: 500), () {
-                    // Simulate a search operation
-                    if (context.mounted) {
-                      context.read<OrderCubit>().searchMedicine(value);
-                    }
-                  });
+                  context.read<OrderCubit>().debounceSearch(value);
                 },
                 onPressed: () {},
               ),

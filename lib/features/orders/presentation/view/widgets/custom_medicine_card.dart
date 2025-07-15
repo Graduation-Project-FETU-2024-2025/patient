@@ -70,11 +70,11 @@ class CustomMedicineCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      medicine?.productName ?? 'Medicine Name',
+                      medicine?.productName ?? 'Medicine',
                       style: AppStyles.semiBold14(context),
                     ),
                     Text(
-                      medicine?.pharmacyName ?? 'Pharmacy Name',
+                      medicine?.pharmacyName ?? 'Pharmacy',
                       style: AppStyles.semiBold10(context).copyWith(
                         color: AppColors.gray,
                       ),
