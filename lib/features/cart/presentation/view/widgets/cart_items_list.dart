@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:patient_app/features/cart/presentation/view/widgets/cart_item_widget.dart';
@@ -41,7 +39,9 @@ class CartItemsList extends StatelessWidget {
                 }
               },
               onPressDelete: () {
-                log(cubit.medicinesInCart[index].quantity.toString());
+                cubit.removeFromCart(
+                    systemProductCode:
+                        cubit.medicinesInCart[index].systemProductCode);
               },
               medicineModel: cubit.medicinesInCart[index],
             ),

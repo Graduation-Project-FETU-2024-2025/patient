@@ -17,10 +17,9 @@ class CheckoutCubit extends Cubit<CheckoutState> {
   void setMedicinesInCart(List<MedicineModel> medicines) {
     medicinesInCart = medicines;
   }
+
   void updateItemCount(
-      {
-      required String systemProductCode,
-      required int count}) {
+      {required String systemProductCode, required int count}) {
     medicinesInCart = medicinesInCart.map((e) {
       if (e.systemProductCode == systemProductCode) {
         return e.copyWith(quantity: count);
@@ -37,6 +36,12 @@ class CheckoutCubit extends Cubit<CheckoutState> {
           previousValue + (medicine.price * medicine.quantity),
     );
     log('Total Price: $totalPrice');
+  }
+
+  void removeFromCart({required String systemProductCode}) {
+    medicinesInCart.removeWhere(
+        (medicine) => medicine.systemProductCode == systemProductCode);
+    emit(ItemCountUpdated(medicinesInCart: medicinesInCart));
   }
 
   void clearCart() {
