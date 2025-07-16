@@ -78,7 +78,7 @@ class SearchTextField extends StatelessWidget {
                 ),
                 child: Text(
                   S.of(context).search,
-                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                  style: Theme.of(context).textTheme.titleMedium?.copyWith(
                         color: AppColors.white,
                       ),
                 ),

@@ -33,26 +33,26 @@ class CustomMedicineCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              isNetworkImage(medicine?.productImage)
-                  ? CachedNetworkImage(
-                      imageUrl: medicine!.productImage,
-                      fit: BoxFit.cover,
-                      height: 100,
-                      placeholder: (context, url) => const Center(
-                        child: CircularProgressIndicator(),
+              Expanded(
+                child: isNetworkImage(medicine?.productImage)
+                    ? CachedNetworkImage(
+                        imageUrl: medicine!.productImage,
+                        fit: BoxFit.cover,
+                        height: 100,
+                        placeholder: (context, url) => const Center(
+                          child: CircularProgressIndicator(),
+                        ),
+                        errorWidget: (context, url, error) => const Icon(
+                          Icons.error,
+                        ),
+                      )
+                    : Image.asset(
+                        AppImages.imagesMedicin,
+                        fit: BoxFit.cover,
+                        height: 100,
                       ),
-                      errorWidget: (context, url, error) => const Icon(
-                        Icons.error,
-                      ),
-                    )
-                  : Image.asset(
-                      AppImages.imagesMedicin,
-                      fit: BoxFit.cover,
-                      height: 100,
-                    ),
+              ),
               medicine != null
                   ? AddToCartButton(
                       medicineModel: medicine!,

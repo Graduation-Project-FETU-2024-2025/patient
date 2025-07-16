@@ -10,14 +10,20 @@ class MedicalInfoContainer extends StatelessWidget {
     required this.title,
     required this.info,
   });
+
   final String title;
   final String info;
+
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 12.h),
       decoration: BoxDecoration(
-        color: AppColors.primaryColor.withValues(alpha: .15),
+        color: isDark
+            ? AppColors.primaryColor.withValues(alpha:0.25)
+            : AppColors.primaryColor.withValues(alpha:0.15),
         borderRadius: BorderRadius.circular(10.0.r),
       ),
       child: Column(
@@ -27,14 +33,17 @@ class MedicalInfoContainer extends StatelessWidget {
           Text(
             title,
             style: AppStyles.medium16(context).copyWith(
-              color: AppColors.black.withValues(alpha: .4),
+              color: isDark ? Colors.grey[400] : AppColors.black.withValues(alpha:0.4),
             ),
           ),
           Gap(10.h),
           Expanded(
             child: Text(
               info,
-              style: AppStyles.medium15(context),
+              style: AppStyles.medium15(context).copyWith(
+                color: isDark ? Colors.white : AppColors.black,
+              ),
+              textAlign: TextAlign.center,
             ),
           ),
         ],
