@@ -23,10 +23,13 @@ class CheckoutButtonBlocConsumer extends StatelessWidget {
           current is OrderMakingLoading ||
           current is OrderMakingSuccess ||
           current is OrderMakingFailure,
-      listener: (context, state) {
+      listener: (context, state) async {
         if (state is OrderMakingSuccess) {
-          successToast(message: state.message);
+          successToast(message: 'Order created successfully');
           context.read<CheckoutCubit>().clearCart();
+          await context
+              .read<CheckoutCubit>()
+              .launchPaymentPage(state.iframeUrl);
         } else if (state is OrderMakingFailure) {
           errorToast(
               message:
@@ -38,7 +41,6 @@ class CheckoutButtonBlocConsumer extends StatelessWidget {
             ? const CustomLoadingWidget()
             : CustomButton(
                 onPressed: () {
-                  context.read<CheckoutCubit>().calculateTotalPrice();
                   context.read<CheckoutCubit>().makeOrder();
                 },
                 text: S.of(context).checkout,

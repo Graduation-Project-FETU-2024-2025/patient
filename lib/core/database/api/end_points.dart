@@ -22,6 +22,7 @@ class EndPoints {
   static String addReview = "api/Review";
   static String createOrder = "api/orders";
   static String getAllDoctors = "api/Doctors";
+  static String payment = "api/payment/start";
 
   static String deleteOrderLogs(String id) => "/api/orders/$id";
   static String searchMedicine(String query) =>

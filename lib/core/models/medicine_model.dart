@@ -15,7 +15,7 @@ class MedicineModel {
       required this.amountInStock,
       required this.productName,
       required this.systemProductCode,
-       this.quantity=0,
+       this.quantity=1,
       required this.productImage});
 
   factory MedicineModel.fromJson(Map<String, dynamic> json) {

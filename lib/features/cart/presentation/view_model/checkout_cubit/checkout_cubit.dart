@@ -5,9 +5,11 @@ import 'package:patient_app/core/database/cache/cache_keys.dart';
 import 'package:patient_app/core/database/cache/cashe_helper.dart';
 import 'package:patient_app/core/services/get_it.dart';
 import 'package:patient_app/features/cart/data/models/make_order_request_model.dart';
+import 'package:patient_app/features/cart/data/models/payment_request_model.dart';
 import 'package:patient_app/features/cart/data/repository/checkout_repo.dart';
 import 'package:patient_app/features/cart/presentation/view_model/checkout_cubit/checkout_state.dart';
 import 'package:patient_app/core/models/medicine_model.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class CheckoutCubit extends Cubit<CheckoutState> {
   CheckoutCubit(this._checkoutRepo) : super(CheckoutInitial());
@@ -29,13 +31,14 @@ class CheckoutCubit extends Cubit<CheckoutState> {
     emit(ItemCountUpdated(medicinesInCart: medicinesInCart));
   }
 
-  void calculateTotalPrice() {
+  double _calculateTotalPrice() {
     double totalPrice = medicinesInCart.fold(
       0.0,
       (previousValue, medicine) =>
           previousValue + (medicine.price * medicine.quantity),
     );
     log('Total Price: $totalPrice');
+    return totalPrice;
   }
 
   void removeFromCart({required String systemProductCode}) {
@@ -74,11 +77,33 @@ class CheckoutCubit extends Cubit<CheckoutState> {
         log('Error making order: ${error.message}');
         emit(OrderMakingFailure(errorModel: error));
       },
-      (message) {
-        log('Order made successfully: $message');
-        emit(OrderMakingSuccess(message: message));
-        medicinesInCart.clear(); // Clear the cart after successful order
+      (orderId) async {
+        log('Order made successfully: $orderId');
+        final paymentResult = await _checkoutRepo.makePayment(
+          paymentRequest: PaymentRequestModel(
+            orderId: orderId,
+            amount: _calculateTotalPrice(),
+          ),
+        );
+        paymentResult.fold(
+          (error) {
+            log('Error making payment: ${error.message}');
+            emit(OrderMakingFailure(errorModel: error));
+          },
+          (iframeUrl) {
+            log('Payment made successfully, iframe URL: $iframeUrl');
+            emit(OrderMakingSuccess(iframeUrl: iframeUrl));
+          },
+        );
       },
     );
+  }
+
+  Future<void> launchPaymentPage(String iframeUrl) async {
+    final Uri url = Uri.parse(iframeUrl);
+    if (!await launchUrl(url, mode: LaunchMode.inAppWebView)) {
+      throw Exception('Could not launch $url');
+    }
+    log('Launching payment page with URL: $iframeUrl');
   }
 }

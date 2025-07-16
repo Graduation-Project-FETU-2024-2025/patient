@@ -20,12 +20,16 @@ class CartItemsList extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 30.0),
             child: CartItemWidget(
               onPressDecrement: () {
-                if (cubit.medicinesInCart[index].quantity >= 1) {
+                if (cubit.medicinesInCart[index].quantity > 1) {
                   context.read<CheckoutCubit>().updateItemCount(
                         systemProductCode:
                             cubit.medicinesInCart[index].systemProductCode,
                         count: cubit.medicinesInCart[index].quantity - 1,
                       );
+                } else {
+                  cubit.removeFromCart(
+                      systemProductCode:
+                          cubit.medicinesInCart[index].systemProductCode);
                 }
               },
               onPressIncrement: () {
