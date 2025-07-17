@@ -19,11 +19,13 @@ class UserNameSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         CircleAvatar(
           radius: 30.r,
+          backgroundColor: isDark ? Colors.grey[800] : Colors.grey[200],
           backgroundImage: isNetworkImage(
             getIt<CacheHelper>().getString(key: CacheKeys.profileImage),
           )

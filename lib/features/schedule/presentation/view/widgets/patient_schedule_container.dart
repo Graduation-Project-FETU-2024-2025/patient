@@ -43,10 +43,13 @@ class PatientScheduleContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                'dr.${appointmentModel.doctorName} | ${appointmentModel.clinicName}',
-                style: AppStyles.semiBold15(context)
-                    .copyWith(color: AppColors.white),
+              SizedBox(
+                width: 230.w,
+                child: Text(
+                  'dr.${appointmentModel.doctorName} | ${appointmentModel.clinicName}',
+                  style: AppStyles.semiBold15(context)
+                      .copyWith(color: AppColors.white),
+                ),
               ),
               Gap(10.h),
               Row(

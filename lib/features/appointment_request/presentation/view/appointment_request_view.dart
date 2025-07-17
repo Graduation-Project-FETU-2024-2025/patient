@@ -44,7 +44,7 @@ class AppointmentRequestView extends StatelessWidget {
                 ),
                 Gap(40.h),
                 Align(
-                  alignment: Alignment.centerLeft,
+                  alignment: AlignmentDirectional.topStart,
                   child: Text(
                     '${S.of(context).patientComment}:\n${appointmentModel.complaint}',
                     style: AppStyles.semiBold18(context).copyWith(
