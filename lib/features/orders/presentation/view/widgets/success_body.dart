@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:patient_app/features/orders/data/models/medicine_model.dart';
+import 'package:patient_app/core/models/medicine_model.dart';
 import 'package:patient_app/features/orders/presentation/view/widgets/custom_medicine_card.dart';
 
 class SuccessBody extends StatelessWidget {

@@ -6,7 +6,7 @@ import 'package:patient_app/core/functions/is_network_image.dart';
 import 'package:patient_app/core/utils/app_colors.dart';
 import 'package:patient_app/core/utils/app_images.dart';
 import 'package:patient_app/core/utils/app_styles.dart';
-import 'package:patient_app/features/orders/data/models/medicine_model.dart';
+import 'package:patient_app/core/models/medicine_model.dart';
 import 'package:patient_app/features/orders/presentation/view/widgets/add_to_cart_button.dart';
 
 class CustomMedicineCard extends StatelessWidget {
@@ -70,11 +70,11 @@ class CustomMedicineCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      medicine?.productName ?? 'Medicine Name',
+                      medicine?.productName ?? 'Medicine',
                       style: AppStyles.semiBold14(context),
                     ),
                     Text(
-                      medicine?.pharmacyName ?? 'Pharmacy Name',
+                      medicine?.pharmacyName ?? 'Pharmacy',
                       style: AppStyles.semiBold10(context).copyWith(
                         color: AppColors.gray,
                       ),
