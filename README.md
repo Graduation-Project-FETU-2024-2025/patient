@@ -28,7 +28,9 @@ Afiatuk User App is a mobile application developed using Flutter, designed to he
 - **Figma** for UI Design
 
 ## Demo 
+https://github.com/user-attachments/assets/3923f32f-fa5c-41d1-8c29-e98db67b538a
 
+https://github.com/user-attachments/assets/8d2741f3-421d-4cc5-8bca-f42433f48afa
 
 ---
 
