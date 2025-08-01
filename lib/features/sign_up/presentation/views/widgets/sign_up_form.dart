@@ -82,15 +82,15 @@ class SignUpForm extends StatelessWidget {
           ),
           Gap(20.h),
           CustomTextFormField(
-            controller: cubit.passwordController,
+            controller: context.read<SignUpCubit>().passwordController,
             hintText: S.of(context).password,
+            obscureText: true,
             keyboardType: TextInputType.visiblePassword,
             prefixIcon: Padding(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 8.0, vertical: 12.0),
+              padding: const EdgeInsets.all(8.0),
               child: Image.asset(
                 AppImages.imagesPassword,
-                height: 10.h,
+                height: 28.h,
               ),
             ),
             suffixIcon: IconButton(
