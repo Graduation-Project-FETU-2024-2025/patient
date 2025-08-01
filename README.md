@@ -27,18 +27,8 @@ Afiatuk User App is a mobile application developed using Flutter, designed to he
 - **Shared Preferences**
 - **Figma** for UI Design
 
-## 🚀 Getting Started
+## Demo 
 
-1. Clone the repository
-2. Run `flutter pub get`
-3. Connect your emulator or real device
-4. Run `flutter run`
-
-> Make sure you have Flutter SDK installed and backend endpoints are set correctly in the environment file.
-
-## 📷 Screenshots
-
-*You can add app screenshots here for better clarity*
 
 ---
 
