@@ -34,7 +34,3 @@ https://github.com/user-attachments/assets/8d2741f3-421d-4cc5-8bca-f42433f48afa
 
 ---
 
-## 👥 Team
-
-- Mobile Developers: [@Khaled Elalfy](https://github.com/...), [@Dina Ahmed](https://github.com/...)
-- UI/UX Designer: [@Nour Ibrahim](https://github.com/...)
