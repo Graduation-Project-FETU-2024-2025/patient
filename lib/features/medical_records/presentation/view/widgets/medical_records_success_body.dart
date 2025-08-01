@@ -17,15 +17,19 @@ class MedicalRecordSuccessBody extends StatelessWidget {
   final MedicalRecordsModel? medicalRecordsModel;
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Card(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16.0),
       ),
       elevation: 6.0,
+      color:
+          isDark ? const Color(0xFF1E1E1E) : Colors.white, 
       child: Container(
         padding: const EdgeInsets.all(16.0),
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: isDark ? const Color(0xFF1E1E1E) : Colors.white,
           borderRadius: BorderRadius.circular(16.0),
         ),
         child: Column(
@@ -34,7 +38,8 @@ class MedicalRecordSuccessBody extends StatelessWidget {
             Text(
               S.of(context).patientHistory,
               style: AppStyles.semiBold20(context).copyWith(
-                color: Colors.black.withValues(alpha: .4),
+                color:
+                    isDark ? Colors.grey[400] : Colors.black.withOpacity(0.6),
               ),
             ),
             const Divider(),
@@ -43,7 +48,9 @@ class MedicalRecordSuccessBody extends StatelessWidget {
             Gap(20.h),
             Text(
               S.of(context).generalInfo,
-              style: AppStyles.medium18(context),
+              style: AppStyles.medium18(context).copyWith(
+                color: isDark ? Colors.white : Colors.black,
+              ),
             ),
             Gap(15.h),
             MedicalInfoGrid(
@@ -56,7 +63,9 @@ class MedicalRecordSuccessBody extends StatelessWidget {
             Gap(30.h),
             Text(
               S.of(context).contact,
-              style: AppStyles.medium18(context),
+              style: AppStyles.medium18(context).copyWith(
+                color: isDark ? Colors.white : Colors.black,
+              ),
             ),
             Gap(15.h),
             MedicalInfoGrid(
@@ -70,7 +79,9 @@ class MedicalRecordSuccessBody extends StatelessWidget {
             Gap(15.h),
             Text(
               S.of(context).lastVisit,
-              style: AppStyles.medium18(context),
+              style: AppStyles.medium18(context).copyWith(
+                color: isDark ? Colors.white : Colors.black,
+              ),
             ),
             Gap(15.h),
             medicalRecordsModel?.appointmentModel == null

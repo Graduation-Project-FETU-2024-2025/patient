@@ -8,9 +8,11 @@ class ShimmerMedicineOrderItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+
     return Shimmer.fromColors(
-      baseColor: Colors.grey.shade300,
-      highlightColor: Colors.grey.shade100,
+      baseColor: isDark ? Colors.grey.shade700 : Colors.grey.shade300,
+      highlightColor: isDark ? Colors.grey.shade500 : Colors.grey.shade100,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -19,7 +21,7 @@ class ShimmerMedicineOrderItem extends StatelessWidget {
             width: 123.w,
             height: 96.h,
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: isDark ? Colors.grey.shade800 : Colors.white,
               borderRadius: BorderRadius.circular(8.r),
             ),
           ),
@@ -31,13 +33,13 @@ class ShimmerMedicineOrderItem extends StatelessWidget {
               Container(
                 width: 120.w,
                 height: 18.h,
-                color: Colors.white,
+                color: isDark ? Colors.grey.shade800 : Colors.white,
               ),
               Gap(8.h),
               Container(
                 width: 80.w,
                 height: 12.h,
-                color: Colors.white,
+                color: isDark ? Colors.grey.shade800 : Colors.white,
               ),
             ],
           ),
@@ -49,13 +51,13 @@ class ShimmerMedicineOrderItem extends StatelessWidget {
               Container(
                 width: 24.w,
                 height: 24.h,
-                color: Colors.white,
+                color: isDark ? Colors.grey.shade800 : Colors.white,
               ),
               Gap(16.h),
               Container(
                 width: 50.w,
                 height: 20.h,
-                color: Colors.white,
+                color: isDark ? Colors.grey.shade800 : Colors.white,
               ),
             ],
           ),

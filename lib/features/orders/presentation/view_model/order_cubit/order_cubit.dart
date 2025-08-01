@@ -1,19 +1,26 @@
-import 'dart:developer';
+import 'dart:async';
 
+import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:patient_app/core/database/cache/cache_keys.dart';
-import 'package:patient_app/core/database/cache/cashe_helper.dart';
-import 'package:patient_app/core/services/get_it.dart';
-import 'package:patient_app/features/orders/data/models/make_order_request_model.dart';
-import 'package:patient_app/features/orders/data/models/medicine_model.dart';
+import 'package:patient_app/core/models/medicine_model.dart';
 import 'package:patient_app/features/orders/data/repository/order_medicine_repo.dart';
 import 'package:patient_app/features/orders/presentation/view_model/order_cubit/order_state.dart';
 
 class OrderCubit extends Cubit<OrderState> {
   OrderCubit(this._medicineRepo) : super(OrderInitial());
   final OrderMedicineRepo _medicineRepo;
+  final TextEditingController searchController = TextEditingController();
   List<MedicineModel> medicinesInCart = [];
-  Future<void> searchMedicine(String query) async {
+  Timer? _debounce;
+
+  Future<void> debounceSearch(String query) async {
+    if (_debounce?.isActive ?? false) _debounce!.cancel();
+    _debounce = Timer(const Duration(milliseconds: 500), () {
+      _searchMedicine(query);
+    });
+  }
+
+  Future<void> _searchMedicine(String query) async {
     emit(SearchLoading());
     final result = await _medicineRepo.searchMedicine(query);
     result.fold(
@@ -22,50 +29,38 @@ class OrderCubit extends Cubit<OrderState> {
     );
   }
 
-  void makeOrder() async {
-    emit(OrderMakingLoading());
-    final cache = getIt<CacheHelper>();
-    final orderRequest = MakeOrderRequestModel(
-      userName: cache.getString(key: CacheKeys.username) ?? '',
-      userEmail: cache.getString(key: CacheKeys.email) ?? '',
-      userAddress: '',
-      userLat: 0,
-      userLong: 0,
-      branchId: medicinesInCart.first.branchId,
-      orderItems: medicinesInCart.map((medicine) {
-        return OrderItem(
-          systemProductCode: medicine.systemProductCode,
-          systemProductPrice: medicine.price,
-          quantity: 0,
-        );
-      }).toList(),
-    );
-    final result = await _medicineRepo.makeOrder(orderRequest: orderRequest);
-
-    result.fold(
-      (error) {
-        log('Error making order: ${error.message}');
-        emit(OrderMakingFailure(errorModel: error));
-      },
-      (message) {
-        log('Order made successfully: $message');
-        emit(OrderMakingSuccess(message: message));
-        medicinesInCart.clear(); // Clear the cart after successful order
-      },
-    );
+  void clearCart() {
+    // medicinesInCart.clear();
+    searchController.clear();
+    emit(OrderInitial());
+    // _searchMedicine('');
   }
 
   bool isMedicineInCart(MedicineModel medicine) {
     return medicinesInCart.contains(medicine);
   }
 
+  void updateMedicineInCart(List<MedicineModel> medicine) {
+    medicinesInCart = medicine;
+    emit(UpdateMedicineInCart());
+  }
+
   void addToCart(MedicineModel medicine) {
     if (!medicinesInCart.contains(medicine)) {
       medicinesInCart.add(medicine);
     }
+    emit(UpdateMedicineInCart());
   }
 
   void removeFromCart(MedicineModel medicine) {
     medicinesInCart.remove(medicine);
+    emit(UpdateMedicineInCart());
+  }
+
+  @override
+  Future<void> close() {
+    searchController.dispose();
+    _debounce?.cancel();
+    return super.close();
   }
 }

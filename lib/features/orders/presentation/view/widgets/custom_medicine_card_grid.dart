@@ -48,10 +48,13 @@ class CustomMedicineCardGrid extends StatelessWidget {
               childCount: 4,
             ),
           );
-        } else {
+        } else if (state is OrderInitial) {
           return const SliverToBoxAdapter(
               child: NoItemWidget(message: 'Start searching for medicines'));
         }
+        return const SliverToBoxAdapter(
+          child: SizedBox.shrink(),
+        );
       },
     );
   }

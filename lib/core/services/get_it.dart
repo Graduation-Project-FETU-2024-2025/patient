@@ -9,6 +9,8 @@ import 'package:patient_app/features/all_Specialities/data/repos/get_all_special
 import 'package:patient_app/features/all_Specialities/data/repos/get_all_specialities_repo_impl.dart';
 import 'package:patient_app/features/all_doctors/data/repos/get_all_doctors_repo.dart';
 import 'package:patient_app/features/all_doctors/data/repos/get_all_doctors_repo_impl.dart';
+import 'package:patient_app/features/cart/data/repository/checkout_repo.dart';
+import 'package:patient_app/features/cart/data/repository/checkout_repo_impl.dart';
 import 'package:patient_app/features/doctor_details/data/repos/get_details_doctor_repo.dart';
 import 'package:patient_app/features/doctor_details/data/repos/get_details_doctor_repo_impl.dart';
 import 'package:patient_app/features/edit_profile/data/repo/edit_profile_repo.dart';
@@ -109,5 +111,8 @@ void setup() {
   );
   getIt.registerLazySingleton<DoctorsRepo>(
     () => DoctorsRepoImpl(apiConsumer: getIt<ApiConsumer>()),
+  );
+  getIt.registerLazySingleton<CheckoutRepo>(
+    () => CheckoutRepoImpl(getIt<ApiConsumer>()),
   );
 }

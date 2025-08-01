@@ -26,9 +26,12 @@ class PatientDetailsSection extends StatelessWidget {
           ),
         ),
         Gap(15.w),
-        Text(
-          '$doctorName | $clinicName',
-          style: AppStyles.semiBold20(context),
+        SizedBox(
+          width: 230.w,
+          child: Text(
+            '$doctorName | $clinicName',
+            style: AppStyles.semiBold20(context),
+          ),
         ),
       ],
     );

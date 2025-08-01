@@ -56,42 +56,44 @@ class HighlyRecommItem extends StatelessWidget {
               ),
             ),
             Gap(10.w),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  doctorModel.fullName,
-                  style: AppStyles.semiBold15(context),
-                ),
-                Gap(5.h),
-                Text(
-                  '${getIt<CacheHelper>().getCurrentLanguage() == 'en' ? doctorModel.specialization.enName : doctorModel.specialization.arName} | ${doctorModel.clinicName}',
-                  style: AppStyles.semiBold12(context).copyWith(
-                    color: Theme.of(context).brightness == Brightness.light
-                        ? AppColors.black.withValues(alpha: .4)
-                        : AppColors.white.withValues(alpha: .4),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    doctorModel.fullName,
+                    style: AppStyles.semiBold15(context),
                   ),
-                ),
-                Gap(5.h),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                      size: 16.sp,
+                  Gap(5.h),
+                  Text(
+                    '${getIt<CacheHelper>().getCurrentLanguage() == 'en' ? doctorModel.specialization.enName : doctorModel.specialization.arName} | ${doctorModel.clinicName}',
+                    style: AppStyles.semiBold12(context).copyWith(
+                      color: Theme.of(context).brightness == Brightness.light
+                          ? AppColors.black.withValues(alpha: .4)
+                          : AppColors.white.withValues(alpha: .4),
                     ),
-                    Gap(5.w),
-                    Text(
-                      '${doctorModel.rating.toStringAsFixed(1)} (${doctorModel.reviewsCount} Reviews)',
-                      style: AppStyles.semiBold10(context).copyWith(
-                        color: Theme.of(context).brightness == Brightness.light
-                            ? AppColors.black.withValues(alpha: .4)
-                            : AppColors.white.withValues(alpha: .4),
+                  ),
+                  Gap(5.h),
+                  Row(
+                    children: [
+                      Icon(
+                        Icons.star,
+                        color: Colors.amber,
+                        size: 16.sp,
                       ),
-                    ),
-                  ],
-                )
-              ],
+                      Gap(5.w),
+                      Text(
+                        '${doctorModel.rating.toStringAsFixed(1)} (${doctorModel.reviewsCount} Reviews)',
+                        style: AppStyles.semiBold10(context).copyWith(
+                          color: Theme.of(context).brightness == Brightness.light
+                              ? AppColors.black.withValues(alpha: .4)
+                              : AppColors.white.withValues(alpha: .4),
+                        ),
+                      ),
+                    ],
+                  )
+                ],
+              ),
             )
           ],
         ),

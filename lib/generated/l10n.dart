@@ -1019,6 +1019,26 @@ class S {
       args: [],
     );
   }
+
+  /// `My Cart`
+  String get myCart {
+    return Intl.message(
+      'My Cart',
+      name: 'myCart',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `checkout`
+  String get checkout {
+    return Intl.message(
+      'checkout',
+      name: 'checkout',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
